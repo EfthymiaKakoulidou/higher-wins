@@ -12,7 +12,10 @@ const cards = ['1', '2', '3', '4', '5', '6', '7', '8', '1' ,'2' ,'3', '4', '5', 
 console.log(cards);
 
 /*Deal Cards*/
-
+const playershand = cards.slice(0,8);
+console.log (playershand);
+const computershand = cards.slice(8,16);
+console.log(computershand);
 
 /*Player and computer choose card*/
 
