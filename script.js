@@ -18,6 +18,18 @@ const computershand = cards.slice(8,16);
 console.log(computershand);
 
 /*Player and computer choose card*/
+//Computers random choice
+const randomCard = computershand[Math.floor(Math.random() * computershand.length)];
+console.log(randomCard);
+//Specify the place of the card randomly chosen
+let randomCardPlace = computershand.indexOf(randomCard);
+console.log(randomCardPlace);
+//Computers hand after playing the card
+let remainingcomputershand = computershand.splice(randomCardPlace,1);
+console.log(remainingcomputershand);
+console.log(computershand);
+
+//players choice
 
 /*Comparison of cards chosen*/
 
