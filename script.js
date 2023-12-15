@@ -1,10 +1,18 @@
-/*Card values*/
-const values = ['1', '2', '3', '4', '5', '6', '7', '8', '1' ,'2' ,'3', '4', '5', '6', '7', '8'];
+/*Deck*/
+const cards = ['1', '2', '3', '4', '5', '6', '7', '8', '1' ,'2' ,'3', '4', '5', '6', '7', '8'];
+
+/*Shuffle Cards with the Fischer Yates algorithm*/
+    var i = cards.length, j, temp;
+    while(--i > 0){
+    j = Math.floor(Math.random()*(i+1));
+    temp = cards[j];
+    cards[j] = cards[i];
+    cards[i] = temp; 
+}
+console.log(cards);
 
 /*Deal Cards*/
-const deal = function(){
-    const card = Math.random()
-return values;}
+
 
 /*Player and computer choose card*/
 
