@@ -12,10 +12,10 @@ const cards = [1, 2, 3, 4, 5, 6, 7, 8, 1 , 2 ,3, 4, 5, 6, 7, 8];
 console.log(cards);
 
 /*Deal Cards*/
-const playershand = cards.slice(0,8);
-console.log (playershand);
 const computershand = cards.slice(8,16);
-console.log(computershand);
+console.log (computershand);
+const playershand = cards.slice(0,8);
+console.log(playershand);
 
 /*Player and computer choose card*/
 
@@ -47,14 +47,21 @@ for (i = 0; i < computershand.length; i++) {
 
 //players choice
 
-//Create divs for players hand
+//Create buttons for players hand
 
 for (i = 0; i < playershand.length; i++) {
-    playerinnerdiv = document.createElement('div');
-    playerinnerdiv.className = 'playerscard';
-    playerinnerdiv.innerHTML = playershand[i];
-    document.getElementById('playersarea').appendChild(playerinnerdiv);
-  }
+    button = document.createElement('button');
+    button.className = 'button';
+    button.innerHTML = playershand[i];
+    document.getElementById('playersarea').appendChild(button);}
+    
+
+//Players choice of card
+
+function playerplay(){
+
+}
+
 
 /*Comparison of cards chosen*/
 
