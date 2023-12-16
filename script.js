@@ -30,6 +30,7 @@ let remainingcomputershand = computershand.splice(randomCardPlace,1);
 console.log(remainingcomputershand);
 console.log(computershand);
 
+//Computers random choice
 const randomCard1 = computershand[Math.floor(Math.random() * computershand.length)];
 console.log(randomCard1);
 //Specify the place of the card randomly chosen
@@ -40,12 +41,15 @@ let remainingcomputershand1 = computershand.splice(randomCardPlace1,1);
 console.log(remainingcomputershand1);
 console.log(computershand);
 
-
 //loop for computers hand
 
-
-//Assign a div for every item in teh array
-
+//Assign a div for every item in the array
+for (i = 0; i < computershand.length; i++) {
+    temp = document.createElement('div');
+    temp.className = 'computerscard';
+    temp.innerHTML = computershand[i];
+    document.getElementsByTagName('main')[0].appendChild(temp);
+  }
 
 //players choice
 

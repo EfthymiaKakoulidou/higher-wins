@@ -1,25 +1,27 @@
-* {box-sizing: border-box;}
-body {display: flex;
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
     justify-content: center;
     flex-direction: column;
-    margin:0;}
-
-#header-page {background-color: blueviolet;
-height: 100px;}
-
-#computers-hand-area {width: 100%;
-    display: flex;
-justify-content: center;
+    margin: 0;
 }
-#game-area { height: 100px;
-    width: 100%;
-height: 100px;}
-#players-hand-area {width: 100%;
+
+main {
     display: flex;
     justify-content: center;
-    }
-    .card {
-        background-color: aqua;
-        width: 100px;
-        height: 100px;
-       margin: 10px;}
+}
+
+#header-page {
+    background-color: blueviolet;
+    height: 100px;
+}
+
+.computerscard {
+    margin: 10px;
+    width: 100px;
+    height: 100px;
+    background-color: brown;
+}
