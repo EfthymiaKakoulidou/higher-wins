@@ -1,5 +1,5 @@
 /*Deck*/
-const cards = ['1', '2', '3', '4', '5', '6', '7', '8', '1' ,'2' ,'3', '4', '5', '6', '7', '8'];
+const cards = [1, 2, 3, 4, 5, 6, 7, 8, 1 , 2 ,3, 4, 5, 6, 7, 8];
 
 /*Shuffle Cards with the Fischer Yates algorithm*/
     var i = cards.length, j, temp;
@@ -18,6 +18,7 @@ const computershand = cards.slice(8,16);
 console.log(computershand);
 
 /*Player and computer choose card*/
+
 //Computers random choice
 const randomCard = computershand[Math.floor(Math.random() * computershand.length)];
 console.log(randomCard);
@@ -28,6 +29,23 @@ console.log(randomCardPlace);
 let remainingcomputershand = computershand.splice(randomCardPlace,1);
 console.log(remainingcomputershand);
 console.log(computershand);
+
+const randomCard1 = computershand[Math.floor(Math.random() * computershand.length)];
+console.log(randomCard1);
+//Specify the place of the card randomly chosen
+let randomCardPlace1 = computershand.indexOf(randomCard1);
+console.log(randomCardPlace1);
+//Computers hand after playing the card
+let remainingcomputershand1 = computershand.splice(randomCardPlace1,1);
+console.log(remainingcomputershand1);
+console.log(computershand);
+
+
+//loop for computers hand
+
+
+//Assign a div for every item in teh array
+
 
 //players choice
 

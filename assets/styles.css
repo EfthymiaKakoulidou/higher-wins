@@ -11,7 +11,7 @@ height: 100px;}
     display: flex;
 justify-content: center;
 }
-#game-area {
+#game-area { height: 100px;
     width: 100%;
 height: 100px;}
 #players-hand-area {width: 100%;
