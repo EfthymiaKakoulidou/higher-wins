@@ -38,10 +38,10 @@ console.log(computershand);
 //Create a div for every item in the array of computers hand
 
 for (i = 0; i < computershand.length; i++) {
-    temp = document.createElement('div');
-    temp.className = 'computerscard';
-    temp.innerHTML = computershand[i];
-    document.getElementsByTagName('main')[0].appendChild(temp);
+    let computerinnerdiv = document.createElement('div');
+    computerinnerdiv.className = 'computerscard';
+    computerinnerdiv.innerHTML = computershand[i];
+    document.getElementById('computerarea').appendChild(computerinnerdiv);
   }
 
 
@@ -50,10 +50,10 @@ for (i = 0; i < computershand.length; i++) {
 //Create divs for players hand
 
 for (i = 0; i < playershand.length; i++) {
-    temp = document.createElement('div');
-    temp.className = 'playerscard';
-    temp.innerHTML = playershand[i];
-    document.getElementsByTagName('main')[0].appendChild(temp);
+    playerinnerdiv = document.createElement('div');
+    playerinnerdiv.className = 'playerscard';
+    playerinnerdiv.innerHTML = playershand[i];
+    document.getElementById('playersarea').appendChild(playerinnerdiv);
   }
 
 /*Comparison of cards chosen*/

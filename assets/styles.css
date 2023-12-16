@@ -9,14 +9,32 @@ body {
     margin: 0;
 }
 
-main {
-    display: flex;
-    justify-content: center;
-}
-
 #header-page {
     background-color: blueviolet;
     height: 100px;
+}
+
+main {width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#computerarea {
+    display:flex;
+    justify-content: center;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+}
+
+#playersarea {
+    display:flex;
+    justify-content: center;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
 }
 
 .computerscard {
