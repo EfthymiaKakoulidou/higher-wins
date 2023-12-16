@@ -25,3 +25,10 @@ main {
     height: 100px;
     background-color: brown;
 }
+
+.playerscard {
+    margin: 10px;
+    width: 100px;
+    height: 100px;
+    background-color: brown;
+}

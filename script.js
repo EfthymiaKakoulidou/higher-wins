@@ -18,6 +18,8 @@ const computershand = cards.slice(8,16);
 console.log(computershand);
 
 /*Player and computer choose card*/
+for (let i = 0; i < 8; i++) {
+//stop the loop after everytime
 
 //Computers random choice
 const randomCard = computershand[Math.floor(Math.random() * computershand.length)];
@@ -29,21 +31,13 @@ console.log(randomCardPlace);
 let remainingcomputershand = computershand.splice(randomCardPlace,1);
 console.log(remainingcomputershand);
 console.log(computershand);
+}
 
 //Computers random choice
-const randomCard1 = computershand[Math.floor(Math.random() * computershand.length)];
-console.log(randomCard1);
-//Specify the place of the card randomly chosen
-let randomCardPlace1 = computershand.indexOf(randomCard1);
-console.log(randomCardPlace1);
-//Computers hand after playing the card
-let remainingcomputershand1 = computershand.splice(randomCardPlace1,1);
-console.log(remainingcomputershand1);
-console.log(computershand);
 
 //loop for computers hand
 
-//Assign a div for every item in the array
+//Create a div for every item in the array
 for (i = 0; i < computershand.length; i++) {
     temp = document.createElement('div');
     temp.className = 'computerscard';
@@ -52,6 +46,15 @@ for (i = 0; i < computershand.length; i++) {
   }
 
 //players choice
+
+//Create divs for players hand
+
+for (i = 0; i < playershand.length; i++) {
+    temp = document.createElement('div');
+    temp.className = 'playerscard';
+    temp.innerHTML = playershand[i];
+    document.getElementsByTagName('main')[0].appendChild(temp);
+  }
 
 /*Comparison of cards chosen*/
 
