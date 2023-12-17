@@ -106,6 +106,7 @@ var elements = document.getElementsByClassName("button");
 
 for (var i=0; i<elements.length; i++) {
     elements[i].addEventListener("click", playerplay);
+    elements[i].addEventListener("click", computerplay);
 }
 
 /*Comparison of cards chosen*/
