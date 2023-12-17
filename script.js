@@ -48,8 +48,6 @@ for (i = 0; i < computershand.length; i++) {
 }
 
 
-//Player plays
-
 //Create buttons for every item in players hand
 
 for (i = 0; i < playershand.length; i++) {
@@ -87,10 +85,23 @@ playerscorediv .className = 'playerscore';
 playerscorediv.innerHTML = 'Player Score'
 document.getElementById('gamearea').appendChild(playerscorediv);
 
-//Call computerplay by clicking buttons
+//Players play
+function playerplay() {
 
+  //Computers random choice
+  const playersCard = playershand[i];
+  console.log(playersCard);
+  //Specify the place of the card randomly chosen
+  let playersCardPlace = playershand.indexOf(playersCard);
+  console.log(playersCardPlace);
+  //Computers hand after playing the card
+  let remainingplayershand = playershand.splice(playersCardPlace, 1);
+  console.log(remainingplayershand);
+  console.log(playershand);
 
-//Players choice of card
+  return playershand;
+}
+
 
 /*Comparison of cards chosen*/
 
