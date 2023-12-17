@@ -102,6 +102,11 @@ function playerplay() {
   return playershand;
 }
 
+var elements = document.getElementsByClassName("button");
+
+for (var i=0; i<elements.length; i++) {
+    elements[i].addEventListener("click", playerplay);
+}
 
 /*Comparison of cards chosen*/
 
