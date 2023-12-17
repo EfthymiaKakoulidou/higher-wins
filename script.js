@@ -61,6 +61,15 @@ for (i = 0; i < playershand.length; i++) {
 
 //Create divs for game area
 
+//Create div for score computer
+
+let computerscorediv = document.createElement('div');
+computerscorediv.className = 'computerscore';
+computerscorediv.innerHTML = 'Computer Score'
+document.getElementById('gamearea').appendChild(computerscorediv);
+
+//Create div for computer area
+
   let computergameareadiv = document.createElement('div');
   computergameareadiv.className = 'computergamearea';
   document.getElementById('gamearea').appendChild(computergameareadiv);
@@ -71,6 +80,12 @@ let playergameareadiv = document.createElement('div');
 playergameareadiv.className = 'playergamearea';
 document.getElementById('gamearea').appendChild(playergameareadiv);
 
+//Create div for score player
+
+let playerscorediv = document.createElement('div');
+playerscorediv .className = 'playerscore';
+playerscorediv.innerHTML = 'Player Score'
+document.getElementById('gamearea').appendChild(playerscorediv);
 
 //Call computerplay by clicking buttons
 
