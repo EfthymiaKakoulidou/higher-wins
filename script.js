@@ -18,13 +18,13 @@ console.log(computershand);
 const playershand = cards.slice(0, 8);
 console.log(playershand);
 
- //Create a div for every item in the array of computers hand
+//Create a div for every item in the array of computers hand
 
- for (i = 0; i < computershand.length; i++) {
+for (i = 0; i < computershand.length; i++) {
   let computerinnerdiv = document.createElement('div');
   computerinnerdiv.className = 'computerscard';
   computerinnerdiv.innerHTML = computershand[i];
-  computerinnerdiv.id = 'computershand-'+i+''
+  computerinnerdiv.id = 'computershand-' + i + ''
   document.getElementById('computerarea').appendChild(computerinnerdiv);
 }
 
@@ -33,7 +33,7 @@ console.log(playershand);
 for (i = 0; i < playershand.length; i++) {
   button = document.createElement('button');
   button.className = 'button';
-  button.id = 'playershand-'+i+'';
+  button.id = 'playershand-' + i + '';
   button.innerHTML = playershand[i];
   document.getElementById('playersarea').appendChild(button);
 }
@@ -41,7 +41,8 @@ for (i = 0; i < playershand.length; i++) {
 /*Player and computer choose card*/
 
 //Computer plays
-  
+
+
 function computerplay() {
   //Computers random choice
   const randomCard = computershand[Math.floor(Math.random() * computershand.length)];
@@ -51,17 +52,16 @@ function computerplay() {
   console.log(randomCardPlace);
   //Computers hand after playing the card
   let computerscardchoice = computershand.splice(randomCardPlace, 1);
-  console.log (computerscardchoice);
-  console.log (computershand);
+  console.log(computerscardchoice);
+  console.log(computershand);
+  //Remove computers random card from computershand
+  for (i = 0; i < computershand.length; i++)
+    if (randomCardPlace === i) {
+      document.getElementById('computershand-' + i + '').remove();
+    }
 
   return computershand;
 }
-
-//Remove computers random card from computershand
-
-function removecomputerscard(){
-  document.getElementById('computershand-3').remove();
-return computershand;}
 
 //Create divs for game area
 
@@ -104,22 +104,25 @@ function playerplay() {
   let remainingplayershand = playershand.splice(playersCardPlace, 1);
   console.log(remainingplayershand);
   console.log(playershand);
+
+  //Remove players card from playersshand
+  for (i = 0; i < playershand.length; i++)
+  if (playersCardPlace === i) {
+    document.getElementById('playershand-' + i + '').remove();
+  }
+
   return playershand;
 }
 
 //call function with button clicks
 
-var elements = document.getElementsByClassName("button");
-for (var i = 0; i < elements.length; i++) {
-  elements[i].addEventListener("click", removecomputerscard);
+const elements = document.getElementsByClassName("button");
+for (i = 0; i < elements.length; i++) {
   elements[i].addEventListener("click", computerplay);
   elements[i].addEventListener("click", playerplay);
 }
 
+
 /*Comparison of cards chosen*/
 
 /*Update score*/
-
-/*Cards chosen deactivated*/
-
-/*Repeat until all cards deactivated*/
