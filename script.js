@@ -18,12 +18,31 @@ console.log(computershand);
 const playershand = cards.slice(0, 8);
 console.log(playershand);
 
+ //Create a div for every item in the array of computers hand
+
+ for (i = 0; i < computershand.length; i++) {
+  let computerinnerdiv = document.createElement('div');
+  computerinnerdiv.className = 'computerscard';
+  computerinnerdiv.innerHTML = computershand[i];
+  computerinnerdiv.id = 'computershand-'+i+''
+  document.getElementById('computerarea').appendChild(computerinnerdiv);
+}
+
+//Create buttons for every item in players hand
+
+for (i = 0; i < playershand.length; i++) {
+  button = document.createElement('button');
+  button.className = 'button';
+  button.id = 'playershand-'+i+'';
+  button.innerHTML = playershand[i];
+  document.getElementById('playersarea').appendChild(button);
+}
+
 /*Player and computer choose card*/
 
 //Computer plays
-
+  
 function computerplay() {
-
   //Computers random choice
   const randomCard = computershand[Math.floor(Math.random() * computershand.length)];
   console.log(randomCard);
@@ -31,31 +50,18 @@ function computerplay() {
   let randomCardPlace = computershand.indexOf(randomCard);
   console.log(randomCardPlace);
   //Computers hand after playing the card
-  let remainingcomputershand = computershand.splice(randomCardPlace, 1);
-  console.log(remainingcomputershand);
-  console.log(computershand);
+  let computerscardchoice = computershand.splice(randomCardPlace, 1);
+  console.log (computerscardchoice);
+  console.log (computershand);
 
   return computershand;
 }
 
-//Create a div for every item in the array of computers hand
+//Remove computers random card from computershand
 
-for (i = 0; i < computershand.length; i++) {
-  let computerinnerdiv = document.createElement('div');
-  computerinnerdiv.className = 'computerscard';
-  computerinnerdiv.innerHTML = computershand[i];
-  document.getElementById('computerarea').appendChild(computerinnerdiv);
-}
-
-
-//Create buttons for every item in players hand
-
-for (i = 0; i < playershand.length; i++) {
-  button = document.createElement('button');
-  button.className = 'button';
-  button.innerHTML = playershand[i];
-  document.getElementById('playersarea').appendChild(button);
-}
+function removecomputerscard(){
+  document.getElementById('computershand-3').remove();
+return computershand;}
 
 //Create divs for game area
 
@@ -68,9 +74,9 @@ document.getElementById('gamearea').appendChild(computerscorediv);
 
 //Create div for computer area
 
-  let computergameareadiv = document.createElement('div');
-  computergameareadiv.className = 'computergamearea';
-  document.getElementById('gamearea').appendChild(computergameareadiv);
+let computergameareadiv = document.createElement('div');
+computergameareadiv.className = 'computergamearea';
+document.getElementById('gamearea').appendChild(computergameareadiv);
 
 //Create divs for player area
 
@@ -81,7 +87,7 @@ document.getElementById('gamearea').appendChild(playergameareadiv);
 //Create div for score player
 
 let playerscorediv = document.createElement('div');
-playerscorediv .className = 'playerscore';
+playerscorediv.className = 'playerscore';
 playerscorediv.innerHTML = 'Player Score'
 document.getElementById('gamearea').appendChild(playerscorediv);
 
@@ -98,15 +104,16 @@ function playerplay() {
   let remainingplayershand = playershand.splice(playersCardPlace, 1);
   console.log(remainingplayershand);
   console.log(playershand);
-
   return playershand;
 }
 
-var elements = document.getElementsByClassName("button");
+//call function with button clicks
 
-for (var i=0; i<elements.length; i++) {
-    elements[i].addEventListener("click", playerplay);
-    elements[i].addEventListener("click", computerplay);
+var elements = document.getElementsByClassName("button");
+for (var i = 0; i < elements.length; i++) {
+  elements[i].addEventListener("click", removecomputerscard);
+  elements[i].addEventListener("click", computerplay);
+  elements[i].addEventListener("click", playerplay);
 }
 
 /*Comparison of cards chosen*/
