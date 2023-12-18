@@ -10,6 +10,11 @@ body {
 }
 
 #header-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: large;
+    color: white;
     background-color: blueviolet;
     height: 100px;
 }
@@ -39,16 +44,27 @@ main {
 }
 
 .computerscard {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
     margin: 10px;
     width: 100px;
-    height: 100px;
+    height: 150px;
     background-color: brown;
 }
 
+#playersplace {
+    display: flex;
+    justify-content: center;
+    align-items: center;s
+}
+
 .button {
+    border-radius: 15px;
     margin: 10px;
     width: 100px;
-    height: 100px;
+    height: 150px;
     background-color: brown;
 }
 
@@ -62,23 +78,23 @@ main {
 .computergamearea {
     background-color: aqua;
     width: 100px;
-    height: 100px;
+    height: 150px;
     margin: 10px;
 }
 
 .playergamearea {
     background-color: aqua;
     width: 100px;
-    height: 100px;
+    height: 150px;
     margin: 10px;
 }
 
 .computerscore {margin: 10px;
     width: 100px;
-    height: 100px;
+    height: 150px;
 }
 
 .playerscore {margin: 10px;
     width: 100px;
-    height: 100px;
+    height: 150px;
 }
