@@ -49,7 +49,7 @@ document.getElementById('gamearea').appendChild(computergameareainnerdiv);
 /*Create a div for playersgamearea*/
 
 let playergameareainnerdiv = document.createElement('div');
-playergameareainnerdiv.className = 'button';
+playergameareainnerdiv.className = 'computerscardgamearea';
 playergameareainnerdiv.innerHTML = '';
 playergameareainnerdiv.id = 'playersplace';
 //Append div to gamearea
@@ -121,9 +121,9 @@ document.getElementById('playershand-0').addEventListener("click", function remo
 document.getElementById('playershand-0').addEventListener("click", function movecardtogamearea() {
 
   let playergameareadiv = document.createElement('div');
-  playergameareadiv.className = 'computerscardgamearea';
+  playergameareadiv.className = 'playerscardgamearea';
+  playergameareadiv.id = 'pplayedcard-0';
   playergameareadiv.innerHTML = playershand[0];
-  playergameareadiv.id = 'pplayedcard';
   //Append div to computersgamearea
 document.getElementById('playersplace').appendChild(playergameareadiv);
 
@@ -146,9 +146,9 @@ document.getElementById('playershand-1').addEventListener("click", function remo
 document.getElementById('playershand-1').addEventListener("click", function movecardtogamearea() {
 
   let playergameareadiv = document.createElement('div');
-  playergameareadiv.className = 'computerscardgamearea';
+  playergameareadiv.className = 'playerscardgamearea';
+  playergameareadiv.id = 'pplayedcard-1';
   playergameareadiv.innerHTML = playershand[1];
-  playergameareadiv.id = 'pplayedcard';
   //Append div to computersgamearea
 document.getElementById('playersplace').appendChild(playergameareadiv);
 
@@ -171,9 +171,9 @@ document.getElementById('playershand-2').addEventListener("click", function remo
 document.getElementById('playershand-2').addEventListener("click", function movecardtogamearea() {
 
   let playergameareadiv = document.createElement('div');
-  playergameareadiv.className = 'computerscardgamearea';
+  playergameareadiv.className = 'playerscardgamearea';
+  playergameareadiv.id = 'pplayedcard-2';
   playergameareadiv.innerHTML = playershand[2];
-  playergameareadiv.id = 'pplayedcard';
   //Append div to computersgamearea
 document.getElementById('playersplace').appendChild(playergameareadiv);
 
@@ -196,9 +196,9 @@ document.getElementById('playershand-3').addEventListener("click", function remo
 document.getElementById('playershand-3').addEventListener("click", function movecardtogamearea() {
 
   let playergameareadiv = document.createElement('div');
-  playergameareadiv.className = 'computerscardgamearea';
+  playergameareadiv.className = 'playerscardgamearea';
+  playergameareadiv.id = 'pplayedcard-3';
   playergameareadiv.innerHTML = playershand[3];
-  playergameareadiv.id = 'pplayedcard';
   //Append div to computersgamearea
 document.getElementById('playersplace').appendChild(playergameareadiv);
 
@@ -221,9 +221,9 @@ document.getElementById('playershand-4').addEventListener("click", function remo
 document.getElementById('playershand-4').addEventListener("click", function movecardtogamearea() {
 
   let playergameareadiv = document.createElement('div');
-  playergameareadiv.className = 'computerscardgamearea';
+  playergameareadiv.className = 'playerscardgamearea';
+  playergameareadiv.id = 'pplayedcard-4';
   playergameareadiv.innerHTML = playershand[4];
-  playergameareadiv.id = 'pplayedcard';
   //Append div to computersgamearea
 document.getElementById('playersplace').appendChild(playergameareadiv);
 
@@ -246,9 +246,9 @@ document.getElementById('playershand-5').addEventListener("click", function remo
 document.getElementById('playershand-5').addEventListener("click", function movecardtogamearea() {
 
   let playergameareadiv = document.createElement('div');
-  playergameareadiv.className = 'computerscardgamearea';
+  playergameareadiv.className = 'playerscardgamearea';
+  playergameareadiv.id = 'pplayedcard-5';
   playergameareadiv.innerHTML = playershand[5];
-  playergameareadiv.id = 'pplayedcard';
   //Append div to computersgamearea
 document.getElementById('playersplace').appendChild(playergameareadiv);
 
@@ -271,9 +271,9 @@ document.getElementById('playershand-6').addEventListener("click", function remo
 document.getElementById('playershand-6').addEventListener("click", function movecardtogamearea() {
 
   let playergameareadiv = document.createElement('div');
-  playergameareadiv.className = 'computerscardgamearea';
+  playergameareadiv.className = 'playerscardgamearea';
+  playergameareadiv.id = 'pplayedcard-6';
   playergameareadiv.innerHTML = playershand[6];
-  playergameareadiv.id = 'pplayedcard';
   //Append div to computersgamearea
 document.getElementById('playersplace').appendChild(playergameareadiv);
 
@@ -296,9 +296,9 @@ document.getElementById('playershand-7').addEventListener("click", function remo
 document.getElementById('playershand-7').addEventListener("click", function movecardtogamearea() {
 
   let playergameareadiv = document.createElement('div');
-  playergameareadiv.className = 'computerscardgamearea';
+  playergameareadiv.className = 'playerscardgamearea';
+  playergameareadiv.id = 'pplayedcard-7';
   playergameareadiv.innerHTML = playershand[7];
-  playergameareadiv.id = 'pplayedcard';
   //Append div to computersgamearea
 document.getElementById('playersplace').appendChild(playergameareadiv);
 
