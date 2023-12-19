@@ -84,11 +84,9 @@ function computerplay() {
   console.log(randomCard);
   //move that choice to game area
 
-  const newtext = document.createTextNode(randomCard);
+  let computersplayedcard = document.getElementById("computersplace");
+  document.getElementById("computersplace").innerHTML = randomCard;
 
-  const parent = document.getElementById("computersplace");
-
-  parent.appendChild(newtext);
 
   //Specify the place of the card randomly chosen
   let randomCardPlace = computershand.indexOf(randomCard);
