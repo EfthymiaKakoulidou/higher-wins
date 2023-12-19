@@ -41,7 +41,7 @@ document.getElementById('gamearea').appendChild(computerscorediv);
 
 for (j = 0; j < 1; j++) {
   let computergameareainnerdiv = document.createElement('div');
-  computergameareainnerdiv.className = 'computerscard';
+  computergameareainnerdiv.className = 'computerscardgamearea';
   computergameareainnerdiv.id = 'computersplace';
   //Append those divs to gamearea
   document.getElementById('gamearea').appendChild(computergameareainnerdiv);
@@ -89,6 +89,7 @@ function computerplay() {
   const newtext = document.createTextNode(randomCard);
 
   const parent = document.getElementById("computersplace");
+
   parent.appendChild(newtext);
 
   //Specify the place of the card randomly chosen
@@ -281,7 +282,6 @@ function computerplay() {
     const parent1 = document.getElementById("playersplace");
     parent1.appendChild(newtext1);
   });
-
 
 
 //Call function with button clicks

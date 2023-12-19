@@ -52,20 +52,36 @@ main {
     width: 100px;
     height: 150px;
     background-color: brown;
+    color: brown;
 }
 
-#playersplace {
+.computerscardgamearea {
     display: flex;
     justify-content: center;
-    align-items: center;s
-}
-
-.button {
+    align-items: center;
     border-radius: 15px;
     margin: 10px;
     width: 100px;
     height: 150px;
     background-color: brown;
+    color:white;
+    font-size: 30px;
+}
+
+#playersplace {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button {color: white;
+    font-size: 30px;
+    border-radius: 15px;
+    margin: 10px;
+    width: 100px;
+    height: 150px;
+    background-color: brown;
+    border: none;
 }
 
 #gamearea {
