@@ -39,23 +39,21 @@ document.getElementById('gamearea').appendChild(computerscorediv);
 
 /*Create a div for computersgamearea*/
 
-for (j = 0; j < 1; j++) {
-  let computergameareainnerdiv = document.createElement('div');
-  computergameareainnerdiv.className = 'computerscardgamearea';
-  computergameareainnerdiv.id = 'computersplace';
-  //Append those divs to gamearea
-  document.getElementById('gamearea').appendChild(computergameareainnerdiv);
-}
+let computergameareainnerdiv = document.createElement('div');
+computergameareainnerdiv.className = 'computerscardgamearea';
+computergameareainnerdiv.innerHTML = '';
+computergameareainnerdiv.id = 'computersplace';
+//Append div to gamearea
+document.getElementById('gamearea').appendChild(computergameareainnerdiv);
 
 /*Create a div for playersgamearea*/
 
-for (j = 0; j < 1; j++) {
-  let playergameareainnerdiv = document.createElement('div');
-  playergameareainnerdiv.className = 'button';
-  playergameareainnerdiv.id = 'playersplace';
-  //Append thseo divs to gamearea
-  document.getElementById('gamearea').appendChild(playergameareainnerdiv);
-}
+let playergameareainnerdiv = document.createElement('div');
+playergameareainnerdiv.className = 'button';
+playergameareainnerdiv.innerHTML = '';
+playergameareainnerdiv.id = 'playersplace';
+//Append div to gamearea
+document.getElementById('gamearea').appendChild(playergameareainnerdiv);
 
 //Create div for score player
 
@@ -100,188 +98,211 @@ function computerplay() {
   console.log(computerscardchoice);
   //Computers hand after playing the card
   console.log(computershand);
-  
+
 }
 
 //Players play
 
 
-  //Remove players choice from playershand 
+//Remove players choice from playershand 
 
-  document.getElementById('playershand-0').addEventListener("click", function removebutton() {
-    document.getElementById('playershand-0').remove();
-  });
+document.getElementById('playershand-0').addEventListener("click", function removebutton() {
+  document.getElementById('playershand-0').remove();
+});
 
- //Remove a card from computeshand
+//Remove a card from computeshand
 
- document.getElementById('playershand-0').addEventListener("click", function removecomputerscard() {
+document.getElementById('playershand-0').addEventListener("click", function removecomputerscard() {
   document.getElementById('computershand-0').remove();
 });
 
-  //move that choice to game area
+//move the players choice to game area
 
-  document.getElementById('playershand-0').addEventListener("click", function movecardtogamearea() {
+document.getElementById('playershand-0').addEventListener("click", function movecardtogamearea() {
 
-    const newtext1 = document.createTextNode(playershand[0]);
+  let playergameareadiv = document.createElement('div');
+  playergameareadiv.className = 'computerscardgamearea';
+  playergameareadiv.innerHTML = playershand[0];
+  playergameareadiv.id = 'pplayedcard';
+  //Append div to computersgamearea
+document.getElementById('playersplace').appendChild(playergameareadiv);
 
-    const parent1 = document.getElementById("playersplace");
+});
 
-    parent1.appendChild(newtext1);
-  });
+//Remove players choice from playershand 
 
-  //Remove players choice from playershand 
+document.getElementById('playershand-1').addEventListener("click", function removebutton() {
+  document.getElementById('playershand-1').remove()
+});
 
-  document.getElementById('playershand-1').addEventListener("click", function removebutton() {
-    document.getElementById('playershand-1').remove()
-  });
+//Remove a card from computeshand
 
-   //Remove a card from computeshand
-
- document.getElementById('playershand-1').addEventListener("click", function removecomputerscard() {
+document.getElementById('playershand-1').addEventListener("click", function removecomputerscard() {
   document.getElementById('computershand-1').remove();
 });
 
-  //move that choice to game area
+//move the players choice to game area
 
-  document.getElementById('playershand-1').addEventListener("click", function movecardtogamearea() {
+document.getElementById('playershand-1').addEventListener("click", function movecardtogamearea() {
 
-    const newtext1 = document.createTextNode(playershand[1]);
+  let playergameareadiv = document.createElement('div');
+  playergameareadiv.className = 'computerscardgamearea';
+  playergameareadiv.innerHTML = playershand[1];
+  playergameareadiv.id = 'pplayedcard';
+  //Append div to computersgamearea
+document.getElementById('playersplace').appendChild(playergameareadiv);
 
-    const parent1 = document.getElementById("playersplace");
-    parent1.appendChild(newtext1);
-  });
+});
 
-  //Remove players choice from playershand 
+//Remove players choice from playershand 
 
-  document.getElementById('playershand-2').addEventListener("click", function removebutton() {
-    document.getElementById('playershand-2').remove()
-  });
+document.getElementById('playershand-2').addEventListener("click", function removebutton() {
+  document.getElementById('playershand-2').remove()
+});
 
-   //Remove a card from computeshand
+//Remove a card from computeshand
 
- document.getElementById('playershand-2').addEventListener("click", function removecomputerscard() {
+document.getElementById('playershand-2').addEventListener("click", function removecomputerscard() {
   document.getElementById('computershand-2').remove();
 });
 
-  //move that choice to game area
+//move the players choice to game area
 
-  document.getElementById('playershand-2').addEventListener("click", function movecardtogamearea() {
+document.getElementById('playershand-2').addEventListener("click", function movecardtogamearea() {
 
-    const newtext1 = document.createTextNode(playershand[2]);
+  let playergameareadiv = document.createElement('div');
+  playergameareadiv.className = 'computerscardgamearea';
+  playergameareadiv.innerHTML = playershand[2];
+  playergameareadiv.id = 'pplayedcard';
+  //Append div to computersgamearea
+document.getElementById('playersplace').appendChild(playergameareadiv);
 
-    const parent1 = document.getElementById("playersplace");
-    parent1.appendChild(newtext1);
-  });
+});
 
-  //Remove players choice from playershand 
+//Remove players choice from playershand 
 
-  document.getElementById('playershand-3').addEventListener("click", function removebutton() {
-    document.getElementById('playershand-3').remove()
-  });
+document.getElementById('playershand-3').addEventListener("click", function removebutton() {
+  document.getElementById('playershand-3').remove()
+});
 
- //Remove a card from computeshand
+//Remove a card from computeshand
 
- document.getElementById('playershand-3').addEventListener("click", function removecomputerscard() {
+document.getElementById('playershand-3').addEventListener("click", function removecomputerscard() {
   document.getElementById('computershand-3').remove();
 });
 
-  //move that choice to game area
+//move the players choice to game area
 
-  document.getElementById('playershand-3').addEventListener("click", function movecardtogamearea() {
+document.getElementById('playershand-3').addEventListener("click", function movecardtogamearea() {
 
-    const newtext1 = document.createTextNode(playershand[3]);
+  let playergameareadiv = document.createElement('div');
+  playergameareadiv.className = 'computerscardgamearea';
+  playergameareadiv.innerHTML = playershand[3];
+  playergameareadiv.id = 'pplayedcard';
+  //Append div to computersgamearea
+document.getElementById('playersplace').appendChild(playergameareadiv);
 
-    const parent1 = document.getElementById("playersplace");
-    parent1.appendChild(newtext1);
-  });
+});
 
-  //Remove players choice from playershand 
+//Remove players choice from playershand 
 
-  document.getElementById('playershand-4').addEventListener("click", function removebutton() {
-    document.getElementById('playershand-4').remove()
-  });
+document.getElementById('playershand-4').addEventListener("click", function removebutton() {
+  document.getElementById('playershand-4').remove()
+});
 
-   //Remove a card from computeshand
+//Remove a card from computeshand
 
- document.getElementById('playershand-4').addEventListener("click", function removecomputerscard() {
+document.getElementById('playershand-4').addEventListener("click", function removecomputerscard() {
   document.getElementById('computershand-4').remove();
 });
 
-  //move that choice to game area
+//move the players choice to game area
 
-  document.getElementById('playershand-4').addEventListener("click", function movecardtogamearea() {
+document.getElementById('playershand-4').addEventListener("click", function movecardtogamearea() {
 
-    const newtext1 = document.createTextNode(playershand[4]);
+  let playergameareadiv = document.createElement('div');
+  playergameareadiv.className = 'computerscardgamearea';
+  playergameareadiv.innerHTML = playershand[4];
+  playergameareadiv.id = 'pplayedcard';
+  //Append div to computersgamearea
+document.getElementById('playersplace').appendChild(playergameareadiv);
 
-    const parent1 = document.getElementById("playersplace");
-    parent1.appendChild(newtext1);
-  });
+});
 
-  //Remove players choice from playershand 
+//Remove players choice from playershand 
 
-  document.getElementById('playershand-5').addEventListener("click", function removebutton() {
-    document.getElementById('playershand-5').remove()
-  });
+document.getElementById('playershand-5').addEventListener("click", function removebutton() {
+  document.getElementById('playershand-5').remove()
+});
 
- //Remove a card from computeshand
+//Remove a card from computeshand
 
- document.getElementById('playershand-5').addEventListener("click", function removecomputerscard() {
+document.getElementById('playershand-5').addEventListener("click", function removecomputerscard() {
   document.getElementById('computershand-5').remove();
 });
 
-  //move that choice to game area
+//move the players choice to game area
 
-  document.getElementById('playershand-5').addEventListener("click", function movecardtogamearea() {
+document.getElementById('playershand-5').addEventListener("click", function movecardtogamearea() {
 
-    const newtext1 = document.createTextNode(playershand[5]);
+  let playergameareadiv = document.createElement('div');
+  playergameareadiv.className = 'computerscardgamearea';
+  playergameareadiv.innerHTML = playershand[5];
+  playergameareadiv.id = 'pplayedcard';
+  //Append div to computersgamearea
+document.getElementById('playersplace').appendChild(playergameareadiv);
 
-    const parent1 = document.getElementById("playersplace");
-    parent1.appendChild(newtext1);
-  });
+});
 
-  //Remove players choice from playershand 
+//Remove players choice from playershand 
 
-  document.getElementById('playershand-6').addEventListener("click", function removebutton() {
-    document.getElementById('playershand-6').remove()
-  });
+document.getElementById('playershand-6').addEventListener("click", function removebutton() {
+  document.getElementById('playershand-6').remove()
+});
 
- //Remove a card from computeshand
+//Remove a card from computeshand
 
- document.getElementById('playershand-6').addEventListener("click", function removecomputerscard() {
+document.getElementById('playershand-6').addEventListener("click", function removecomputerscard() {
   document.getElementById('computershand-6').remove();
 });
 
-  //move that choice to game area
+//move the players choice to game area
 
-  document.getElementById('playershand-6').addEventListener("click", function movecardtogamearea() {
+document.getElementById('playershand-6').addEventListener("click", function movecardtogamearea() {
 
-    const newtext1 = document.createTextNode(playershand[6]);
+  let playergameareadiv = document.createElement('div');
+  playergameareadiv.className = 'computerscardgamearea';
+  playergameareadiv.innerHTML = playershand[6];
+  playergameareadiv.id = 'pplayedcard';
+  //Append div to computersgamearea
+document.getElementById('playersplace').appendChild(playergameareadiv);
 
-    const parent1 = document.getElementById("playersplace");
-    parent1.appendChild(newtext1);
-  });
+});
 
-  //Remove players choice from playershand 
+//Remove players choice from playershand 
 
-  document.getElementById('playershand-7').addEventListener("click", function removebutton() {
-    document.getElementById('playershand-7').remove()
-  });
+document.getElementById('playershand-7').addEventListener("click", function removebutton() {
+  document.getElementById('playershand-7').remove()
+});
 
- //Remove a card from computeshand
+//Remove a card from computeshand
 
- document.getElementById('playershand-7').addEventListener("click", function removecomputerscard() {
+document.getElementById('playershand-7').addEventListener("click", function removecomputerscard() {
   document.getElementById('computershand-7').remove();
 });
 
-  //move that choice to game area
+//move the players choice to game area
 
-  document.getElementById('playershand-7').addEventListener("click", function movecardtogamearea() {
+document.getElementById('playershand-7').addEventListener("click", function movecardtogamearea() {
 
-    const newtext1 = document.createTextNode(playershand[7]);
+  let playergameareadiv = document.createElement('div');
+  playergameareadiv.className = 'computerscardgamearea';
+  playergameareadiv.innerHTML = playershand[7];
+  playergameareadiv.id = 'pplayedcard';
+  //Append div to computersgamearea
+document.getElementById('playersplace').appendChild(playergameareadiv);
 
-    const parent1 = document.getElementById("playersplace");
-    parent1.appendChild(newtext1);
-  });
+});
 
 
 //Call function with button clicks
