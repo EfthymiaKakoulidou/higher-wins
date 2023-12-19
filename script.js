@@ -32,8 +32,8 @@ for (i = 0; i < computershand.length; i++) {
 //Create div for score computer
 
 let computerscorediv = document.createElement('div');
-computerscorediv.className = 'computerscore';
-computerscorediv.innerHTML = 'Computer Score'
+computerscorediv.id = 'computerscore';
+computerscorediv.innerHTML = '0';
 document.getElementById('gamearea').appendChild(computerscorediv);
 
 
@@ -58,8 +58,8 @@ document.getElementById('gamearea').appendChild(playergameareainnerdiv);
 //Create div for score player
 
 let playerscorediv = document.createElement('div');
-playerscorediv.className = 'playerscore';
-playerscorediv.innerHTML = 'Player Score'
+playerscorediv.id = 'playerscore';
+playerscorediv.innerHTML = 0;
 document.getElementById('gamearea').appendChild(playerscorediv);
 
 
@@ -76,17 +76,14 @@ for (i = 0; i < playershand.length; i++) {
 
 /*Player and computer choose card*/
 
-
 //Computer plays
 function computerplay() {
   //Computers random choice
   const randomCard = computershand[Math.floor(Math.random() * computershand.length)];
   console.log(randomCard);
   //move that choice to game area
-
   let computersplayedcard = document.getElementById("computersplace");
   document.getElementById("computersplace").innerHTML = randomCard;
-
 
   //Specify the place of the card randomly chosen
   let randomCardPlace = computershand.indexOf(randomCard);
@@ -100,7 +97,6 @@ function computerplay() {
 }
 
 //Players play
-
 
 //Remove players choice from playershand 
 
@@ -123,7 +119,7 @@ document.getElementById('playershand-0').addEventListener("click", function move
   playergameareadiv.id = 'pplayedcard-0';
   playergameareadiv.innerHTML = playershand[0];
   //Append div to computersgamearea
-document.getElementById('playersplace').appendChild(playergameareadiv);
+  document.getElementById('playersplace').appendChild(playergameareadiv);
 
 });
 
@@ -148,7 +144,7 @@ document.getElementById('playershand-1').addEventListener("click", function move
   playergameareadiv.id = 'pplayedcard-1';
   playergameareadiv.innerHTML = playershand[1];
   //Append div to computersgamearea
-document.getElementById('playersplace').appendChild(playergameareadiv);
+  document.getElementById('playersplace').appendChild(playergameareadiv);
 
 });
 
@@ -173,7 +169,7 @@ document.getElementById('playershand-2').addEventListener("click", function move
   playergameareadiv.id = 'pplayedcard-2';
   playergameareadiv.innerHTML = playershand[2];
   //Append div to computersgamearea
-document.getElementById('playersplace').appendChild(playergameareadiv);
+  document.getElementById('playersplace').appendChild(playergameareadiv);
 
 });
 
@@ -198,7 +194,7 @@ document.getElementById('playershand-3').addEventListener("click", function move
   playergameareadiv.id = 'pplayedcard-3';
   playergameareadiv.innerHTML = playershand[3];
   //Append div to computersgamearea
-document.getElementById('playersplace').appendChild(playergameareadiv);
+  document.getElementById('playersplace').appendChild(playergameareadiv);
 
 });
 
@@ -223,7 +219,7 @@ document.getElementById('playershand-4').addEventListener("click", function move
   playergameareadiv.id = 'pplayedcard-4';
   playergameareadiv.innerHTML = playershand[4];
   //Append div to computersgamearea
-document.getElementById('playersplace').appendChild(playergameareadiv);
+  document.getElementById('playersplace').appendChild(playergameareadiv);
 
 });
 
@@ -248,7 +244,7 @@ document.getElementById('playershand-5').addEventListener("click", function move
   playergameareadiv.id = 'pplayedcard-5';
   playergameareadiv.innerHTML = playershand[5];
   //Append div to computersgamearea
-document.getElementById('playersplace').appendChild(playergameareadiv);
+  document.getElementById('playersplace').appendChild(playergameareadiv);
 
 });
 
@@ -273,7 +269,7 @@ document.getElementById('playershand-6').addEventListener("click", function move
   playergameareadiv.id = 'pplayedcard-6';
   playergameareadiv.innerHTML = playershand[6];
   //Append div to computersgamearea
-document.getElementById('playersplace').appendChild(playergameareadiv);
+  document.getElementById('playersplace').appendChild(playergameareadiv);
 
 });
 
@@ -298,7 +294,7 @@ document.getElementById('playershand-7').addEventListener("click", function move
   playergameareadiv.id = 'pplayedcard-7';
   playergameareadiv.innerHTML = playershand[7];
   //Append div to computersgamearea
-document.getElementById('playersplace').appendChild(playergameareadiv);
+  document.getElementById('playersplace').appendChild(playergameareadiv);
 
 });
 
