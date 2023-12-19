@@ -42,7 +42,6 @@ document.getElementById('gamearea').appendChild(computerscorediv);
 for (j = 0; j < 1; j++) {
   let computergameareainnerdiv = document.createElement('div');
   computergameareainnerdiv.className = 'computerscard';
-  computergameareainnerdiv.innerHTML = computershand[i];
   computergameareainnerdiv.id = 'computersplace';
   //Append those divs to gamearea
   document.getElementById('gamearea').appendChild(computergameareainnerdiv);
@@ -53,9 +52,8 @@ for (j = 0; j < 1; j++) {
 for (j = 0; j < 1; j++) {
   let playergameareainnerdiv = document.createElement('div');
   playergameareainnerdiv.className = 'button';
-  playergameareainnerdiv.innerHTML = playershand[i];
   playergameareainnerdiv.id = 'playersplace';
-  //Append those divs to gamearea
+  //Append thseo divs to gamearea
   document.getElementById('gamearea').appendChild(playergameareainnerdiv);
 }
 
@@ -87,8 +85,10 @@ function computerplay() {
   const randomCard = computershand[Math.floor(Math.random() * computershand.length)];
   console.log(randomCard);
 //move that choice to game area
+
   const newtext = document.createTextNode(randomCard);
-  const parent = document.getElementById("playersplace");
+
+  const parent = document.getElementById("computersplace");
   parent.appendChild(newtext);
 
   //Specify the place of the card randomly chosen
@@ -100,6 +100,9 @@ function computerplay() {
   //Computers hand after playing the card
   console.log(computershand);
   //Remove computers computerscardchoice from computershand
+  document.getElementById('playershand-0').addEventListener("click", function removeplayedcard() {
+    document.getElementById('computerarea').removeChild(randomCard);
+  })
 
 }
 
@@ -107,6 +110,12 @@ function computerplay() {
 function playerplay() {
   //Players' choice
   const playersCard = playershand[i];
+//move that choice to game area
+
+const newtext1 = document.createTextNode(playershand[i]);
+
+const parent1 = document.getElementById("playersplace");
+parent1.appendChild(newtext1);
 
   //Specify the place of the card chosen
   let playersCardPlace = playershand.indexOf(playersCard);
