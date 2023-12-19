@@ -86,6 +86,11 @@ function computerplay() {
   //Computers random choice
   const randomCard = computershand[Math.floor(Math.random() * computershand.length)];
   console.log(randomCard);
+//move that choice to game area
+  const newtext = document.createTextNode(randomCard);
+  const parent = document.getElementById("playersplace");
+  parent.appendChild(newtext);
+
   //Specify the place of the card randomly chosen
   let randomCardPlace = computershand.indexOf(randomCard);
   console.log(randomCardPlace);
@@ -94,69 +99,70 @@ function computerplay() {
   console.log(computerscardchoice);
   //Computers hand after playing the card
   console.log(computershand);
-  //Remove computers random card from computershand
-  for (i = 0; i < computershand.length; i++)
-    if (randomCard === i) {
-      document.getElementById('computershand-' + i + '').remove();
-    }
+  //Remove computers computerscardchoice from computershand
+
 }
 
 //Players play
 function playerplay() {
   //Players' choice
   const playersCard = playershand[i];
-  console.log(playersCard);
+
   //Specify the place of the card chosen
   let playersCardPlace = playershand.indexOf(playersCard);
-  console.log(playersCardPlace);
+
   //Players hand after playing the card
   let remainingplayershand = playershand.splice(playersCardPlace, 1);
   console.log(remainingplayershand);
   console.log(playershand);
   //Remove players card from playershand
-  
-  document.getElementById('playershand-0').addEventListener("click", function removebutton()
-{document.getElementById('playershand-0').remove()
-});
 
-document.getElementById('playershand-1').addEventListener("click", function removebutton()
-{document.getElementById('playershand-1').remove()
-});
+  document.getElementById('playershand-0').addEventListener("click", function removebutton() {
+    document.getElementById('playershand-0').remove()
+  })
 
-document.getElementById('playershand-2').addEventListener("click", function removebutton()
-{document.getElementById('playershand-2').remove()
-});
+  document.getElementById('playershand-1').addEventListener("click", function removebutton() {
+    document.getElementById('playershand-1').remove()
+  });
+
+  document.getElementById('playershand-2').addEventListener("click", function removebutton() {
+    document.getElementById('playershand-2').remove()
+  });
 
 
-document.getElementById('playershand-3').addEventListener("click", function removebutton()
-{document.getElementById('playershand-3').remove()
-});
+  document.getElementById('playershand-3').addEventListener("click", function removebutton() {
+    document.getElementById('playershand-3').remove()
+  });
 
-document.getElementById('playershand-4').addEventListener("click", function removebutton()
-{document.getElementById('playershand-4').remove()
-});
+  document.getElementById('playershand-4').addEventListener("click", function removebutton() {
+    document.getElementById('playershand-4').remove()
+  });
 
-document.getElementById('playershand-5').addEventListener("click", function removebutton()
-{document.getElementById('playershand-5').remove()
-});
+  document.getElementById('playershand-5').addEventListener("click", function removebutton() {
+    document.getElementById('playershand-5').remove()
+  });
 
-document.getElementById('playershand-6').addEventListener("click", function removebutton()
-{document.getElementById('playershand-6').remove()
-});
+  document.getElementById('playershand-6').addEventListener("click", function removebutton() {
+    document.getElementById('playershand-6').remove()
+  });
 
-document.getElementById('playershand-7').addEventListener("click", function removebutton()
-{document.getElementById('playershand-7').remove()
-});
+  document.getElementById('playershand-7').addEventListener("click",
+    function removebutton() {
+      document.getElementById('playershand-7').remove()
+    });
 
-  }
-  
+}
+//move players played card to gamearea
+
+
+
 //Call function with button clicks
 
 let elements = document.getElementsByClassName("button");
 for (i = 0; i < elements.length; i++) {
   elements[i].addEventListener("click", computerplay);
   elements[i].addEventListener("click", playerplay);
-  }
+}
 
 
 /*Comparison of cards chosen*/
