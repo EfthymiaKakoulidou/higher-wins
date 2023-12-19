@@ -84,7 +84,7 @@ function computerplay() {
   //Computers random choice
   const randomCard = computershand[Math.floor(Math.random() * computershand.length)];
   console.log(randomCard);
-//move that choice to game area
+  //move that choice to game area
 
   const newtext = document.createTextNode(randomCard);
 
@@ -100,68 +100,140 @@ function computerplay() {
   //Computers hand after playing the card
   console.log(computershand);
   //Remove computers computerscardchoice from computershand
-  document.getElementById('playershand-0').addEventListener("click", function removeplayedcard() {
-    document.getElementById('computerarea').removeChild(randomCard);
-  })
 
 }
 
 //Players play
-function playerplay() {
-  //Players' choice
-  const playersCard = playershand[i];
-//move that choice to game area
 
-const newtext1 = document.createTextNode(playershand[i]);
 
-const parent1 = document.getElementById("playersplace");
-parent1.appendChild(newtext1);
-
-  //Specify the place of the card chosen
-  let playersCardPlace = playershand.indexOf(playersCard);
-
-  //Players hand after playing the card
-  let remainingplayershand = playershand.splice(playersCardPlace, 1);
-  console.log(remainingplayershand);
-  console.log(playershand);
-  //Remove players card from playershand
+  //Remove players choice from playershand 
 
   document.getElementById('playershand-0').addEventListener("click", function removebutton() {
-    document.getElementById('playershand-0').remove()
-  })
+    document.getElementById('playershand-0').remove();
+  });
+
+  //move that choice to game area
+
+  document.getElementById('playershand-0').addEventListener("click", function movecardtogamearea() {
+
+    const newtext1 = document.createTextNode(playershand[0]);
+
+    const parent1 = document.getElementById("playersplace");
+
+    parent1.appendChild(newtext1);
+  });
+
+  //Remove players choice from playershand 
 
   document.getElementById('playershand-1').addEventListener("click", function removebutton() {
     document.getElementById('playershand-1').remove()
   });
 
+  //move that choice to game area
+
+  document.getElementById('playershand-1').addEventListener("click", function movecardtogamearea() {
+
+    const newtext1 = document.createTextNode(playershand[1]);
+
+    const parent1 = document.getElementById("playersplace");
+    parent1.appendChild(newtext1);
+  });
+
+  //Remove players choice from playershand 
+
   document.getElementById('playershand-2').addEventListener("click", function removebutton() {
     document.getElementById('playershand-2').remove()
   });
 
+  //move that choice to game area
+
+  document.getElementById('playershand-2').addEventListener("click", function movecardtogamearea() {
+
+    const newtext1 = document.createTextNode(playershand[2]);
+
+    const parent1 = document.getElementById("playersplace");
+    parent1.appendChild(newtext1);
+  });
+
+  //Remove players choice from playershand 
 
   document.getElementById('playershand-3').addEventListener("click", function removebutton() {
     document.getElementById('playershand-3').remove()
   });
 
+  //move that choice to game area
+
+  document.getElementById('playershand-3').addEventListener("click", function movecardtogamearea() {
+
+    const newtext1 = document.createTextNode(playershand[3]);
+
+    const parent1 = document.getElementById("playersplace");
+    parent1.appendChild(newtext1);
+  });
+
+  //Remove players choice from playershand 
+
   document.getElementById('playershand-4').addEventListener("click", function removebutton() {
     document.getElementById('playershand-4').remove()
   });
+
+  //move that choice to game area
+
+  document.getElementById('playershand-4').addEventListener("click", function movecardtogamearea() {
+
+    const newtext1 = document.createTextNode(playershand[4]);
+
+    const parent1 = document.getElementById("playersplace");
+    parent1.appendChild(newtext1);
+  });
+
+  //Remove players choice from playershand 
 
   document.getElementById('playershand-5').addEventListener("click", function removebutton() {
     document.getElementById('playershand-5').remove()
   });
 
+  //move that choice to game area
+
+  document.getElementById('playershand-5').addEventListener("click", function movecardtogamearea() {
+
+    const newtext1 = document.createTextNode(playershand[5]);
+
+    const parent1 = document.getElementById("playersplace");
+    parent1.appendChild(newtext1);
+  });
+
+  //Remove players choice from playershand 
+
   document.getElementById('playershand-6').addEventListener("click", function removebutton() {
     document.getElementById('playershand-6').remove()
   });
 
-  document.getElementById('playershand-7').addEventListener("click",
-    function removebutton() {
-      document.getElementById('playershand-7').remove()
-    });
+  //move that choice to game area
 
-}
-//move players played card to gamearea
+  document.getElementById('playershand-6').addEventListener("click", function movecardtogamearea() {
+
+    const newtext1 = document.createTextNode(playershand[6]);
+
+    const parent1 = document.getElementById("playersplace");
+    parent1.appendChild(newtext1);
+  });
+
+  //Remove players choice from playershand 
+
+  document.getElementById('playershand-7').addEventListener("click", function removebutton() {
+    document.getElementById('playershand-7').remove()
+  });
+
+  //move that choice to game area
+
+  document.getElementById('playershand-7').addEventListener("click", function movecardtogamearea() {
+
+    const newtext1 = document.createTextNode(playershand[7]);
+
+    const parent1 = document.getElementById("playersplace");
+    parent1.appendChild(newtext1);
+  });
 
 
 
@@ -170,7 +242,7 @@ parent1.appendChild(newtext1);
 let elements = document.getElementsByClassName("button");
 for (i = 0; i < elements.length; i++) {
   elements[i].addEventListener("click", computerplay);
-  elements[i].addEventListener("click", playerplay);
+  
 }
 
 
