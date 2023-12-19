@@ -99,8 +99,7 @@ function computerplay() {
   console.log(computerscardchoice);
   //Computers hand after playing the card
   console.log(computershand);
-  //Remove computers computerscardchoice from computershand
-
+  
 }
 
 //Players play
@@ -111,6 +110,12 @@ function computerplay() {
   document.getElementById('playershand-0').addEventListener("click", function removebutton() {
     document.getElementById('playershand-0').remove();
   });
+
+ //Remove a card from computeshand
+
+ document.getElementById('playershand-0').addEventListener("click", function removecomputerscard() {
+  document.getElementById('computershand-0').remove();
+});
 
   //move that choice to game area
 
@@ -129,6 +134,12 @@ function computerplay() {
     document.getElementById('playershand-1').remove()
   });
 
+   //Remove a card from computeshand
+
+ document.getElementById('playershand-1').addEventListener("click", function removecomputerscard() {
+  document.getElementById('computershand-1').remove();
+});
+
   //move that choice to game area
 
   document.getElementById('playershand-1').addEventListener("click", function movecardtogamearea() {
@@ -144,6 +155,12 @@ function computerplay() {
   document.getElementById('playershand-2').addEventListener("click", function removebutton() {
     document.getElementById('playershand-2').remove()
   });
+
+   //Remove a card from computeshand
+
+ document.getElementById('playershand-2').addEventListener("click", function removecomputerscard() {
+  document.getElementById('computershand-2').remove();
+});
 
   //move that choice to game area
 
@@ -161,6 +178,12 @@ function computerplay() {
     document.getElementById('playershand-3').remove()
   });
 
+ //Remove a card from computeshand
+
+ document.getElementById('playershand-3').addEventListener("click", function removecomputerscard() {
+  document.getElementById('computershand-3').remove();
+});
+
   //move that choice to game area
 
   document.getElementById('playershand-3').addEventListener("click", function movecardtogamearea() {
@@ -176,6 +199,12 @@ function computerplay() {
   document.getElementById('playershand-4').addEventListener("click", function removebutton() {
     document.getElementById('playershand-4').remove()
   });
+
+   //Remove a card from computeshand
+
+ document.getElementById('playershand-4').addEventListener("click", function removecomputerscard() {
+  document.getElementById('computershand-4').remove();
+});
 
   //move that choice to game area
 
@@ -193,6 +222,12 @@ function computerplay() {
     document.getElementById('playershand-5').remove()
   });
 
+ //Remove a card from computeshand
+
+ document.getElementById('playershand-5').addEventListener("click", function removecomputerscard() {
+  document.getElementById('computershand-5').remove();
+});
+
   //move that choice to game area
 
   document.getElementById('playershand-5').addEventListener("click", function movecardtogamearea() {
@@ -209,6 +244,12 @@ function computerplay() {
     document.getElementById('playershand-6').remove()
   });
 
+ //Remove a card from computeshand
+
+ document.getElementById('playershand-6').addEventListener("click", function removecomputerscard() {
+  document.getElementById('computershand-6').remove();
+});
+
   //move that choice to game area
 
   document.getElementById('playershand-6').addEventListener("click", function movecardtogamearea() {
@@ -224,6 +265,12 @@ function computerplay() {
   document.getElementById('playershand-7').addEventListener("click", function removebutton() {
     document.getElementById('playershand-7').remove()
   });
+
+ //Remove a card from computeshand
+
+ document.getElementById('playershand-7').addEventListener("click", function removecomputerscard() {
+  document.getElementById('computershand-7').remove();
+});
 
   //move that choice to game area
 
@@ -242,7 +289,6 @@ function computerplay() {
 let elements = document.getElementsByClassName("button");
 for (i = 0; i < elements.length; i++) {
   elements[i].addEventListener("click", computerplay);
-  
 }
 
 
