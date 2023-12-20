@@ -75,16 +75,36 @@ for (i = 0; i < playershand.length; i++) {
 
 //Computer's random choice
 
-function computerplay(){
-
+function computerplay() {
+  //Computers random choice
   const randomCard = computershand[Math.floor(Math.random() * computershand.length)];
   console.log(randomCard);
+  //move that choice to game area
 
-  //Move the player's choice to game area
+  const newtext = document.createTextNode(randomCard);
+  let computersplayedcard = document.getElementById("computersplace");
+  document.getElementById("computersplace").innerHTML = randomCard;
 
-  document.getElementById('computersplace').appendChild(randomCard);
+  const parent = document.getElementById("computersplace");
 
+  parent.appendChild(newtext);
+
+  //Specify the place of the card randomly chosen
+  let randomCardPlace = computershand.indexOf(randomCard);
+  console.log(randomCardPlace);
+  //As an array
+  let computerscardchoice = computershand.splice(randomCardPlace, 1);
+  console.log(computerscardchoice);
+  //Computers hand after playing the card
+  console.log(computershand);
 }
+
+let elements = document.getElementsByClassName("button");
+for (i = 0; i < elements.length; i++) {
+  elements[i].addEventListener("click", computerplay);
+}
+
+
 //Player plays
 
 //If player choses the card playershand[0]
@@ -183,6 +203,20 @@ document.getElementById('playershand-3').addEventListener("click", function remo
 document.getElementById('playershand-3').addEventListener("click", function removecomputerscard() {
   document.getElementById('computershand-3').remove();
 });
+
+//Move the player's choice to game area
+
+document.getElementById('playershand-3').addEventListener("click", function moveplayerscardtogamearea() {
+
+  let playergameareadiv = document.createElement('div');
+  playergameareadiv.className = 'playerscardgamearea';
+  playergameareadiv.id = 'pplayedcard-3';
+  playergameareadiv.innerHTML = playershand[3];
+  //Append div to playersgamearea
+  document.getElementById('playersplace').appendChild(playergameareadiv);
+
+});
+
 
 
 //If player choses the card playershand[4]
