@@ -40,7 +40,6 @@ document.getElementById('gamearea').appendChild(computerscorediv);
 
 let computergameareainnerdiv = document.createElement('div');
 computergameareainnerdiv.className = 'computerscardgamearea';
-computergameareainnerdiv.innerHTML = '';
 computergameareainnerdiv.id = 'computersplace';
 //Append div to gamearea
 document.getElementById('gamearea').appendChild(computergameareainnerdiv);
@@ -49,7 +48,6 @@ document.getElementById('gamearea').appendChild(computergameareainnerdiv);
 
 let playergameareainnerdiv = document.createElement('div');
 playergameareainnerdiv.className = 'computerscardgamearea';
-playergameareainnerdiv.innerHTML = '';
 playergameareainnerdiv.id = 'playersplace';
 //Append div to gamearea
 document.getElementById('gamearea').appendChild(playergameareainnerdiv);
@@ -75,20 +73,29 @@ for (i = 0; i < playershand.length; i++) {
 
 /*Player and computer choose card*/
 
-//Computers random choice
-  
-const randomCard = computershand[Math.floor(Math.random() * computershand.length)];
+//Computer's random choice
+
+function computerplay(){
+
+  const randomCard = computershand[Math.floor(Math.random() * computershand.length)];
   console.log(randomCard);
 
-//Players play
+  //Move the player's choice to game area
+
+  document.getElementById('computersplace').appendChild(randomCard);
+
+}
+//Player plays
 
 //If player choses the card playershand[0]
 
 //Remove players choice from playershand 
 
-document.getElementById('playershand-0').addEventListener("click", function removebutton0() {
+function removebutton0() {
   document.getElementById('playershand-0').remove();
-});
+}
+
+document.getElementById('playershand-0').addEventListener("click", removebutton0);
 
 //Remove a card from computeshand
 
@@ -108,29 +115,6 @@ document.getElementById('playershand-0').addEventListener("click", function move
   document.getElementById('playersplace').appendChild(playergameareadiv);
 
 });
-
-
-//Move computer's choice to game area
-document.getElementById('playershand-0').addEventListener("click", function movecomputerscardtogamearea() {
-
-  let computergameareadiv = document.createElement('div');
-  computergameareadiv.className = 'playerscardgamearea';
-  computergameareadiv.id = 'cplayedcard-0';
-  computergameareadiv.innerHTML = randomCard;
-  //Append div to playersgamearea
-  document.getElementById('computersplace').appendChild(computergameareadiv);
-
-});
-
-//Compare cards
-function removebutton0() {
-  document.getElementById('playershand-0').remove();}
-
-const x = removebutton0;
-
-if (x && playershand[0]>randomCard){
-  document.getElementById('playerscore').innerHTML = 'player chose 0';
-}
 
 
 //If player choses the card playershand[1]
@@ -159,20 +143,7 @@ document.getElementById('playershand-1').addEventListener("click", function move
   document.getElementById('playersplace').appendChild(playergameareadiv);
 
 });
-
-//Move computer's choice to game area
-document.getElementById('playershand-1').addEventListener("click", function movecomputerscardtogamearea() {
-
-  let computergameareadiv = document.createElement('div');
-  computergameareadiv.className = 'playerscardgamearea';
-  computergameareadiv.id = 'cplayedcard-1';
-  computergameareadiv.innerHTML = randomCard;
-  //Append div to playersgamearea
-  document.getElementById('computersplace').appendChild(computergameareadiv);
-
-});
-
-//If player choses the card playershand[2]
+// Player choses the card playershand[2]
 
 //Remove players choice from playershand 
 
@@ -196,22 +167,10 @@ document.getElementById('playershand-2').addEventListener("click", function move
   playergameareadiv.innerHTML = playershand[2];
   //Append div to playersgamearea
   document.getElementById('playersplace').appendChild(playergameareadiv);
-
-});
-
-//Move computer's choice to game area
-document.getElementById('playershand-2').addEventListener("click", function movecomputerscardtogamearea() {
-
-  let computergameareadiv = document.createElement('div');
-  computergameareadiv.className = 'playerscardgamearea';
-  computergameareadiv.id = 'cplayedcard-2';
-  computergameareadiv.innerHTML = randomCard;
-  //Append div to playersgamearea
-  document.getElementById('computersplace').appendChild(computergameareadiv);
-
 });
 
 //If player choses the card playershand[3]
+
 
 //Remove players choice from playershand 
 
@@ -225,30 +184,6 @@ document.getElementById('playershand-3').addEventListener("click", function remo
   document.getElementById('computershand-3').remove();
 });
 
-//Move the player's choice to game area
-
-document.getElementById('playershand-3').addEventListener("click", function moveplayerscardtogamearea() {
-
-  let playergameareadiv = document.createElement('div');
-  playergameareadiv.className = 'playerscardgamearea';
-  playergameareadiv.id = 'pplayedcard-3';
-  playergameareadiv.innerHTML = playershand[2];
-  //Append div to playersgamearea
-  document.getElementById('playersplace').appendChild(playergameareadiv);
-
-});
-
-//Move computer's choice to game area
-document.getElementById('playershand-3').addEventListener("click", function movecomputerscardtogamearea() {
-
-  let computergameareadiv = document.createElement('div');
-  computergameareadiv.className = 'playerscardgamearea';
-  computergameareadiv.id = 'cplayedcard-3';
-  computergameareadiv.innerHTML = randomCard;
-  //Append div to playersgamearea
-  document.getElementById('computersplace').appendChild(computergameareadiv);
-
-});
 
 //If player choses the card playershand[4]
 
@@ -274,18 +209,6 @@ document.getElementById('playershand-4').addEventListener("click", function move
   playergameareadiv.innerHTML = playershand[4];
   //Append div to playersgamearea
   document.getElementById('playersplace').appendChild(playergameareadiv);
-
-});
-
-//Move computer's choice to game area
-document.getElementById('playershand-4').addEventListener("click", function movecomputerscardtogamearea() {
-
-  let computergameareadiv = document.createElement('div');
-  computergameareadiv.className = 'playerscardgamearea';
-  computergameareadiv.id = 'cplayedcard-4';
-  computergameareadiv.innerHTML = randomCard;
-  //Append div to playersgamearea
-  document.getElementById('computersplace').appendChild(computergameareadiv);
 
 });
 
@@ -316,18 +239,6 @@ document.getElementById('playershand-5').addEventListener("click", function move
 
 });
 
-//Move computer's choice to game area
-document.getElementById('playershand-5').addEventListener("click", function movecomputerscardtogamearea() {
-
-  let computergameareadiv = document.createElement('div');
-  computergameareadiv.className = 'playerscardgamearea';
-  computergameareadiv.id = 'cplayedcard-5';
-  computergameareadiv.innerHTML = randomCard;
-  //Append div to playersgamearea
-  document.getElementById('computersplace').appendChild(computergameareadiv);
-
-});
-
 //If player choses the card playershand[6]
 
 //Remove players choice from playershand 
@@ -352,18 +263,6 @@ document.getElementById('playershand-6').addEventListener("click", function move
   playergameareadiv.innerHTML = playershand[6];
   //Append div to playersgamearea
   document.getElementById('playersplace').appendChild(playergameareadiv);
-
-});
-
-//Move computer's choice to game area
-document.getElementById('playershand-6').addEventListener("click", function movecomputerscardtogamearea() {
-
-  let computergameareadiv = document.createElement('div');
-  computergameareadiv.className = 'playerscardgamearea';
-  computergameareadiv.id = 'cplayedcard-6';
-  computergameareadiv.innerHTML = randomCard;
-  //Append div to playersgamearea
-  document.getElementById('computersplace').appendChild(computergameareadiv);
 
 });
 
@@ -393,16 +292,3 @@ document.getElementById('playershand-7').addEventListener("click", function move
   document.getElementById('playersplace').appendChild(playergameareadiv);
 
 });
-
-//Move computer's choice to game area
-document.getElementById('playershand-7').addEventListener("click", function movecomputerscardtogamearea() {
-
-  let computergameareadiv = document.createElement('div');
-  computergameareadiv.className = 'playerscardgamearea';
-  computergameareadiv.id = 'cplayedcard-7';
-  computergameareadiv.innerHTML = randomCard;
-  //Append div to playersgamearea
-  document.getElementById('computersplace').appendChild(computergameareadiv);
-
-});
-
