@@ -33,7 +33,6 @@ for (i = 0; i < computershand.length; i++) {
 
 let computerscorediv = document.createElement('div');
 computerscorediv.id = 'computerscore';
-computerscorediv.innerHTML = '0';
 document.getElementById('gamearea').appendChild(computerscorediv);
 
 
@@ -59,7 +58,6 @@ document.getElementById('gamearea').appendChild(playergameareainnerdiv);
 
 let playerscorediv = document.createElement('div');
 playerscorediv.id = 'playerscore';
-playerscorediv.innerHTML = 0;
 document.getElementById('gamearea').appendChild(playerscorediv);
 
 
@@ -75,26 +73,6 @@ for (i = 0; i < playershand.length; i++) {
 }
 
 /*Player and computer choose card*/
-
-//Computer plays
-function computerplay() {
-  //Computers random choice
-  const randomCard = computershand[Math.floor(Math.random() * computershand.length)];
-  console.log(randomCard);
-  //move that choice to game area
-  let computersplayedcard = document.getElementById("computersplace");
-  document.getElementById("computersplace").innerHTML = randomCard;
-
-  //Specify the place of the card randomly chosen
-  let randomCardPlace = computershand.indexOf(randomCard);
-  console.log(randomCardPlace);
-  //As an array
-  let computerscardchoice = computershand.splice(randomCardPlace, 1);
-  console.log(computerscardchoice);
-  //Computers hand after playing the card
-  console.log(computershand);
-
-}
 
 //Players play
 
@@ -297,6 +275,31 @@ document.getElementById('playershand-7').addEventListener("click", function move
   document.getElementById('playersplace').appendChild(playergameareadiv);
 
 });
+
+
+//Computer plays
+function computerplay() {
+  //Computers random choice
+  const randomCard = computershand[Math.floor(Math.random() * computershand.length)];
+  console.log(randomCard);
+  //move that choice to game area
+  let computersplayedcard = document.getElementById("computersplace");
+  document.getElementById("computersplace").innerHTML = randomCard;
+
+  //Specify the place of the card randomly chosen
+  let randomCardPlace = computershand.indexOf(randomCard);
+  console.log(randomCardPlace);
+  //As an array
+  let computerscardchoice = computershand.splice(randomCardPlace, 1);
+  console.log(computerscardchoice);
+  //Computers hand after playing the card
+  console.log(computershand);
+
+if (playershand[0]>randomCard){
+  document.getElementById('playerscore').innerHTML = 'feqrfr';
+}
+
+}
 
 
 //Call function with button clicks
