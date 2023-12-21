@@ -139,20 +139,20 @@ main {
 }
 
 
-.computerscore {
+#computerscore {
     font-family: 'Balsamiq Sans', sans-serif;
     margin: 10px;
     width: 100px;
     height: 150px;
-    height: 100%;
-    width: 100%;
+   
 }
 
-.playerscore {
+#playerscore {
     font-family: 'Balsamiq Sans', sans-serif;
+    width: 100px;
+    height: 150px;
     margin: 10px;
-    height: 100%;
-    width: 100%;
+   
 }
 
 @media screen and (max-width: 490px) {
