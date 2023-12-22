@@ -24,7 +24,8 @@ for (i = 0; i < computershand.length; i++) {
   let computerinnerdiv = document.createElement('div');
   computerinnerdiv.className = 'computerscard';
   computerinnerdiv.innerHTML = computershand[i];
-  computerinnerdiv.id = 'computershand-' + i + '';
+  computerinnerdiv.id = 'computershand-' + i;
+  computerinnerdiv.dataset.card = computershand[i];
   //Append those divs to computerarea
   document.getElementById('computerarea').appendChild(computerinnerdiv);
 }
@@ -66,8 +67,9 @@ document.getElementById('gamearea').appendChild(playerscorediv);
 for (i = 0; i < playershand.length; i++) {
   button = document.createElement('button');
   button.className = 'button';
-  button.id = 'playershand-' + i + '';
+  button.id = 'playershand-' + i;
   button.innerHTML = playershand[i];
+  button.dataset.card = playershand[i];
   //Append those divs to playerarea
   document.getElementById('playersarea').appendChild(button);
 }
@@ -581,28 +583,78 @@ function moveplayerscardtogamearea7() {
 
 //Call functions
 
-document.getElementById('playershand-0').addEventListener("click", removebutton0);
-document.getElementById('playershand-0').addEventListener("click", removecomputerscard0);
-document.getElementById('playershand-0').addEventListener("click", moveplayerscardtogamearea0);
-document.getElementById('playershand-1').addEventListener("click", removebutton1);
-document.getElementById('playershand-1').addEventListener("click", removecomputerscard1);
-document.getElementById('playershand-1').addEventListener("click", moveplayerscardtogamearea1);
-document.getElementById('playershand-2').addEventListener("click", removebutton2);
-document.getElementById('playershand-2').addEventListener("click", removecomputerscard2);
-document.getElementById('playershand-2').addEventListener("click", moveplayerscardtogamearea2);
-document.getElementById('playershand-3').addEventListener("click", removebutton3);
-document.getElementById('playershand-3').addEventListener("click", removecomputerscard3);
-document.getElementById('playershand-3').addEventListener("click", moveplayerscardtogamearea3);
-document.getElementById('playershand-4').addEventListener("click", removebutton4);
-document.getElementById('playershand-4').addEventListener("click", removecomputerscard4);
-document.getElementById('playershand-4').addEventListener("click", moveplayerscardtogamearea4);
-document.getElementById('playershand-5').addEventListener("click", removebutton5);
-document.getElementById('playershand-5').addEventListener("click", removecomputerscard5);
-document.getElementById('playershand-5').addEventListener("click", moveplayerscardtogamearea5);
-document.getElementById('playershand-6').addEventListener("click", removebutton6);
-document.getElementById('playershand-6').addEventListener("click", removecomputerscard6);
-document.getElementById('playershand-6').addEventListener("click", moveplayerscardtogamearea6);
-document.getElementById('playershand-7').addEventListener("click", removebutton7);
-document.getElementById('playershand-7').addEventListener("click", removecomputerscard7);
-document.getElementById('playershand-7').addEventListener("click", moveplayerscardtogamearea7);
+const playerBtns = document.querySelectorAll(".button");
+playerBtns.forEach(btn => {
+    btn.addEventListener("click", function() {
+      let cardValue = this.dataset.card;
+      this.remove();
+      moveplayerscardtogamearea(cardValue);
+    });
+});
+
+
+function moveplayerscardtogamearea(playersCardValue) {
+
+  //Computers random choice
+
+  const computersChoice = computershand[Math.floor(Math.random() * computershand.length)];
+  console.log(computersChoice);
+
+  //Move computer's choice to gamearea
+  document.getElementById("computersplace").innerHTML = computersChoice;
+
+  //Specify the place of the card randomly chosen
+  let computersChoicePlace = computershand.indexOf(computersChoice);
+  console.log(computersChoicePlace);
+  //As an array
+  let computerscardchoice = computershand.splice(computersChoicePlace, 1);
+  console.log(computerscardchoice);
+
+  let computersCardToRemove = document.querySelector(`.computerscard[data-card="${computersChoice}"]`);  // tempalte literal
+  // let computersCardToRemove = document.querySelector(".computerscard[data-card='" + computersChoice + "']");
+  console.log(computersCardToRemove);
+  computersCardToRemove.remove();
+
+  //Computers hand after playing the card
+  console.log(computershand);
+
+  let playersPlace = document.getElementById("playersplace");
+  playersPlace.innerText = playersCardValue;
+
+    //Comparison
+
+    if (playersCardValue < computersChoice) {
+      // computer wins
+      computerscorediv.innerHTML++;
+    } else if (playersCardValue > computersChoice) {
+      // player wins
+      playerscorediv.innerHTML++;
+    }
+  
+}
+
+// document.getElementById('playershand-0').addEventListener("click", removebutton0);
+// document.getElementById('playershand-0').addEventListener("click", removecomputerscard0);
+// document.getElementById('playershand-0').addEventListener("click", moveplayerscardtogamearea0);
+// document.getElementById('playershand-1').addEventListener("click", removebutton1);
+// document.getElementById('playershand-1').addEventListener("click", removecomputerscard1);
+// document.getElementById('playershand-1').addEventListener("click", moveplayerscardtogamearea1);
+// document.getElementById('playershand-2').addEventListener("click", removebutton2);
+// document.getElementById('playershand-2').addEventListener("click", removecomputerscard2);
+// document.getElementById('playershand-2').addEventListener("click", moveplayerscardtogamearea2);
+// document.getElementById('playershand-3').addEventListener("click", removebutton3);
+// document.getElementById('playershand-3').addEventListener("click", removecomputerscard3);
+// document.getElementById('playershand-3').addEventListener("click", moveplayerscardtogamearea3);
+// document.getElementById('playershand-4').addEventListener("click", removebutton4);
+// document.getElementById('playershand-4').addEventListener("click", removecomputerscard4);
+// document.getElementById('playershand-4').addEventListener("click", moveplayerscardtogamearea4);
+// document.getElementById('playershand-5').addEventListener("click", removebutton5);
+// document.getElementById('playershand-5').addEventListener("click", removecomputerscard5);
+// document.getElementById('playershand-5').addEventListener("click", moveplayerscardtogamearea5);
+// document.getElementById('playershand-6').addEventListener("click", removebutton6);
+// document.getElementById('playershand-6').addEventListener("click", removecomputerscard6);
+// document.getElementById('playershand-6').addEventListener("click", moveplayerscardtogamearea6);
+// document.getElementById('playershand-7').addEventListener("click", removebutton7);
+// document.getElementById('playershand-7').addEventListener("click", removecomputerscard7);
+// document.getElementById('playershand-7').addEventListener("click", moveplayerscardtogamearea7);
 
