@@ -126,51 +126,21 @@ function moveplayerscardtogamearea0() {
 
   //Append div to playersgamearea
   document.getElementById('playersplace').appendChild(playergameareadiv);
-  
-  //Compare computer's card with player's card
-
-  function score() {
-
-    
-  //Computers random choice
-
-  const randomCard = computershand[Math.floor(Math.random() * computershand.length)];
-  console.log(randomCard);
-
-  //Move computer's choice to gamearea
-
-  document.getElementById("computersplace").innerHTML = randomCard;
-
-  //Specify the place of the card randomly chosen
-
-  let randomCardPlace = computershand.indexOf(randomCard);
-  console.log(randomCardPlace);
-
-  //As an array
-
-  let computerscardchoice = computershand.splice(randomCardPlace, 1);
-  console.log(computerscardchoice);
-
-  //Computers hand after playing the card
-
-  console.log(computershand);
-
 
     //Comparison
 
     let num = computerscorediv.innerHTML++;
     let num1 = playerscorediv.innerHTML++;
 
-    if (randomCard < playergameareadiv.innerHTML) {
+    if (randomCard < playershand[0]) {
       document.getElementById('computerscore').innerHTML = num;
-    } else if (randomCard == playergameareadiv.innerHTML) {
+    } else if (randomCard == playershand[0]) {
       document.getElementById('computerscore').innerHTML = computerscorediv.innerHTML;
       document.getElementById('playerscore').innerHTML = playerscorediv.innerHTML;
     } else {
       document.getElementById('playerscore').innerHTML = num1;
     }
-  }
-  score();
+  
 }
 
 //If player choses the card playershand[1]
@@ -221,49 +191,20 @@ function moveplayerscardtogamearea1() {
   //Append div to playersgamearea
   document.getElementById('playersplace').appendChild(playergameareadiv);
 
-  //Compare computer's card with player's card
-
-  function score() {
-
-
-  //Computers random choice
-
-  const randomCard = computershand[Math.floor(Math.random() * computershand.length)];
-  console.log(randomCard);
-
-  //Move computer's choice to gamearea
-
-  document.getElementById("computersplace").innerHTML = randomCard;
-
-  //Specify the place of the card randomly chosen
-
-  let randomCardPlace = computershand.indexOf(randomCard);
-  console.log(randomCardPlace);
-
-  //As an array
-
-  let computerscardchoice = computershand.splice(randomCardPlace, 1);
-  console.log(computerscardchoice);
-
-  //Computers hand after playing the card
-
-  console.log(computershand);
-
     //Comparison
 
     let num = computerscorediv.innerHTML++;
     let num1 = playerscorediv.innerHTML++;
 
-    if (randomCard < playergameareadiv.innerHTML) {
+    if (randomCard < playershand[1]) {
       document.getElementById('computerscore').innerHTML = num;
-    } else if (randomCard == playergameareadiv.innerHTML) {
+    } else if (randomCard == playershand[1]) {
       document.getElementById('computerscore').innerHTML = computerscorediv.innerHTML;
       document.getElementById('playerscore').innerHTML = playerscorediv.innerHTML;
     } else {
       document.getElementById('playerscore').innerHTML = num1;
     }
-  }
-  score();
+
 }
 // If player choses the card playershand[2]
 
@@ -312,51 +253,22 @@ function moveplayerscardtogamearea2() {
   //Append div to playersgamearea
   document.getElementById('playersplace').appendChild(playergameareadiv);
 
-  //Compare computer's card with player's card
-
-  function score() {
-
-    
-  //Computers random choice
-
-  const randomCard = computershand[Math.floor(Math.random() * computershand.length)];
-  console.log(randomCard);
-
-  //Move computer's choice to gamearea
-
-  document.getElementById("computersplace").innerHTML = randomCard;
-
-  //Specify the place of the card randomly chosen
-
-  let randomCardPlace = computershand.indexOf(randomCard);
-  console.log(randomCardPlace);
-
-  //As an array
-
-  let computerscardchoice = computershand.splice(randomCardPlace, 1);
-  console.log(computerscardchoice);
-
-  //Computers hand after playing the card
-
-  console.log(computershand);
-
-
     //Comparison
 
     let num = computerscorediv.innerHTML++;
     let num1 = playerscorediv.innerHTML++;
 
-    if (randomCard < playergameareadiv.innerHTML) {
+    if (randomCard < playershand[2]) {
       document.getElementById('computerscore').innerHTML = num;
-    } else if (randomCard == playergameareadiv.innerHTML) {
+    } else if (randomCard == playershand[2]) {
       document.getElementById('computerscore').innerHTML = computerscorediv.innerHTML;
       document.getElementById('playerscore').innerHTML = playerscorediv.innerHTML;
     } else {
       document.getElementById('playerscore').innerHTML = num1;
     }
   }
-  score();
-}
+
+
 //If player choses the card playershand[3]
 
 
@@ -407,38 +319,6 @@ function moveplayerscardtogamearea3() {
   //Append div to playersgamearea
   document.getElementById('playersplace').appendChild(playergameareadiv);
 
-  //Compare computer's card with player's card
-
-  
-
-
-  function score() {
-
-   
-  //Computers random choice
-
-  const randomCard = computershand[Math.floor(Math.random() * computershand.length)];
-  console.log(randomCard);
-
-  //Move computer's choice to gamearea
-
-  document.getElementById("computersplace").innerHTML = randomCard;
-
-  //Specify the place of the card randomly chosen
-
-  let randomCardPlace = computershand.indexOf(randomCard);
-  console.log(randomCardPlace);
-
-  //As an array
-
-  let computerscardchoice = computershand.splice(randomCardPlace, 1);
-  console.log(computerscardchoice);
-
-  //Computers hand after playing the card
-
-  console.log(computershand);
-
-
     //Comparison
 
     let num = computerscorediv.innerHTML++;
@@ -452,8 +332,7 @@ function moveplayerscardtogamearea3() {
     } else {
       document.getElementById('playerscore').innerHTML = num1;
     }
-  }
-  score();
+ 
 }
 
 //If player choses the card playershand[4]
@@ -505,36 +384,6 @@ function moveplayerscardtogamearea4() {
   //Append div to playersgamearea
   document.getElementById('playersplace').appendChild(playergameareadiv);
 
-  //Compare computer's card with player's card
-
-  
-
-
-  function score() {
-
-  //Computers random choice
-
-  const randomCard = computershand[Math.floor(Math.random() * computershand.length)];
-  console.log(randomCard);
-
-  //Move computer's choice to gamearea
-
-  document.getElementById("computersplace").innerHTML = randomCard;
-
-  //Specify the place of the card randomly chosen
-
-  let randomCardPlace = computershand.indexOf(randomCard);
-  console.log(randomCardPlace);
-
-  //As an array
-
-  let computerscardchoice = computershand.splice(randomCardPlace, 1);
-  console.log(computerscardchoice);
-
-  //Computers hand after playing the card
-
-  console.log(computershand);
-
     //Comparison
 
     let num = computerscorediv.innerHTML++;
@@ -548,8 +397,7 @@ function moveplayerscardtogamearea4() {
     } else {
       document.getElementById('playerscore').innerHTML = num1;
     }
-  }
-  score();
+ 
 }
 
 //If player choses the card playershand[5]
@@ -599,37 +447,6 @@ function moveplayerscardtogamearea5() {
   playergameareadiv.innerHTML = playershand[5];
   //Append div to playersgamearea
   document.getElementById('playersplace').appendChild(playergameareadiv);
-  //Compare computer's card with player's card
-
-  
-
-
-  function score() {
-
-    
-  //Computers random choice
-
-  const randomCard = computershand[Math.floor(Math.random() * computershand.length)];
-  console.log(randomCard);
-
-  //Move computer's choice to gamearea
-
-  document.getElementById("computersplace").innerHTML = randomCard;
-
-  //Specify the place of the card randomly chosen
-
-  let randomCardPlace = computershand.indexOf(randomCard);
-  console.log(randomCardPlace);
-
-  //As an array
-
-  let computerscardchoice = computershand.splice(randomCardPlace, 1);
-  console.log(computerscardchoice);
-
-  //Computers hand after playing the card
-
-  console.log(computershand);
-
 
     //Comparison
 
@@ -644,8 +461,7 @@ function moveplayerscardtogamearea5() {
     } else {
       document.getElementById('playerscore').innerHTML = num1;
     }
-  }
-  score();
+  
 }
 
 //If player choses the card playershand[6]
@@ -690,35 +506,6 @@ function moveplayerscardtogamearea6() {
   //Append div to playersgamearea
   document.getElementById('playersplace').appendChild(playergameareadiv);
 
-  //Compare computer's card with player's card
-
-  function score() {
-
-    
-  //Computers random choice
-
-  const randomCard = computershand[Math.floor(Math.random() * computershand.length)];
-  console.log(randomCard);
-
-  //Move computer's choice to gamearea
-
-  document.getElementById("computersplace").innerHTML = randomCard;
-
-  //Specify the place of the card randomly chosen
-
-  let randomCardPlace = computershand.indexOf(randomCard);
-  console.log(randomCardPlace);
-
-  //As an array
-
-  let computerscardchoice = computershand.splice(randomCardPlace, 1);
-  console.log(computerscardchoice);
-
-  //Computers hand after playing the card
-
-  console.log(computershand);
-
-
     //Comparison
 
     let num = computerscorediv.innerHTML++;
@@ -732,8 +519,7 @@ function moveplayerscardtogamearea6() {
     } else {
       document.getElementById('playerscore').innerHTML = num1;
     }
-  }
-  score();
+ 
 }
 //If player choses the card playershand[7]
 
@@ -776,37 +562,6 @@ function moveplayerscardtogamearea7() {
   playergameareadiv.innerHTML = playershand[7];
   //Append div to playersgamearea
   document.getElementById('playersplace').appendChild(playergameareadiv);
-  //Compare computer's card with player's card
-
- 
-
-
-  function score() {
-
-    
-  //Computers random choice
-
-  const randomCard = computershand[Math.floor(Math.random() * computershand.length)];
-  console.log(randomCard);
-
-  //Move computer's choice to gamearea
-
-  document.getElementById("computersplace").innerHTML = randomCard;
-
-  //Specify the place of the card randomly chosen
-
-  let randomCardPlace = computershand.indexOf(randomCard);
-  console.log(randomCardPlace);
-
-  //As an array
-
-  let computerscardchoice = computershand.splice(randomCardPlace, 1);
-  console.log(computerscardchoice);
-
-  //Computers hand after playing the card
-
-  console.log(computershand);
-
 
     //Comparison
 
@@ -821,8 +576,7 @@ function moveplayerscardtogamearea7() {
     } else {
       document.getElementById('playerscore').innerHTML = num1;
     }
-  }
-  score();
+  
 }
 
 //Call functions
@@ -851,3 +605,4 @@ document.getElementById('playershand-6').addEventListener("click", moveplayersca
 document.getElementById('playershand-7').addEventListener("click", removebutton7);
 document.getElementById('playershand-7').addEventListener("click", removecomputerscard7);
 document.getElementById('playershand-7').addEventListener("click", moveplayerscardtogamearea7);
+
