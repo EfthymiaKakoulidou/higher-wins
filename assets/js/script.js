@@ -80,10 +80,11 @@ const playerBtns = document.querySelectorAll(".button");
 playerBtns.forEach(btn => {
     btn.addEventListener("click", function() {
       let cardValue = this.dataset.card;
-      this.remove();
+      this.style.visibility = "hidden";
       moveplayerscardtogamearea(cardValue);
     });
 });
+
 
 //Move player's card to gamearea
 
@@ -104,10 +105,8 @@ function moveplayerscardtogamearea(playersCardValue) {
   let computerscardchoice = computershand.splice(computersChoicePlace, 1);
   console.log(computerscardchoice);
 
-  let computersCardToRemove = document.querySelector(`.computerscard[data-card="${computersChoice}"]`);  // tempalte literal
-  // let computersCardToRemove = document.querySelector(".computerscard[data-card='" + computersChoice + "']");
-  console.log(computersCardToRemove);
-  computersCardToRemove.remove();
+  let computersCardToRemove = document.querySelector(`.computerscard[data-card="${computersChoice}"]`);  
+  computersCardToRemove.style.visibility = "hidden";
 
   //Computers hand after playing the card
   console.log(computershand);
