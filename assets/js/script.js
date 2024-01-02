@@ -104,7 +104,11 @@ if (playershand.length == 0 && playerscorediv.innerHTML > computerscorediv.inner
 }
 
 if (playershand.length == 0 && playerscorediv.innerHTML < computerscorediv.innerHTML){
-  document.getElementById("main").innerHTML = "You Lose";
+  document.getElementById("main").innerHTML = "You Lose!";
+}
+
+if (playershand.length == 0 && playerscorediv.innerHTML == computerscorediv.innerHTML){
+  document.getElementById("main").innerHTML = "It's a tie!";
 }
 
   });
