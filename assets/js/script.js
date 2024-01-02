@@ -77,12 +77,27 @@ for (i = 0; i < playershand.length; i++) {
 //Take out the player's choice from player's hand
 
 const playerBtns = document.querySelectorAll(".button");
+
 playerBtns.forEach(btn => {
-    btn.addEventListener("click", function() {
-      let cardValue = this.dataset.card;
-      this.style.visibility = "hidden";
-      moveplayerscardtogamearea(cardValue);
-    });
+  btn.addEventListener("click", function () {
+    let cardValue = this.dataset.card;
+    this.remove();
+    moveplayerscardtogamearea(cardValue);
+    
+//Specify the place of the card chosen by th player
+let playersChoicePlace = playershand.indexOf(cardValue);
+console.log(playersChoicePlace);
+
+//Remove player's card from player's hand
+let playerscardchoice = playershand.splice(playersChoicePlace, 1);
+
+//Playershand after playing the card
+console.log(playershand);
+
+if (playershand.length == 0) {
+  document.getElementById("gamearea").style.visibility = "hidden";
+}
+  });
 });
 
 
@@ -105,8 +120,8 @@ function moveplayerscardtogamearea(playersCardValue) {
   let computerscardchoice = computershand.splice(computersChoicePlace, 1);
   console.log(computerscardchoice);
 
-  let computersCardToRemove = document.querySelector(`.computerscard[data-card="${computersChoice}"]`);  
-  computersCardToRemove.style.visibility = "hidden";
+  let computersCardToRemove = document.querySelector(`.computerscard[data-card="${computersChoice}"]`);
+  computersCardToRemove.remove();
 
   //Computers hand after playing the card
   console.log(computershand);
@@ -114,14 +129,15 @@ function moveplayerscardtogamearea(playersCardValue) {
   let playersPlace = document.getElementById("playersplace");
   playersPlace.innerText = playersCardValue;
 
-    //Comparison
+  //Comparison
 
-    if (playersCardValue < computersChoice) {
-      // computer wins
-      computerscorediv.innerHTML++;
-    } else if (playersCardValue > computersChoice) {
-      // player wins
-      playerscorediv.innerHTML++;
-    }
-  
+  if (playersCardValue < computersChoice) {
+    // computer wins
+    computerscorediv.innerHTML++;
+  } else if (playersCardValue > computersChoice) {
+    // player wins
+    playerscorediv.innerHTML++;
+  }
+
 }
+
