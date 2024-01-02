@@ -16,10 +16,10 @@ body {
 #header-page {
     font-family: 'Balsamiq Sans', sans-serif;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
     font-size: 50px;
-    color: white;
+    color: rgb(193, 164, 17);
     background-color: rgb(6, 100, 31);
     height: 100px;
 }
@@ -46,6 +46,7 @@ main {
     align-content: flex-end;
     height: 100%;
     width: 100%;
+    background-color: rgb(193, 164, 17);
 }
 
 #playersarea {
@@ -59,6 +60,7 @@ main {
     align-content: flex-start;
     height: 100%;
     width: 100%;
+    background-color: red;
 }
 
 .computerscard {
@@ -77,7 +79,6 @@ main {
     border: 2px solid rgb(6, 100, 31);
     border-radius: 15px;
     z-index: 1;
-    background-color:rgb(193, 164, 17);
 }
 
 .computerscardgamearea {
@@ -120,7 +121,7 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color:red;
+    
 }
 
 #computersplace {
@@ -128,7 +129,7 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color:rgb(193, 164, 17);
+    
 }
 
 .button {
@@ -144,7 +145,6 @@ main {
     width: 10vw;
     height: 25vh;
     z-index: 1;
-    background-color:red;
 }
 
 #gamearea {
@@ -201,10 +201,9 @@ main {
     background-color: white;
     color: rgb(6, 100, 31);
     font-size: 20px;
-    border: 2px solid rgb(6, 100, 31);
-    border-radius: 15px;
     padding: 10px;
 }
+
 
 #start-button {
     font-family: 'Balsamiq Sans', sans-serif;
@@ -216,6 +215,7 @@ main {
     border: 2px solid rgb(6, 100, 31);
     height: 100%;
     width: 100%;
+    background-color: rgb(193, 164, 17);
 }
 
 #main {
