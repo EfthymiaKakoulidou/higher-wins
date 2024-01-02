@@ -74,6 +74,20 @@ for (i = 0; i < playershand.length; i++) {
   //Append those divs to playerarea
   document.getElementById('playersarea').appendChild(button);
 }
+//Hide gamearea
+
+function hideGamearea() {
+  document.getElementById("gamearea").style.visibility = "hidden";
+}
+function youWin(){
+  document.getElementById("main").innerHTML = "You Win!"
+}
+function computerWins(){
+  document.getElementById("main").innerHTML = "You Win!"
+}
+function itsAtie(){
+  document.getElementById("main").innerHTML = "You Win!"
+}
 
 //Take out the player's choice from player's hand
 
@@ -84,34 +98,48 @@ playerBtns.forEach(btn => {
     let cardValue = this.dataset.card;
     this.style.visibility = "hidden";
     moveplayerscardtogamearea(cardValue);
-    
-//Specify the place of the card chosen by th player
-let playersChoicePlace = playershand.indexOf(cardValue);
-console.log(playersChoicePlace);
 
-//Remove player's card from player's hand
-let playerscardchoice = playershand.splice(playersChoicePlace, 1);
+    //Specify the place of the card chosen by th player
+    let playersChoicePlace = playershand.indexOf(cardValue);
+    console.log(playersChoicePlace);
 
-//Playershand after playing the card
-console.log(playershand);
+    //Remove player's card from player's hand
+    let playerscardchoice = playershand.splice(playersChoicePlace, 1);
 
-if (playershand.length == 0) {
-  document.getElementById("gamearea").style.visibility = "hidden";
-}
+    //Playershand after playing the card
+    console.log(playershand);
 
-if (playershand.length == 0 && playerscorediv.innerHTML > computerscorediv.innerHTML){
-  document.getElementById("main").innerHTML = "You Win!";
-}
+    if (playershand.length == 0) {
+      setTimeout(hideGamearea,2000);
+    }
 
-if (playershand.length == 0 && playerscorediv.innerHTML < computerscorediv.innerHTML){
-  document.getElementById("main").innerHTML = "You Lose!";
-}
+    if (playershand.length == 0 && playerscorediv.innerHTML > computerscorediv.innerHTML) {
+      
+      setTimeout(youWin,1000);
+    }
 
-if (playershand.length == 0 && playerscorediv.innerHTML == computerscorediv.innerHTML){
-  document.getElementById("main").innerHTML = "It's a tie!";
-}
+    if (document.getElementById("main").innerHTML === "You Win!") {
+      document.getElementById("main").style.color = "red"
+    }
+
+    if (playershand.length == 0 && playerscorediv.innerHTML < computerscorediv.innerHTML) {
+     
+      setTimeout(computerWins,1000);
+      
+    }
+
+    if (document.getElementById("main").innerHTML === "Computer Wins!") {
+      document.getElementById("main").style.color = "rgb(193, 164, 17)"
+    }
+
+    if (playershand.length == 0 && playerscorediv.innerHTML == computerscorediv.innerHTML) {
+      
+      setTimeout(itsAtie,1000);
+      
+    }
 
   });
+
 });
 
 
@@ -137,7 +165,7 @@ function moveplayerscardtogamearea(playersCardValue) {
   let computersCardToRemove = document.querySelector(`.computerscard[data-card="${computersChoice}"]`);
   computersCardToRemove.style.visibility = "hidden";
   computersCardToRemove.removeAttribute("data-card");
-  
+
 
   //Computers hand after playing the card
   console.log(computershand);
@@ -156,4 +184,3 @@ function moveplayerscardtogamearea(playersCardValue) {
   }
 
 }
-
