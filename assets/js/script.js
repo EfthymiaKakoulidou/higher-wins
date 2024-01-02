@@ -30,6 +30,7 @@ for (i = 0; i < computershand.length; i++) {
   document.getElementById('computerarea').appendChild(computerinnerdiv);
 }
 
+
 //Create div for score computer
 
 let computerscorediv = document.createElement('div');
@@ -81,7 +82,7 @@ const playerBtns = document.querySelectorAll(".button");
 playerBtns.forEach(btn => {
   btn.addEventListener("click", function () {
     let cardValue = this.dataset.card;
-    this.remove();
+    this.style.visibility = "hidden";
     moveplayerscardtogamearea(cardValue);
     
 //Specify the place of the card chosen by th player
@@ -99,7 +100,7 @@ if (playershand.length == 0) {
 }
 
 if (playershand.length == 0 && playerscorediv.innerHTML > computerscorediv.innerHTML){
-  document.getElementById("main").innerHTML = "You Win";
+  document.getElementById("main").innerHTML = "You Win!";
 }
 
 if (playershand.length == 0 && playerscorediv.innerHTML < computerscorediv.innerHTML){
@@ -130,7 +131,9 @@ function moveplayerscardtogamearea(playersCardValue) {
   console.log(computerscardchoice);
 
   let computersCardToRemove = document.querySelector(`.computerscard[data-card="${computersChoice}"]`);
-  computersCardToRemove.remove();
+  computersCardToRemove.style.visibility = "hidden";
+  computersCardToRemove.removeAttribute("data-card");
+  
 
   //Computers hand after playing the card
   console.log(computershand);
