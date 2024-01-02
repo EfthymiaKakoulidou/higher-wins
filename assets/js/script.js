@@ -74,18 +74,15 @@ for (i = 0; i < playershand.length; i++) {
   //Append those divs to playerarea
   document.getElementById('playersarea').appendChild(button);
 }
-//Hide gamearea
 
-function hideGamearea() {
-  document.getElementById("gamearea").style.visibility = "hidden";
-}
+//Hide gamearea
 function youWin(){
   document.getElementById("main").innerHTML = "You Win!"
   document.getElementById("main").style.color = "red"
 }
 function computerWins(){
   document.getElementById("main").innerHTML = "Computer Wins!"
-  document.getElementById("main").style.color = "rgb(193, 164, 17)"
+  document.getElementById("main").style.color = "rgb(86, 68, 218)"
 }
 function itsAtie(){
   document.getElementById("main").innerHTML = "It's a tie!"
@@ -111,26 +108,16 @@ playerBtns.forEach(btn => {
     //Playershand after playing the card
     console.log(playershand);
 
-    if (playershand.length == 0) {
-      setTimeout(hideGamearea,2000);
-    }
-
     if (playershand.length == 0 && playerscorediv.innerHTML > computerscorediv.innerHTML) {
-      
       setTimeout(youWin,1000);
     }
 
-
     if (playershand.length == 0 && playerscorediv.innerHTML < computerscorediv.innerHTML) {
-     
       setTimeout(computerWins,1000);
-      
     }
 
     if (playershand.length == 0 && playerscorediv.innerHTML == computerscorediv.innerHTML) {
-      
       setTimeout(itsAtie,1000);
-      
     }
 
   });
