@@ -97,6 +97,15 @@ console.log(playershand);
 if (playershand.length == 0) {
   document.getElementById("gamearea").style.visibility = "hidden";
 }
+
+if (playershand.length == 0 && playerscorediv.innerHTML > computerscorediv.innerHTML){
+  document.getElementById("main").innerHTML = "You Win";
+}
+
+if (playershand.length == 0 && playerscorediv.innerHTML < computerscorediv.innerHTML){
+  document.getElementById("main").innerHTML = "You Lose";
+}
+
   });
 });
 
