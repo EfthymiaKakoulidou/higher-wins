@@ -81,12 +81,14 @@ function hideGamearea() {
 }
 function youWin(){
   document.getElementById("main").innerHTML = "You Win!"
+  document.getElementById("main").style.color = "red"
 }
 function computerWins(){
-  document.getElementById("main").innerHTML = "You Win!"
+  document.getElementById("main").innerHTML = "Computer Wins!"
+  document.getElementById("main").style.color = "rgb(193, 164, 17)"
 }
 function itsAtie(){
-  document.getElementById("main").innerHTML = "You Win!"
+  document.getElementById("main").innerHTML = "It's a tie!"
 }
 
 //Take out the player's choice from player's hand
@@ -118,18 +120,11 @@ playerBtns.forEach(btn => {
       setTimeout(youWin,1000);
     }
 
-    if (document.getElementById("main").innerHTML === "You Win!") {
-      document.getElementById("main").style.color = "red"
-    }
 
     if (playershand.length == 0 && playerscorediv.innerHTML < computerscorediv.innerHTML) {
      
       setTimeout(computerWins,1000);
       
-    }
-
-    if (document.getElementById("main").innerHTML === "Computer Wins!") {
-      document.getElementById("main").style.color = "rgb(193, 164, 17)"
     }
 
     if (playershand.length == 0 && playerscorediv.innerHTML == computerscorediv.innerHTML) {
