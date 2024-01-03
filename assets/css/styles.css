@@ -7,7 +7,7 @@ body {
     justify-content: space-evenly;
     flex-direction: column;
     margin: 0;
-    height: 100vh;
+    min-height: 100vh;
 }
 
 #header-page {
@@ -29,28 +29,13 @@ main {
     align-items: center;
 }
 
-#computerarea {
+#computerarea, #playersarea {
     font-family: 'Balsamiq Sans', sans-serif;
     display: flex;
     justify-content: center;
     flex-direction: row;
-    height: 100%;
     flex: 1;
     flex-wrap: wrap;
-    align-content: flex-end;
-
-}
-
-#playersarea {
-    font-family: 'Balsamiq Sans', sans-serif;
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
-    height: 100%;
-    flex: 1;
-    flex-wrap: wrap;
-    align-content: flex-start;
-   
 }
 
 .computerscard {
@@ -69,7 +54,7 @@ main {
     z-index: 1;
 }
 
-.computerscardgamearea {
+.computerscardgamearea, .playerscardgamearea {
     font-family: 'Balsamiq Sans', sans-serif;
     display: flex;
     justify-content: center;
@@ -84,31 +69,7 @@ main {
     border-radius: 15px;
 }
 
-.playerscardgamearea {
-    font-family: 'Balsamiq Sans', sans-serif;
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 10px;
-    background-color: white;
-    color: rgb(50, 19, 81);
-    font-size: 30px;
-    width: 10vw;
-    height: 25vh;
-    border: 2px solid rgb(50, 19, 81);
-    border-radius: 15px;
-}
-
-#playersplace {
-    font-family: 'Balsamiq Sans', sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
-}
-
-#computersplace {
+#playersplace, #computersplace {
     font-family: 'Balsamiq Sans', sans-serif;
     display: flex;
     justify-content: center;
@@ -139,27 +100,25 @@ main {
 }
 
 
-#computerscore {
+#computerscore, #playerscore {
     display: flex;
     justify-content: center;
     align-items: center;
-    color: rgb(113, 206, 220);
     font-size: 40px;
     font-family: 'Balsamiq Sans', sans-serif;
     font-family: 'Balsamiq Sans', sans-serif;
     margin: 10px;
+}
+
+#computerscore {
+    color: rgb(113, 206, 220);
 }
 
 
 #playerscore {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     color: rgb(212, 121, 180);
-    font-size: 40px;
-    font-family: 'Balsamiq Sans', sans-serif;
-    margin: 10px;
 }
+
 
 #playerscoretext, #computerscoretext {
     font-size: 20px;
@@ -209,10 +168,6 @@ main {
     background-image: linear-gradient(rgb(113, 206, 220),white,white ,rgb(212, 121, 180) );
    
 }
-#main-index {
-    background-image: linear-gradient(rgb(113, 206, 220),white,white ,rgb(212, 121, 180) );
-}
-
 
 @media screen and (max-width: 490px) {
 
@@ -222,19 +177,7 @@ main {
         height: 15vh;
     }
 
-    .button {
-        font-family: 'Balsamiq Sans', sans-serif;
-        width: 15vw;
-        height: 15vh;
-    }
-
-    .computerscardgamearea {
-        font-family: 'Balsamiq Sans', sans-serif;
-        width: 15vw;
-        height: 15vh;
-    }
-
-    .playerscardgamearea {
+    .button, .computerscardgamearea, .playerscardgamearea {
         font-family: 'Balsamiq Sans', sans-serif;
         width: 15vw;
         height: 15vh;
@@ -243,8 +186,5 @@ main {
     #playerscoretext, #computerscoretext {
         font-size: 15px;
         width: 15vw;
-        
     }
-    
-
 }
