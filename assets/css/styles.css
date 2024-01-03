@@ -104,6 +104,7 @@ main {
     height: 25vh;
     z-index: 1;
     cursor:pointer;
+    text-align: center;
 }
 
 #gamearea {
@@ -182,6 +183,17 @@ main {
     font-size: 60px;
     background-image: linear-gradient(rgb(113, 206, 220),white,white ,rgb(212, 121, 180) );
    
+}
+
+footer {font-family: 'Balsamiq Sans', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    color: rgb(212, 121, 180);
+    background-color: rgb(50, 19, 81);
+    min-height: 60px;
+
 }
 
 @media screen and (max-width: 490px) {
