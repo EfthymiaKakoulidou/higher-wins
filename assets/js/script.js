@@ -82,17 +82,35 @@ for (i = 0; i < playershand.length; i++) {
   document.getElementById('playersarea').appendChild(button);
 }
 
+function refresh(){
+  window.location.reload();
+}
 //Hide gamearea
 function youWin(){
   document.getElementById("main").innerHTML = "You Win!"
   document.getElementById("main").style.color = "rgb(212, 121, 180)"
+  playAgain = document.createElement("button");
+  playAgain.innerHTML="Play Again";
+  playAgain.id="play-again"
+  playAgain.addEventListener("click", refresh);
+  document.getElementById("main").appendChild(playAgain);
 }
 function computerWins(){
   document.getElementById("main").innerHTML = "Computer Wins!"
   document.getElementById("main").style.color = "rgb(113, 206, 220)"
+  playAgain = document.createElement("button");
+  playAgain.innerHTML="Play Again";
+  playAgain.id="play-again"
+  playAgain.addEventListener("click", refresh);
+  document.getElementById("main").appendChild(playAgain);
 }
 function itsAtie(){
   document.getElementById("main").innerHTML = "It's a tie!"
+  playAgain = document.createElement("button");
+  playAgain.innerHTML="Play Again";
+  playAgain.id="play-again"
+  playAgain.addEventListener("click", refresh);
+  document.getElementById("main").appendChild(playAgain);
 }
 
 //Take out the player's choice from player's hand

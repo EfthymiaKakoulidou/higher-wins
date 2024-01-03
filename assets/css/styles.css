@@ -237,6 +237,17 @@ footer {font-family: 'Balsamiq Sans', sans-serif;
 
 }
 
+#play-again {font-family: 'Balsamiq Sans', sans-serif;
+    color: rgb(50, 19, 81);
+    font-size: 30px;
+    border-radius: 15px;
+    margin: 2px;
+    border: 2px solid rgb(50, 19, 81);
+    background-color: white;
+    cursor:pointer;
+
+}
+
 @media screen and (max-width: 490px) {
 
     .computerscard {
