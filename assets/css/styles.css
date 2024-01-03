@@ -16,7 +16,7 @@ body {
     justify-content: center;
     align-items: center;
     font-size: 50px;
-    color: red;
+    color: rgb(212, 121, 180);
     background-color: rgb(50, 19, 81);
     min-height: 80px;
 }
@@ -127,6 +127,7 @@ main {
     width: 10vw;
     height: 25vh;
     z-index: 1;
+    cursor:pointer;
 }
 
 #gamearea {
@@ -142,25 +143,27 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    color: rgb(86, 68, 218);
-    font-size: 50px;
+    color: rgb(113, 206, 220);
+    font-size: 40px;
     font-family: 'Balsamiq Sans', sans-serif;
     font-family: 'Balsamiq Sans', sans-serif;
     margin: 10px;
-    width: 100px;
-    height: 150px;
-
 }
+
 
 #playerscore {
     display: flex;
     justify-content: center;
     align-items: center;
-    color: red;
-    font-size: 50px;
+    color: rgb(212, 121, 180);
+    font-size: 40px;
     font-family: 'Balsamiq Sans', sans-serif;
-    width: 100px;
-    height: 150px;
+    margin: 10px;
+}
+
+#playerscoretext, #computerscoretext {
+    font-size: 20px;
+    width: 10vw;
     margin: 10px;
 }
 
@@ -190,8 +193,9 @@ main {
     font-size: 30px;
     border-radius: 15px;
     margin: 10px;
-    border: 2px solid rgb(6, 100, 31);
+    border: 2px solid rgb(50, 19, 81);
     background-color: white;
+    cursor:pointer;
 }
 
 #main {
@@ -202,11 +206,11 @@ main {
     font-family: 'Balsamiq Sans', sans-serif;
     color: rgb(50, 19, 81);
     font-size: 60px;
-    background-image: linear-gradient(rgb(86, 68, 218),white,white ,red );
+    background-image: linear-gradient(rgb(113, 206, 220),white,white ,rgb(212, 121, 180) );
    
 }
 #main-index {
-    background-image: linear-gradient(rgb(86, 68, 218),white,white ,red );
+    background-image: linear-gradient(rgb(113, 206, 220),white,white ,rgb(212, 121, 180) );
 }
 
 
@@ -235,5 +239,12 @@ main {
         width: 15vw;
         height: 15vh;
     }
+
+    #playerscoretext, #computerscoretext {
+        font-size: 15px;
+        width: 15vw;
+        
+    }
+    
 
 }

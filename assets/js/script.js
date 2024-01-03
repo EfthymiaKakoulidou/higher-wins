@@ -30,13 +30,16 @@ for (i = 0; i < computershand.length; i++) {
   document.getElementById('computerarea').appendChild(computerinnerdiv);
 }
 
-
 //Create div for score computer
 
-let computerscorediv = document.createElement('div');
-computerscorediv.id = 'computerscore';
-computerscorediv.innerHTML = 0;
-document.getElementById('gamearea').appendChild(computerscorediv);
+let computerscoreSpan = document.createElement('span');
+computerscoreSpan.id = 'computerscore';
+computerscoreSpan.innerHTML = 0;
+let computerScoreDiv = document.createElement('div');
+computerScoreDiv.id = 'computerscoretext';
+computerScoreDiv.innerText = "Computer Score:";
+computerScoreDiv.appendChild(computerscoreSpan);
+document.getElementById('gamearea').appendChild(computerScoreDiv);
 
 
 /*Create a div for computersgamearea*/
@@ -57,10 +60,14 @@ document.getElementById('gamearea').appendChild(playergameareainnerdiv);
 
 //Create div for score player
 
-let playerscorediv = document.createElement('div');
-playerscorediv.id = 'playerscore';
-playerscorediv.innerHTML = 0;
-document.getElementById('gamearea').appendChild(playerscorediv);
+let playerScoreSpan = document.createElement('span');
+playerScoreSpan.id = 'playerscore';
+playerScoreSpan.innerHTML = 0;
+let playerScoreDiv = document.createElement('div');
+playerScoreDiv.id = 'playerscoretext';
+playerScoreDiv.innerText = "Player Score:";
+playerScoreDiv.appendChild(playerScoreSpan);
+document.getElementById('gamearea').appendChild(playerScoreDiv);
 
 
 /*Create buttons for every item in players hand*/
