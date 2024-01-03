@@ -53,20 +53,30 @@ main {
     flex-wrap: wrap;
 }
 
-.computerscard {
+#computerarea {
+   align-items: flex-end;
+}
+
+.computerscard, .deck {
     font-family: 'Balsamiq Sans', sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 10px;
-    background-color: white;
+    margin: 5px;
+    background-color:  rgb(50, 19, 81);
     color: rgb(50, 19, 81);
     font-size: 30px;
-    width: 10vw;
-    height: 25vh;
+    width: 100px;
+    height: 150px;
     border: 2px solid rgb(50, 19, 81);
     border-radius: 15px;
     z-index: 1;
+}
+
+.deck {
+    background-color:  white;
+    min-width: 70px;
+    min-height: 120px;
 }
 
 .computerscardgamearea, .playerscardgamearea {
@@ -74,12 +84,12 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 10px;
+    margin: 5px;
     background-color: white;
     color: rgb(50, 19, 81);
     font-size: 30px;
-    width: 10vw;
-    height: 25vh;
+    width: 100px;
+   height: 150px;
     border: 2px solid rgb(50, 19, 81);
     border-radius: 15px;
 }
@@ -97,11 +107,11 @@ main {
     color: rgb(50, 19, 81);
     font-size: 30px;
     border-radius: 15px;
-    margin: 10px;
+    margin: 5px;
     background-color: white;
     border: 2px solid rgb(50, 19, 81);
-    width: 10vw;
-    height: 25vh;
+    width: 100px;
+    height: 150px;
     z-index: 1;
     cursor:pointer;
     text-align: center;
@@ -123,7 +133,7 @@ main {
     font-size: 40px;
     font-family: 'Balsamiq Sans', sans-serif;
     font-family: 'Balsamiq Sans', sans-serif;
-    margin: 10px;
+    margin: 5px;
 }
 
 #computerscore {
@@ -138,8 +148,10 @@ main {
 
 #playerscoretext, #computerscoretext {
     font-size: 20px;
-    width: 10vw;
-    margin: 10px;
+    margin: 5px;
+    max-width: 80px;
+    min-height: 130px;
+    margin: 25px;
 }
 
 #deck {
@@ -150,15 +162,20 @@ main {
     justify-content: center;
 }
 
-#instructions {
+#instructions, #deck-introduction {
     font-family: 'Balsamiq Sans', sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 20px;
+    margin: 10px;
     color: rgb(50, 19, 81);
     font-size: 20px;
     padding: 10px;
+}
+
+#deck-introduction {
+    margin: 5px;
+    padding: 2px;
 }
 
 
@@ -167,7 +184,7 @@ main {
     color: rgb(50, 19, 81);
     font-size: 30px;
     border-radius: 15px;
-    margin: 10px;
+    margin: 2px;
     border: 2px solid rgb(50, 19, 81);
     background-color: white;
     cursor:pointer;
@@ -189,7 +206,7 @@ footer {font-family: 'Balsamiq Sans', sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 20px;
+    font-size: 15px;
     color: rgb(212, 121, 180);
     background-color: rgb(50, 19, 81);
     min-height: 60px;
@@ -222,4 +239,9 @@ footer {font-family: 'Balsamiq Sans', sans-serif;
         display: block;
     }
     
+    .button, .computerscard, .computerscardgamearea, .playerscardgamearea {
+        min-width: 80px;
+        min-height: 130px;
+    }
+
 }
