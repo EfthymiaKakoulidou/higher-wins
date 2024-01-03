@@ -63,17 +63,19 @@ main {
     justify-content: center;
     align-items: center;
     margin: 5px;
-    background-color:  rgb(50, 19, 81);
-    color: rgb(50, 19, 81);
-    font-size: 30px;
+    background-image: linear-gradient(rgb(212, 121, 180),white, rgb(113, 206, 220) );
+    font-size: 0px;
     width: 100px;
     height: 150px;
     border: 2px solid rgb(50, 19, 81);
     border-radius: 15px;
     z-index: 1;
+   
 }
 
 .deck {
+    font-size: 30px;
+    background-image: linear-gradient(rgb(212, 121, 180),white, rgb(113, 206, 220) );
     background-color:  white;
     min-width: 70px;
     min-height: 120px;
@@ -92,6 +94,7 @@ main {
    height: 150px;
     border: 2px solid rgb(50, 19, 81);
     border-radius: 15px;
+    
 }
 
 #playersplace, #computersplace {
@@ -99,7 +102,7 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    
+    background-image: linear-gradient(rgb(212, 121, 180),white, rgb(113, 206, 220) );
 }
 
 .button {
@@ -115,6 +118,7 @@ main {
     z-index: 1;
     cursor:pointer;
     text-align: center;
+    background-image: linear-gradient(rgb(212, 121, 180),white, rgb(113, 206, 220) );
 }
 
 #gamearea {
