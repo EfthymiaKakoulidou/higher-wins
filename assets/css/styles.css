@@ -15,10 +15,25 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 50px;
+    font-size: 40px;
     color: rgb(212, 121, 180);
     background-color: rgb(50, 19, 81);
     min-height: 80px;
+}
+
+#nav {
+    position: absolute;
+    left: 40px;
+    font-size: 30px;
+    color: rgb(212, 121, 180);
+}
+
+#nav-icon {
+    position: absolute;
+    color: rgb(212, 121, 180);
+    display: none;
+    font-size: 30px;
+    left: 20px;
 }
 
 main {
@@ -187,4 +202,12 @@ main {
         font-size: 15px;
         width: 15vw;
     }
+
+    #nav {
+        display: none;
+    }
+    #nav-icon {
+        display: block;
+    }
+    
 }
