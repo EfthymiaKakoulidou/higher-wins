@@ -75,7 +75,6 @@ main {
 
 .deck {
     font-size: 30px;
-    background-image: linear-gradient(rgb(212, 121, 180),white, rgb(113, 206, 220) );
     background-color:  white;
     min-width: 70px;
     min-height: 120px;
@@ -102,7 +101,6 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: linear-gradient(rgb(212, 121, 180),white, rgb(113, 206, 220) );
 }
 
 .button {
@@ -118,7 +116,10 @@ main {
     z-index: 1;
     cursor:pointer;
     text-align: center;
-    background-image: linear-gradient(rgb(212, 121, 180),white, rgb(113, 206, 220) );
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
 }
 
 #gamearea {
