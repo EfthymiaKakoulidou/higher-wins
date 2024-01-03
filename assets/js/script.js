@@ -32,13 +32,13 @@ for (i = 0; i < computershand.length; i++) {
 
 //Create div for score computer
 
-let computerscoreSpan = document.createElement('span');
-computerscoreSpan.id = 'computerscore';
-computerscoreSpan.innerHTML = 0;
+let computerScoreSpan = document.createElement('span');
+computerScoreSpan.id = 'computerscore';
+computerScoreSpan.innerHTML = 0;
 let computerScoreDiv = document.createElement('div');
 computerScoreDiv.id = 'computerscoretext';
 computerScoreDiv.innerText = "Computer Score:";
-computerScoreDiv.appendChild(computerscoreSpan);
+computerScoreDiv.appendChild(computerScoreSpan);
 document.getElementById('gamearea').appendChild(computerScoreDiv);
 
 
@@ -85,11 +85,11 @@ for (i = 0; i < playershand.length; i++) {
 //Hide gamearea
 function youWin(){
   document.getElementById("main").innerHTML = "You Win!"
-  document.getElementById("main").style.color = "red"
+  document.getElementById("main").style.color = "rgb(212, 121, 180)"
 }
 function computerWins(){
   document.getElementById("main").innerHTML = "Computer Wins!"
-  document.getElementById("main").style.color = "rgb(86, 68, 218)"
+  document.getElementById("main").style.color = "rgb(113, 206, 220)"
 }
 function itsAtie(){
   document.getElementById("main").innerHTML = "It's a tie!"
@@ -115,16 +115,16 @@ playerBtns.forEach(btn => {
     //Playershand after playing the card
     console.log(playershand);
 
-    if (playershand.length == 0 && playerscorediv.innerHTML > computerscorediv.innerHTML) {
-      setTimeout(youWin,1000);
+    if (playershand.length == 0 && playerScoreSpan.innerHTML > computerScoreSpan.innerHTML) {
+      setTimeout(youWin,500);
     }
 
-    if (playershand.length == 0 && playerscorediv.innerHTML < computerscorediv.innerHTML) {
-      setTimeout(computerWins,1000);
+    if (playershand.length == 0 && playerScoreSpan.innerHTML < computerScoreSpan.innerHTML) {
+      setTimeout(computerWins,500);
     }
 
-    if (playershand.length == 0 && playerscorediv.innerHTML == computerscorediv.innerHTML) {
-      setTimeout(itsAtie,1000);
+    if (playershand.length == 0 && playerScoreSpan.innerHTML == computerScoreSpan.innerHTML) {
+      setTimeout(itsAtie,500);
     }
 
   });
@@ -166,10 +166,10 @@ function moveplayerscardtogamearea(playersCardValue) {
 
   if (playersCardValue < computersChoice) {
     // computer wins
-    computerscorediv.innerHTML++;
+    computerScoreSpan.innerHTML++;
   } else if (playersCardValue > computersChoice) {
     // player wins
-    playerscorediv.innerHTML++;
+    playerScoreSpan.innerHTML++;
   }
 
 }
