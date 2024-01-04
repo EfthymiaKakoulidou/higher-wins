@@ -28,21 +28,27 @@ for (i = 0; i < computershand.length; i++) {
   computerinnerdiv.id = 'computershand-' + i;
   computerinnerdiv.dataset.card = computershand[i];
   //Append those divs to computerarea
-  document.getElementById('computerscards').appendChild(computerinnerdiv);
+  document.getElementById('computerarea').appendChild(computerinnerdiv);
 }
 
 /*Create a div for every item in the array of pile*/
 
 for (i = 0; i < pile.length; i++) {
-  let pilediv = document.createElement('div');
-  pilediv.className = 'pilecard';
-  pilediv.innerHTML = pile[i];
-  pilediv.id = 'pile-' + i;
-  pilediv.dataset.card = pile[i];
-  //Append those divs to computerarea
-  document.getElementById('pile-cards').appendChild(pilediv);
-}
+  let pileButton = document.createElement('button');
+  pileButton.className = 'pilecard';
+  pileButton.innerHTML = pile[i];
+  pileButton.id = 'pile-' + i;
+  pileButton.dataset.card = pile[i];
+  //Append divs to pile-cards
+document.getElementById('pile-cards').appendChild(pileButton);
+//Take the first card of the pile
 
+document.getElementById("pile-0").addEventListener("click", hidePilecard);
+
+function hidePilecard(){
+  document.getElementById("pile-0").style.visibility = "hidden"
+}
+}
 
 //Create div for score computer
 
@@ -51,7 +57,7 @@ computerScoreSpan.id = 'computerscore';
 computerScoreSpan.innerHTML = 0;
 let computerScoreDiv = document.createElement('div');
 computerScoreDiv.id = 'computerscoretext';
-computerScoreDiv.innerText = "Computer Score:";
+computerScoreDiv.innerText = "Computer:";
 computerScoreDiv.appendChild(computerScoreSpan);
 document.getElementById('gamearea').appendChild(computerScoreDiv);
 
@@ -79,7 +85,7 @@ playerScoreSpan.id = 'playerscore';
 playerScoreSpan.innerHTML = 0;
 let playerScoreDiv = document.createElement('div');
 playerScoreDiv.id = 'playerscoretext';
-playerScoreDiv.innerText = "Player Score:";
+playerScoreDiv.innerText = "Player:";
 playerScoreDiv.appendChild(playerScoreSpan);
 document.getElementById('gamearea').appendChild(playerScoreDiv);
 
@@ -99,6 +105,8 @@ for (i = 0; i < playershand.length; i++) {
 function refresh(){
   window.location.reload();
 }
+
+
 //Hide gamearea
 function youWin(){
   document.getElementById("main").innerHTML = "You Win!"
@@ -186,7 +194,6 @@ function moveplayerscardtogamearea(playersCardValue) {
   let computersCardToRemove = document.querySelector(`.computerscard[data-card="${computersChoice}"]`);
   computersCardToRemove.style.visibility = "hidden";
   computersCardToRemove.removeAttribute("data-card");
-
 
   //Computers hand after playing the card
   console.log(computershand);
