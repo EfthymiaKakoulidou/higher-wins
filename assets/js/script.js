@@ -134,7 +134,6 @@ function itsAtie(){
 document.getElementById("pile-0").addEventListener("click", hideOldPlayershand);
 document.getElementById("pile-0").addEventListener("click", hidePilecard);
 document.getElementById("pile-0").addEventListener("click", replacePlayersLowestCard);
-document.getElementById("pile-0").addEventListener("click", hideReplaceWindow);
 
 //Hide initial player's hand
 function hideOldPlayershand(){
@@ -148,10 +147,16 @@ function hideReplaceWindow(){
   document.getElementById('pile-cards').style.visibility = 'hidden'
 }
 
-//Remove it
-
 function hidePilecard(){
-  document.getElementById("pile-0").style.visibility = "hidden"}
+  document.getElementById("pile-0").remove()
+  let newPile = pile.splice(0, 1);
+  console.log(newPile);
+  console.log(pile);
+  if (pile.length == 7) {
+  setTimeout(hideReplaceWindow,1000)
+}
+
+}
 
 //Replace player's lowest card
 
