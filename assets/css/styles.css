@@ -8,7 +8,6 @@ body {
     flex-direction: column;
     margin: 0;
     min-height: 100vh;
-    overflow: hidden;
     flex-grow: 1;
 }
 
@@ -56,7 +55,8 @@ main {
     flex-grow: 1;
 }
 
-#chand, #phand {
+#chand,
+#phand {
     font-size: 20px;
 }
 
@@ -79,14 +79,14 @@ main {
     background-color: white;
     position: absolute;
     height: 250px;
-    width:90%;
+    width: 90%;
     max-width: 880px;
     z-index: 10;
     border: 2px solid rgb(50, 19, 81);
     border-radius: 15px;
     display: flex;
     justify-content: flex-start;
-    margin-bottom: 75px;
+    margin-bottom: 77px;
     padding: 20px;
 }
 
@@ -111,7 +111,7 @@ main {
     z-index: 8;
     position: absolute;
     margin-left: 80%;
-font-size: 20px;
+    font-size: 20px;
 }
 
 #pile-1 {
@@ -360,10 +360,12 @@ footer {
 
 @media screen and (max-width: 490px) {
 
-#instructions, #deck-introduction {
-    margin:0px;
-    font-size: 15px;
-}
+    #instructions,
+    #deck-introduction {
+        margin: 0px;
+        font-size: 15px;
+    }
+
     .computerscard {
         width: 60px;
         height: 90px;
@@ -381,11 +383,13 @@ footer {
     #computerscoretext {
         font-size: 15px;
         width: 15vw;
-        margin:0px;
+        margin: 0px;
     }
-#replacetext {
-    margin:0px;
-}
+
+    #replacetext {
+        margin: 0px;
+    }
+
     #nav,
     #restart {
         display: none;
@@ -414,15 +418,17 @@ footer {
         font-size: 0px;
     }
 
-    .pilecard{width: 60px;
+    .pilecard {
+        width: 60px;
         height: 90px;
         margin-bottom: 20px;
 
     }
 
-    .cards-index, .deck {
-        width:50px;
-        height:75px;
+    .cards-index,
+    .deck {
+        width: 50px;
+        height: 75px;
     }
 
     #pile-cards {
@@ -430,64 +436,73 @@ footer {
         font-size: 15px;
         padding: 0px;
         justify-content: center;
-        width:90%;
+        width: 90%;
     }
 
 
     #pile-0 {
         z-index: 8;
         position: absolute;
-        margin-left: 65vw;
+        margin-left: 55vw;
         margin-top: 80px;
-        font-size: 15px;}
+        font-size: 15px;
+    }
 
     #pile-1 {
         z-index: 7;
         position: absolute;
-        margin-left: 63vw;
+        margin-left: 50vw;
         margin-top: 80px;
     }
 
     #pile-2 {
         z-index: 6;
         position: absolute;
-        margin-left: 61vw;
+        margin-left: 45vw;
         margin-top: 80px;
     }
 
     #pile-3 {
         z-index: 5;
         position: absolute;
-        margin-left: 59vw;
+        margin-left: 40vw;
         margin-top: 80px;
     }
 
     #pile-4 {
         z-index: 4;
         position: absolute;
-        margin-left: 57vw;
+        margin-left: 35vw;
         margin-top: 80px;
     }
 
     #pile-5 {
         z-index: 3;
         position: absolute;
-        margin-left: 55vw;
+        margin-left: 30vw;
         margin-top: 80px;
     }
 
     #pile-6 {
         z-index: 2;
         position: absolute;
-        margin-left: 53vw;
+        margin-left: 25vw;
         margin-top: 80px;
     }
 
     #pile-7 {
         z-index: 1;
         position: absolute;
-        margin-left: 51vw;
+        margin-left: 20vw;
         margin-top: 80px;
     }
 
+    #no {
+        margin-top: 100px;
+        margin-right: 150px;
+        position: absolute;
+    }
+p{
+    margin-bottom: 100px;
+}
 }

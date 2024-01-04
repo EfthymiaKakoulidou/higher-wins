@@ -165,6 +165,7 @@ function replaceAndPlay(){
 
 //Find lowest card in players' hand
 let index = Math.min(...playershand);
+
 //Find place of lowest card in players' hand
 let placeOfIndex = playershand.indexOf(index);
 console.log(index);
