@@ -1,5 +1,5 @@
 /*Deck*/
-const cards = [1, 2, 3, 4, 5, 6, 7, 8, 1, 2, 3, 4, 5, 6, 7, 8];
+const cards = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10 , 11, 12, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 , 11, 12,];
 
 /*Shuffle Cards with the Fischer Yates algorithm*/
 var i = cards.length,
