@@ -18,7 +18,7 @@ console.log(computershand);
 const playershand = cards.slice(0, 8);
 console.log(playershand);
 const pile = cards.slice(16, 24);
-
+console.log(pile);
 /*Create a div for every item in the array of computer's hand*/
 
 for (i = 0; i < computershand.length; i++) {
@@ -40,15 +40,29 @@ for (i = 0; i < pile.length; i++) {
   pileButton.id = 'pile-' + i;
   pileButton.dataset.card = pile[i];
   //Append divs to pile-cards
-document.getElementById('pile-cards').appendChild(pileButton);
-//Take the first card of the pile
+document.getElementById('pile-cards').appendChild(pileButton);}
+
+//Take the first card of the pile and place it to player's hand lowest card
 
 document.getElementById("pile-0").addEventListener("click", hidePilecard);
 
+//Remove it
+
 function hidePilecard(){
-  document.getElementById("pile-0").style.visibility = "hidden"
-}
-}
+  document.getElementById("pile-0").style.visibility = "hidden"}
+
+//Find lowest card in players' hand
+const index = Math.min(...playershand);
+//Find place of lowest card in players' hand
+let placeOfIndex = playershand.indexOf(index);
+console.log(index);
+console.log(placeOfIndex);
+//Replace player's card with pile's card
+const newValue = pile[0];
+
+playershand[placeOfIndex]=pile[0];
+console.log(playershand);
+
 
 //Create div for score computer
 
