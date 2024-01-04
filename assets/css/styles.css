@@ -52,7 +52,7 @@ main {
     align-items: center;
 }
 
-#computerarea, #playersarea {
+#computerarea, #playersarea, #computerscards, #pile-cards {
     font-family: 'Balsamiq Sans', sans-serif;
     display: flex;
     justify-content: center;
@@ -65,7 +65,7 @@ main {
    align-items: flex-end;
 }
 
-.computerscard, .deck {
+.computerscard, .deck, .pilecard {
     font-family: 'Balsamiq Sans', sans-serif;
     display: flex;
     justify-content: center;
@@ -80,6 +80,72 @@ main {
     z-index: 1;
    
 }
+
+#computershand-1 {
+    position: absolute;
+    margin-right: 30px;
+}
+
+#computershand-2 {
+    position: absolute;
+    margin-right: 60px;
+}
+
+#computershand-3 {
+    position: absolute;
+    margin-right: 90px;
+}
+
+#computershand-4 {
+    position: absolute;
+    margin-right: 120px;
+}
+
+#computershand-5 {
+    position: absolute;
+    margin-right: 150px;
+}
+
+#computershand-6 {
+    position: absolute;
+    margin-right: 180px;
+}
+
+#computershand-7 {
+    position: absolute;
+    margin-right: 210px;
+}
+
+
+#pile-1 {
+    position: absolute;
+    margin-left: 10px;
+}
+#pile-2 {
+    position: absolute;
+    margin-left: 20px;
+}
+#pile-3 {
+    position: absolute;
+    margin-left: 30px;
+}
+#pile-4 {
+    position: absolute;
+    margin-left: 40px;
+}
+#pile-5 {
+    position: absolute;
+    margin-left: 50px;
+}
+#pile-6 {
+    position: absolute;
+    margin-left: 60px;
+}
+#pile-7 {
+    position: absolute;
+    margin-left: 70px;
+}
+
 
 .deck {
     font-size: 30px;
@@ -279,7 +345,7 @@ footer {font-family: 'Balsamiq Sans', sans-serif;
         width:36px;
     }
 
-    .button, .computerscard, .computerscardgamearea, .playerscardgamearea, .deck, .cards-index {
+    .button, .computerscard, .computerscardgamearea, .playerscardgamearea, .deck, .cards-index, .pilecard {
        width: 80px;
        height: 130px;
     }

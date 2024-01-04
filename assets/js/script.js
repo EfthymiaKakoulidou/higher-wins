@@ -17,6 +17,7 @@ const computershand = cards.slice(8, 16);
 console.log(computershand);
 const playershand = cards.slice(0, 8);
 console.log(playershand);
+const pile = cards.slice(16, 24);
 
 /*Create a div for every item in the array of computer's hand*/
 
@@ -27,8 +28,21 @@ for (i = 0; i < computershand.length; i++) {
   computerinnerdiv.id = 'computershand-' + i;
   computerinnerdiv.dataset.card = computershand[i];
   //Append those divs to computerarea
-  document.getElementById('computerarea').appendChild(computerinnerdiv);
+  document.getElementById('computerscards').appendChild(computerinnerdiv);
 }
+
+/*Create a div for every item in the array of pile*/
+
+for (i = 0; i < pile.length; i++) {
+  let pilediv = document.createElement('div');
+  pilediv.className = 'pilecard';
+  pilediv.innerHTML = pile[i];
+  pilediv.id = 'pile-' + i;
+  pilediv.dataset.card = pile[i];
+  //Append those divs to computerarea
+  document.getElementById('pile-cards').appendChild(pilediv);
+}
+
 
 //Create div for score computer
 
