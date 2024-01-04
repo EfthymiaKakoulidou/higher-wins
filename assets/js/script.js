@@ -20,19 +20,6 @@ console.log(playershand);
 const pile = cards.slice(16, 24);
 console.log(pile);
 
-/*Create a div for every item in the array of computer's hand*/
-
-for (i = 0; i < computershand.length; i++) {
-  let computerinnerdiv = document.createElement('div');
-  computerinnerdiv.className = 'computerscard';
-  computerinnerdiv.innerHTML = computershand[i];
-  computerinnerdiv.id = 'computershand-' + i;
-  computerinnerdiv.dataset.card = computershand[i];
-  //Append those divs to computerarea
-  document.getElementById('computerarea').appendChild(computerinnerdiv);
-  document.getElementById('computerarea').style.visibility = 'hidden';
-}
-
 /*Create a div for every card of player's hand*/
 
 for (i = 0; i < playershand.length; i++) {
@@ -44,6 +31,19 @@ for (i = 0; i < playershand.length; i++) {
   document.getElementById('playersareaold').appendChild(playerinnerdiv);
 }
 
+/*Create a div for every item in the array of computer's hand*/
+
+for (i = 0; i < computershand.length; i++) {
+  let computerinnerdiv = document.createElement('div');
+  computerinnerdiv.className = 'computerscard';
+  computerinnerdiv.innerHTML = computershand[i];
+  computerinnerdiv.id = 'computershand-' + i;
+  computerinnerdiv.dataset.card = computershand[i];
+  //Append those divs to computerarea
+  document.getElementById('computerarea').appendChild(computerinnerdiv);
+}
+
+
 /*Create a div for every item in the array of pile*/
 
 for (i = 0; i < pile.length; i++) {
@@ -53,44 +53,10 @@ for (i = 0; i < pile.length; i++) {
   pileButton.id = 'pile-' + i;
   pileButton.dataset.card = pile[i];
   //Append divs to pile-cards
-document.getElementById('pile-cards').appendChild(pileButton);}
+document.getElementById('pile-cards').appendChild(pileButton);
 
-//Take the first card of the pile and place it to player's hand lowest card
-//Then hide the window with remainingcards
-
-document.getElementById("pile-0").addEventListener("click", hidePilecard);
-document.getElementById("pile-0").addEventListener("click", hideRemainingCards);
-document.getElementById("pile-0").addEventListener("click", replacePlayersLowestCard);
-document.getElementById("pile-0").addEventListener("click", hideOldplayershand);
-
-function hideOldplayershand(){
-  document.getElementById('playersareaold').remove()
 }
-
-//Remove it
-
-function hidePilecard(){
-  document.getElementById("pile-0").style.visibility = "hidden"}
-  
-//Hide remaining cards
-function hideRemainingCards(){
-  document.getElementById("pile-cards").remove()
-}
-
-//Replace player's lowest card
-function replacePlayersLowestCard(){
-//Find lowest card in players' hand
-const index = Math.min(...playershand);
-//Find place of lowest card in players' hand
-let placeOfIndex = playershand.indexOf(index);
-console.log(index);
-console.log(placeOfIndex);
-//Replace player's card with pile's card
-
-playershand[placeOfIndex]=pile[0];
-
-console.log(playershand);
-
+document.getElementById('pile-0').innerHTML = 'Click Here To Replace Card';
 //Create div for score computer
 
 let computerScoreSpan = document.createElement('span');
@@ -130,19 +96,6 @@ playerScoreDiv.innerText = "Player:";
 playerScoreDiv.appendChild(playerScoreSpan);
 document.getElementById('gamearea').appendChild(playerScoreDiv);
 
-
-/*Create buttons for every item in players hand*/
-
-for (i = 0; i < playershand.length; i++) {
-  button = document.createElement('button');
-  button.className = 'button';
-  button.id = 'playershand-' + i;
-  button.innerHTML = playershand[i];
-  button.dataset.card = playershand[i];
-  //Append those divs to playerarea
-  document.getElementById('playersarea').appendChild(button);
-}
-
 function refresh(){
   window.location.reload();
 }
@@ -173,6 +126,59 @@ function itsAtie(){
   playAgain.id="play-again"
   playAgain.addEventListener("click", refresh);
   document.getElementById("main").appendChild(playAgain);
+}
+
+//Take the first card of the pile and place it to player's hand lowest card
+//Then hide the window with remainingcards
+
+document.getElementById("pile-0").addEventListener("click", hideOldPlayershand);
+document.getElementById("pile-0").addEventListener("click", hidePilecard);
+document.getElementById("pile-0").addEventListener("click", replacePlayersLowestCard);
+document.getElementById("pile-0").addEventListener("click", hideReplaceWindow);
+
+//Hide initial player's hand
+function hideOldPlayershand(){
+  document.getElementById('playersareaold').remove()
+}
+
+//If the player choses No start the game
+document.getElementById("no").addEventListener("click", hideReplaceWindow);
+
+function hideReplaceWindow(){
+  document.getElementById('pile-cards').style.visibility = 'hidden'
+}
+
+//Remove it
+
+function hidePilecard(){
+  document.getElementById("pile-0").style.visibility = "hidden"}
+
+//Replace player's lowest card
+
+function replacePlayersLowestCard(){
+
+//Find lowest card in players' hand
+const index = Math.min(...playershand);
+//Find place of lowest card in players' hand
+let placeOfIndex = playershand.indexOf(index);
+console.log(index);
+console.log(placeOfIndex);
+//Replace player's card with pile's card
+
+playershand[placeOfIndex]=pile[0];
+
+console.log(playershand);
+
+/*Create buttons for every item in players hand*/
+
+for (i = 0; i < playershand.length; i++) {
+  button = document.createElement('button');
+  button.className = 'button';
+  button.id = 'playershand-' + i;
+  button.innerHTML = playershand[i];
+  button.dataset.card = playershand[i];
+  //Append those divs to playerarea
+  document.getElementById('playersarea').appendChild(button);
 }
 
 //Take out the player's choice from player's hand

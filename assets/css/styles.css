@@ -21,7 +21,8 @@ body {
     min-height: 80px;
 }
 
-#nav, #restart {
+#nav,
+#restart {
     position: absolute;
     left: 40px;
     font-size: 30px;
@@ -32,7 +33,8 @@ body {
     left: 78vw;
 }
 
-#nav-icon, #restart-icon {
+#nav-icon,
+#restart-icon {
     position: absolute;
     color: rgb(212, 121, 180);
     display: none;
@@ -41,7 +43,7 @@ body {
 }
 
 #restart-icon {
-    right:20px;
+    right: 20px;
 }
 
 main {
@@ -52,7 +54,11 @@ main {
     align-items: center;
 }
 
-#computerarea, #playersarea, #computerscards, #pile-cards, #playersareaold {
+#computerarea,
+#playersarea,
+#computerscards,
+#pile-cards,
+#playersareaold {
     font-family: 'Balsamiq Sans', sans-serif;
     display: flex;
     flex-direction: row;
@@ -63,40 +69,41 @@ main {
     justify-content: center;
 }
 
-#computerarea {
-   align-items: flex-end;
-   justify-content: flex-start;
+#pile-cards {
+    background-color: white;
+    position: absolute;
+    height: 250px;
+    width: 90%;
+    z-index: 10;
+    border: 2px solid rgb(50, 19, 81);
+    border-radius: 15px;
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 50px;
+    padding: 20px;
 }
 
-.computerscard, .deck, .pilecard {
+#computerarea {
+    align-items: flex-end;
+    justify-content: flex-start;
+}
+
+.computerscard,
+.deck,
+.pilecard {
     font-family: 'Balsamiq Sans', sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 5px;
-    background-image: linear-gradient(rgb(212, 121, 180),white, rgb(113, 206, 220) );
+    background-image: linear-gradient(rgb(212, 121, 180), white, rgb(113, 206, 220));
     font-size: 0px;
     width: 100px;
     height: 150px;
     border: 2px solid rgb(50, 19, 81);
     border-radius: 15px;
     z-index: 1;
-   
-}
 
-#pile-cards {
-    display: flex;
-    justify-content: center;
-    border: 2px solid rgb(50, 19, 81);
-    border-radius: 15px;
-    min-width: 300px;
-    max-width: 90vw;
-    height: 300px;
-    background-color: white;
-    position: absolute;
-    z-index: 2;
-    align-content: flex-end;
-    margin-bottom: 200px;
 }
 
 #computershand-0 {
@@ -141,48 +148,71 @@ main {
 #pile-0 {
     z-index: 8;
     position: absolute;
-    margin-left: 0px;
+    margin-left: 65vw;
+font-size: 20px;
 }
 
-#pile-1 { z-index: 7;
+#pile-1 {
+    z-index: 7;
     position: absolute;
-    margin-left: 10px;
+    margin-left: 63vw;
+
 }
+
 #pile-2 {
     z-index: 6;
     position: absolute;
-    margin-left: 20px;
-}
-#pile-3 { z-index: 5;
-    position: absolute;
-    margin-left: 30px;
-}
-#pile-4 { z-index: 4;
-    position: absolute;
-    margin-left: 40px;
-}
-#pile-5 { z-index: 3;
-    position: absolute;
-    margin-left: 50px;
-}
-#pile-6 { z-index: 2;
-    position: absolute;
-    margin-left: 60px;
-}
-#pile-7 { z-index: 1;
-    position: absolute;
-    margin-left: 70px;
+    margin-left: 61vw;
+
 }
 
+#pile-3 {
+    z-index: 5;
+    position: absolute;
+    margin-left: 59vw;
+
+}
+
+#pile-4 {
+    z-index: 4;
+    position: absolute;
+    margin-left: 57vw;
+
+}
+
+#pile-5 {
+    z-index: 3;
+    position: absolute;
+    margin-left: 55vw;
+
+}
+
+#pile-6 {
+    z-index: 2;
+    position: absolute;
+    margin-left: 53vw;
+
+}
+
+#pile-7 {
+    z-index: 1;
+    position: absolute;
+    margin-left: 51vw;
+}
 
 .deck {
     font-size: 30px;
-    background-color:  white;
+    background-color: white;
     width: 100px;
     height: 150px;
 }
 
-.computerscardgamearea, .playerscardgamearea {
+#replacetext {
+    font-size: 20px;
+}
+
+.computerscardgamearea,
+.playerscardgamearea {
     font-family: 'Balsamiq Sans', sans-serif;
     display: flex;
     justify-content: center;
@@ -192,13 +222,14 @@ main {
     color: rgb(50, 19, 81);
     font-size: 30px;
     width: 100px;
-   height: 150px;
+    height: 150px;
     border: 2px solid rgb(50, 19, 81);
     border-radius: 15px;
-    
+
 }
 
-#playersplace, #computersplace {
+#playersplace,
+#computersplace {
     font-family: 'Balsamiq Sans', sans-serif;
     display: flex;
     justify-content: center;
@@ -217,12 +248,12 @@ main {
     width: 100px;
     height: 150px;
     z-index: 1;
-    cursor:pointer;
+    cursor: pointer;
     text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
-   
+
 }
 
 .playerinnerdiv {
@@ -241,6 +272,7 @@ main {
     justify-content: center;
     align-items: center;
 }
+
 .cards-index {
     font-family: 'Balsamiq Sans', sans-serif;
     color: rgb(50, 19, 81);
@@ -267,7 +299,8 @@ main {
 }
 
 
-#computerscore, #playerscore {
+#computerscore,
+#playerscore {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -287,7 +320,8 @@ main {
 }
 
 
-#playerscoretext, #computerscoretext {
+#playerscoretext,
+#computerscoretext {
     font-size: 20px;
     margin: 5px;
     max-width: 80px;
@@ -303,7 +337,8 @@ main {
     justify-content: center;
 }
 
-#instructions, #deck-introduction {
+#instructions,
+#deck-introduction {
     font-family: 'Balsamiq Sans', sans-serif;
     display: flex;
     justify-content: center;
@@ -314,15 +349,16 @@ main {
     padding: 10px;
 }
 
-#start-button {
+#start-button,
+#no {
     font-family: 'Balsamiq Sans', sans-serif;
     color: rgb(50, 19, 81);
     font-size: 30px;
     border-radius: 15px;
-    margin: 2px;
+    margin: 20px;
     border: 2px solid rgb(50, 19, 81);
     background-color: white;
-    cursor:pointer;
+    cursor: pointer;
 }
 
 #main {
@@ -333,11 +369,12 @@ main {
     font-family: 'Balsamiq Sans', sans-serif;
     color: rgb(50, 19, 81);
     font-size: 60px;
-    background-image: linear-gradient(rgb(113, 206, 220),white,white ,rgb(212, 121, 180) );
-   
+    background-image: linear-gradient(rgb(113, 206, 220), white, white, rgb(212, 121, 180));
+
 }
 
-footer {font-family: 'Balsamiq Sans', sans-serif;
+footer {
+    font-family: 'Balsamiq Sans', sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -348,14 +385,15 @@ footer {font-family: 'Balsamiq Sans', sans-serif;
 
 }
 
-#play-again {font-family: 'Balsamiq Sans', sans-serif;
+#play-again {
+    font-family: 'Balsamiq Sans', sans-serif;
     color: rgb(50, 19, 81);
     font-size: 30px;
     border-radius: 15px;
     margin: 2px;
     border: 2px solid rgb(50, 19, 81);
     background-color: white;
-    cursor:pointer;
+    cursor: pointer;
 
 }
 
@@ -367,32 +405,105 @@ footer {font-family: 'Balsamiq Sans', sans-serif;
         height: 15vh;
     }
 
-    .button, .computerscardgamearea, .playerscardgamearea {
+    .button,
+    .computerscardgamearea,
+    .playerscardgamearea {
         font-family: 'Balsamiq Sans', sans-serif;
         width: 15vw;
         height: 15vh;
     }
 
-    #playerscoretext, #computerscoretext {
+    #playerscoretext,
+    #computerscoretext {
         font-size: 15px;
         width: 15vw;
     }
 
-    #nav, #restart {
+    #nav,
+    #restart {
         display: none;
     }
-    #nav-icon, #restart-icon {
+
+    #nav-icon,
+    #restart-icon {
         display: block;
     }
-    
+
     #restart-icon {
         left: 85vw;
-        width:36px;
+        width: 36px;
     }
 
-    .button, .computerscard, .computerscardgamearea, .playerscardgamearea, .deck, .cards-index, .pilecard, .playerinnerdiv {
-       width: 80px;
-       height: 130px;
+    .button,
+    .computerscard,
+    .computerscardgamearea,
+    .playerscardgamearea,
+    .deck,
+    .cards-index,
+    .pilecard,
+    .playerinnerdiv {
+        width: 80px;
+        height: 130px;
+    }
+
+    #pile-cards {
+        padding: 0px;
+    }
+
+    #pile-0 {
+        z-index: 8;
+        position: absolute;
+        margin-left: 65vw;
+        margin-top: 80px;
+    }
+
+    #pile-1 {
+        z-index: 7;
+        position: absolute;
+        margin-left: 63vw;
+        margin-top: 80px;
+    }
+
+    #pile-2 {
+        z-index: 6;
+        position: absolute;
+        margin-left: 61vw;
+        margin-top: 80px;
+    }
+
+    #pile-3 {
+        z-index: 5;
+        position: absolute;
+        margin-left: 59vw;
+        margin-top: 80px;
+    }
+
+    #pile-4 {
+        z-index: 4;
+        position: absolute;
+        margin-left: 57vw;
+        margin-top: 80px;
+    }
+
+    #pile-5 {
+        z-index: 3;
+        position: absolute;
+        margin-left: 55vw;
+        margin-top: 80px;
+    }
+
+    #pile-6 {
+        z-index: 2;
+        position: absolute;
+        margin-left: 53vw;
+        margin-top: 80px;
+    }
+
+    #pile-7 {
+        z-index: 1;
+        position: absolute;
+        margin-left: 51vw;
+        margin-top: 80px;
     }
 
 }
