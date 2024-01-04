@@ -154,7 +154,7 @@ function hidePilecard(){
   console.log(newPile);
   console.log(pile);
   if (pile.length == 7) {
-  setTimeout(hideReplaceWindow,1000)
+  setTimeout(hideReplaceWindow,500)
 }
 
 }
@@ -164,7 +164,7 @@ function hidePilecard(){
 function replaceAndPlay(){
 
 //Find lowest card in players' hand
-const index = Math.min(...playershand);
+let index = Math.min(...playershand);
 //Find place of lowest card in players' hand
 let placeOfIndex = playershand.indexOf(index);
 console.log(index);

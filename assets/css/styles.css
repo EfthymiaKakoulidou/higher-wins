@@ -8,6 +8,8 @@ body {
     flex-direction: column;
     margin: 0;
     min-height: 100vh;
+    overflow: hidden;
+    flex-grow: 1;
 }
 
 #header-page {
@@ -15,17 +17,17 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 40px;
+    font-size: 30px;
     color: rgb(212, 121, 180);
     background-color: rgb(50, 19, 81);
-    min-height: 80px;
+    min-height: 50px;
 }
 
 #nav,
 #restart {
     position: absolute;
-    left: 40px;
-    font-size: 30px;
+    left: 30px;
+    font-size: 20px;
     color: rgb(212, 121, 180);
 }
 
@@ -38,7 +40,7 @@ body {
     position: absolute;
     color: rgb(212, 121, 180);
     display: none;
-    font-size: 30px;
+    font-size: 20px;
     left: 20px;
 }
 
@@ -50,8 +52,12 @@ main {
     display: flex;
     justify-content: center;
     flex-direction: column;
-    flex: 1;
     align-items: center;
+    flex-grow: 1;
+}
+
+#chand, #phand {
+    font-size: 20px;
 }
 
 #computerarea,
@@ -73,19 +79,15 @@ main {
     background-color: white;
     position: absolute;
     height: 250px;
-    width: 90%;
+    width:90%;
+    max-width: 880px;
     z-index: 10;
     border: 2px solid rgb(50, 19, 81);
     border-radius: 15px;
     display: flex;
     justify-content: flex-start;
-    margin-bottom: 50px;
+    margin-bottom: 75px;
     padding: 20px;
-}
-
-#computerarea {
-    align-items: flex-end;
-    justify-content: flex-start;
 }
 
 .computerscard,
@@ -95,109 +97,69 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 5px;
+    margin: 10px;
     background-image: linear-gradient(rgb(212, 121, 180), white, rgb(113, 206, 220));
     font-size: 0px;
-    width: 100px;
-    height: 150px;
+    width: 80px;
+    height: 120px;
     border: 2px solid rgb(50, 19, 81);
     border-radius: 15px;
     z-index: 1;
-
-}
-
-#computershand-0 {
-    margin-left: -150px;
-}
-
-#computershand-1 {
-    position: absolute;
-    margin-left: -120px;
-}
-
-#computershand-2 {
-    position: absolute;
-    margin-left: -90px;
-}
-
-#computershand-3 {
-    position: absolute;
-    margin-left: -60px;
-}
-
-#computershand-4 {
-    position: absolute;
-    margin-left: -30px;
-}
-
-#computershand-5 {
-    position: absolute;
-    margin-left: 0px;
-}
-
-#computershand-6 {
-    position: absolute;
-    margin-left: 30px;
-}
-
-#computershand-7 {
-    position: absolute;
-    margin-left: 60px;
 }
 
 #pile-0 {
     z-index: 8;
     position: absolute;
-    margin-left: 65vw;
+    margin-left: 80%;
 font-size: 20px;
 }
 
 #pile-1 {
     z-index: 7;
     position: absolute;
-    margin-left: 63vw;
+    margin-left: 78%;
 
 }
 
 #pile-2 {
     z-index: 6;
     position: absolute;
-    margin-left: 61vw;
+    margin-left: 76%;
 
 }
 
 #pile-3 {
     z-index: 5;
     position: absolute;
-    margin-left: 59vw;
+    margin-left: 74%;
 
 }
 
 #pile-4 {
     z-index: 4;
     position: absolute;
-    margin-left: 57vw;
+    margin-left: 72%;
 
 }
 
 #pile-5 {
     z-index: 3;
     position: absolute;
-    margin-left: 55vw;
+    margin-left: 70%;
 
 }
 
 #pile-6 {
     z-index: 2;
     position: absolute;
-    margin-left: 53vw;
+    margin-left: 68%;
 
 }
 
 #pile-7 {
     z-index: 1;
     position: absolute;
-    margin-left: 51vw;
+    margin-left: 66%;
 }
 
 .deck {
@@ -221,8 +183,8 @@ font-size: 20px;
     background-color: white;
     color: rgb(50, 19, 81);
     font-size: 30px;
-    width: 100px;
-    height: 150px;
+    width: 80px;
+    height: 120px;
     border: 2px solid rgb(50, 19, 81);
     border-radius: 15px;
 
@@ -242,11 +204,11 @@ font-size: 20px;
     color: rgb(50, 19, 81);
     font-size: 30px;
     border-radius: 15px;
-    margin: 5px;
+    margin: 10px;
     background-color: white;
     border: 2px solid rgb(50, 19, 81);
-    width: 100px;
-    height: 150px;
+    width: 80px;
+    height: 120px;
     z-index: 1;
     cursor: pointer;
     text-align: center;
@@ -261,11 +223,11 @@ font-size: 20px;
     color: rgb(50, 19, 81);
     font-size: 30px;
     border-radius: 15px;
-    margin: 5px;
+    margin: 10px;
     background-color: white;
     border: 2px solid rgb(50, 19, 81);
-    width: 100px;
-    height: 150px;
+    width: 80px;
+    height: 120px;
     z-index: 1;
     text-align: center;
     display: flex;
@@ -343,7 +305,6 @@ font-size: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 10px;
     color: rgb(50, 19, 81);
     font-size: 20px;
     padding: 10px;
@@ -355,7 +316,7 @@ font-size: 20px;
     color: rgb(50, 19, 81);
     font-size: 30px;
     border-radius: 15px;
-    margin: 20px;
+    margin: 40px;
     border: 2px solid rgb(50, 19, 81);
     background-color: white;
     cursor: pointer;
@@ -381,7 +342,7 @@ footer {
     font-size: 15px;
     color: rgb(212, 121, 180);
     background-color: rgb(50, 19, 81);
-    min-height: 60px;
+    min-height: 50px;
 
 }
 
@@ -399,10 +360,13 @@ footer {
 
 @media screen and (max-width: 490px) {
 
+#instructions, #deck-introduction {
+    margin:0px;
+    font-size: 15px;
+}
     .computerscard {
-
-        width: 15vw;
-        height: 15vh;
+        width: 60px;
+        height: 90px;
     }
 
     .button,
@@ -417,8 +381,11 @@ footer {
     #computerscoretext {
         font-size: 15px;
         width: 15vw;
+        margin:0px;
     }
-
+#replacetext {
+    margin:0px;
+}
     #nav,
     #restart {
         display: none;
@@ -435,27 +402,44 @@ footer {
     }
 
     .button,
-    .computerscard,
     .computerscardgamearea,
     .playerscardgamearea,
-    .deck,
-    .cards-index,
-    .pilecard,
     .playerinnerdiv {
-        width: 80px;
-        height: 130px;
+        font-size: 20px;
+        width: 60px;
+        height: 90px;
+    }
+
+    .computerscard {
+        font-size: 0px;
+    }
+
+    .pilecard{width: 60px;
+        height: 90px;
+        margin-bottom: 20px;
+
+    }
+
+    .cards-index, .deck {
+        width:50px;
+        height:75px;
     }
 
     #pile-cards {
+        height: 25%;
+        font-size: 15px;
         padding: 0px;
+        justify-content: center;
+        width:90%;
     }
+
 
     #pile-0 {
         z-index: 8;
         position: absolute;
         margin-left: 65vw;
         margin-top: 80px;
-    }
+        font-size: 15px;}
 
     #pile-1 {
         z-index: 7;
