@@ -19,6 +19,7 @@ const playershand = cards.slice(0, 8);
 console.log(playershand);
 const pile = cards.slice(16, 24);
 console.log(pile);
+
 /*Create a div for every item in the array of computer's hand*/
 
 for (i = 0; i < computershand.length; i++) {
@@ -29,6 +30,18 @@ for (i = 0; i < computershand.length; i++) {
   computerinnerdiv.dataset.card = computershand[i];
   //Append those divs to computerarea
   document.getElementById('computerarea').appendChild(computerinnerdiv);
+  document.getElementById('computerarea').style.visibility = 'hidden';
+}
+
+/*Create a div for every card of player's hand*/
+
+for (i = 0; i < playershand.length; i++) {
+  playerinnerdiv = document.createElement('div');
+  playerinnerdiv.className = 'playerinnerdiv';
+  playerinnerdiv.innerHTML = playershand[i];
+  playerinnerdiv.dataset.card = playershand[i];
+  //Append those divs to playerarea
+  document.getElementById('playersareaold').appendChild(playerinnerdiv);
 }
 
 /*Create a div for every item in the array of pile*/
@@ -43,14 +56,29 @@ for (i = 0; i < pile.length; i++) {
 document.getElementById('pile-cards').appendChild(pileButton);}
 
 //Take the first card of the pile and place it to player's hand lowest card
+//Then hide the window with remainingcards
 
 document.getElementById("pile-0").addEventListener("click", hidePilecard);
+document.getElementById("pile-0").addEventListener("click", hideRemainingCards);
+document.getElementById("pile-0").addEventListener("click", replacePlayersLowestCard);
+document.getElementById("pile-0").addEventListener("click", hideOldplayershand);
+
+function hideOldplayershand(){
+  document.getElementById('playersareaold').remove()
+}
 
 //Remove it
 
 function hidePilecard(){
   document.getElementById("pile-0").style.visibility = "hidden"}
+  
+//Hide remaining cards
+function hideRemainingCards(){
+  document.getElementById("pile-cards").remove()
+}
 
+//Replace player's lowest card
+function replacePlayersLowestCard(){
 //Find lowest card in players' hand
 const index = Math.min(...playershand);
 //Find place of lowest card in players' hand
@@ -58,11 +86,10 @@ let placeOfIndex = playershand.indexOf(index);
 console.log(index);
 console.log(placeOfIndex);
 //Replace player's card with pile's card
-const newValue = pile[0];
 
 playershand[placeOfIndex]=pile[0];
-console.log(playershand);
 
+console.log(playershand);
 
 //Create div for score computer
 
@@ -120,7 +147,6 @@ function refresh(){
   window.location.reload();
 }
 
-
 //Hide gamearea
 function youWin(){
   document.getElementById("main").innerHTML = "You Win!"
@@ -159,25 +185,18 @@ playerBtns.forEach(btn => {
     this.style.visibility = "hidden";
     moveplayerscardtogamearea(cardValue);
 
-    //Specify the place of the card chosen by th player
-    let playersChoicePlace = playershand.indexOf(cardValue);
-    console.log(playersChoicePlace);
-
-    //Remove player's card from player's hand
-    let playerscardchoice = playershand.splice(playersChoicePlace, 1);
-
     //Playershand after playing the card
     console.log(playershand);
 
-    if (playershand.length == 0 && playerScoreSpan.innerHTML > computerScoreSpan.innerHTML) {
+    if (computershand.length == 0 && playerScoreSpan.innerHTML > computerScoreSpan.innerHTML) {
       setTimeout(youWin,500);
     }
 
-    if (playershand.length == 0 && playerScoreSpan.innerHTML < computerScoreSpan.innerHTML) {
+    if (computershand.length == 0 && playerScoreSpan.innerHTML < computerScoreSpan.innerHTML) {
       setTimeout(computerWins,500);
     }
 
-    if (playershand.length == 0 && playerScoreSpan.innerHTML == computerScoreSpan.innerHTML) {
+    if (computershand.length == 0 && playerScoreSpan.innerHTML == computerScoreSpan.innerHTML) {
       setTimeout(itsAtie,500);
     }
 
@@ -225,4 +244,4 @@ function moveplayerscardtogamearea(playersCardValue) {
     playerScoreSpan.innerHTML++;
   }
 
-}
+}}

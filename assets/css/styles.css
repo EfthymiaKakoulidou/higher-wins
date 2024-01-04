@@ -52,13 +52,15 @@ main {
     align-items: center;
 }
 
-#computerarea, #playersarea, #computerscards, #pile-cards {
+#computerarea, #playersarea, #computerscards, #pile-cards, #playersareaold {
     font-family: 'Balsamiq Sans', sans-serif;
     display: flex;
     flex-direction: row;
     flex: 1;
     flex-wrap: wrap;
     font-size: 20px;
+    align-items: center;
+    justify-content: center;
 }
 
 #computerarea {
@@ -94,7 +96,7 @@ main {
     position: absolute;
     z-index: 2;
     align-content: flex-end;
-    margin-bottom: 150px;
+    margin-bottom: 200px;
 }
 
 #computershand-0 {
@@ -202,7 +204,6 @@ main {
     justify-content: center;
     align-items: center;
     font-size: 30px;
-   
 }
 
 .button {
@@ -223,6 +224,23 @@ main {
     align-items: center;
    
 }
+
+.playerinnerdiv {
+    font-family: 'Balsamiq Sans', sans-serif;
+    color: rgb(50, 19, 81);
+    font-size: 30px;
+    border-radius: 15px;
+    margin: 5px;
+    background-color: white;
+    border: 2px solid rgb(50, 19, 81);
+    width: 100px;
+    height: 150px;
+    z-index: 1;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .cards-index {
     font-family: 'Balsamiq Sans', sans-serif;
     color: rgb(50, 19, 81);
@@ -239,7 +257,6 @@ main {
     align-items: center;
     margin-left: 20px;
 }
-
 
 #gamearea {
     font-family: 'Balsamiq Sans', sans-serif;
@@ -373,7 +390,7 @@ footer {font-family: 'Balsamiq Sans', sans-serif;
         width:36px;
     }
 
-    .button, .computerscard, .computerscardgamearea, .playerscardgamearea, .deck, .cards-index, .pilecard {
+    .button, .computerscard, .computerscardgamearea, .playerscardgamearea, .deck, .cards-index, .pilecard, .playerinnerdiv {
        width: 80px;
        height: 130px;
     }
