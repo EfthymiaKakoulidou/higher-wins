@@ -231,6 +231,7 @@ main {
     align-items: center;
     background-color: rgb(113, 206, 220);
    transition: background-color 0.5s ease;
+   cursor: pointer;
 }
 
 .blink:hover {
@@ -269,7 +270,6 @@ main {
     justify-content: center;
     align-items: center;
     font-size: 40px;
-    font-family: 'Balsamiq Sans', sans-serif;
     font-family: 'Balsamiq Sans', sans-serif;
     margin: 5px;
 }
