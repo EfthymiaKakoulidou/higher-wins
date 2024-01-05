@@ -190,7 +190,13 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: background-color 0.5s ease;
 }
+
+.button:hover {
+    background-color: rgb(212, 121, 180);
+}
+
 
 
 .playerinnerdiv {
@@ -208,6 +214,29 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.blink {
+    font-family: 'Balsamiq Sans', sans-serif;
+    color: rgb(50, 19, 81);
+    font-size: 30px;
+    border-radius: 15px;
+    margin: 10px;
+    background-color: white;
+    border: 2px solid rgb(50, 19, 81);
+    width: 80px;
+    height: 120px;
+    z-index: 1;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+   transition: background-color 0.5s ease;
+}
+
+.blink:hover {
+    background-color: rgb(212, 121, 180);
 }
 
 .cards-index {
@@ -334,7 +363,7 @@ footer {
 
 
 @media screen and (max-width: 490px) {
-    
+
     #computer-section, #gamearea, #player-section {
         font-size: 0px;
     }

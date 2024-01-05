@@ -34,8 +34,7 @@ for (i = 0; i < playershand.length; i++) {
 //Make lowest card blink
 let lowest = Math.min(...playershand);
 let lowestBlink = document.querySelector(`.playerinnerdiv[data-card="${lowest}"]`);
-lowestBlink.style.backgroundColor = "rgb(212, 121, 180)";
-lowestBlink.style.transition = "background 1s";
+lowestBlink.setAttribute('class', 'blink');
 
 /*Create a div for every item in the array of computer's hand*/
 
