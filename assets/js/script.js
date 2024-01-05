@@ -119,17 +119,19 @@ playerScoreDiv.innerText = "Your score:";
 playerScoreDiv.appendChild(playerScoreSpan);
 document.getElementById('gamearea').appendChild(playerScoreDiv);
 
-//If the player chooses to replace the lowest card
-
-document.getElementById("pile-0").addEventListener("click", hideOldPlayershand);
-document.getElementById("pile-0").addEventListener("click", hidePilecard);
-document.getElementById("pile-0").addEventListener("click", replaceAndPlay);
-
 //If the player chooses not replace the lowest card
 
 document.getElementById("no").addEventListener("click", hideReplaceWindow);
 document.getElementById("no").addEventListener("click", hideOldPlayershand);
 document.getElementById("no").addEventListener("click", play);
+document.getElementById("no").addEventListener("click", hidePilecard);
+
+//If the player chooses to replace the lowest card
+
+document.getElementById("pile-0").addEventListener("click", hideOldPlayershand);
+document.getElementById("pile-0").addEventListener("click", hidePilecard);
+document.getElementById("pile-0").addEventListener("click", replaceAndPlay);
+document.getElementById("pile-0").addEventListener("click", hideReplaceWindow);
 
 //Functions executed in both cases
 
@@ -152,9 +154,7 @@ function hidePilecard() {
   let newPile = pile.splice(0, 1);
   console.log(newPile);
   console.log(pile);
-  if (pile.length == 7) {
-    setTimeout(hideReplaceWindow, 500)
-  }
+
 }
 
 //If the player chooses to replace the lowest card
