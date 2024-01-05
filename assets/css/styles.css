@@ -113,6 +113,7 @@ main {
     margin-left: 80%;
     font-size: 20px;
     transition : all 0.2s ease;
+    cursor: pointer;
 }
 
 #pile-0:hover {

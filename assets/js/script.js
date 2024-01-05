@@ -31,6 +31,12 @@ for (i = 0; i < playershand.length; i++) {
   document.getElementById('playersareaold').appendChild(playerinnerdiv);
 }
 
+//Make lowest card blink
+let lowest = Math.min(...playershand);
+let lowestBlink = document.querySelector(`.playerinnerdiv[data-card="${lowest}"]`);
+lowestBlink.style.backgroundColor = "rgb(212, 121, 180)";
+lowestBlink.style.transition = "background 1s";
+
 /*Create a div for every item in the array of computer's hand*/
 
 for (i = 0; i < computershand.length; i++) {
@@ -158,7 +164,6 @@ function hidePilecard(){
   if (pile.length == 7) {
   setTimeout(hideReplaceWindow,500)
 }
-
 }
 
 //Replace player's lowest card
