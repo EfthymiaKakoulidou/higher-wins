@@ -370,7 +370,6 @@ function play() {
   }
 }
 
-
 //Function executed when the player wins
 
 function youWin() {

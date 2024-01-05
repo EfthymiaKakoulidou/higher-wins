@@ -11,6 +11,8 @@ body {
     flex-grow: 1;
 }
 
+/*Header*/
+
 #header-page {
     font-family: 'Balsamiq Sans', sans-serif;
     display: flex;
@@ -47,6 +49,8 @@ body {
     right: 20px;
 }
 
+/*Main*/
+
 main {
     display: flex;
     justify-content: center;
@@ -55,24 +59,56 @@ main {
     flex-grow: 1;
 }
 
-#chand,
-#phand {
-    font-size: 20px;
+#main {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    font-family: 'Balsamiq Sans', sans-serif;
+    color: rgb(50, 19, 81);
+    font-size: 60px;
+    background-image: linear-gradient(rgb(88, 166, 179), white, white, rgb(212, 121, 180));
+
 }
 
-#computerarea,
-#playersarea,
-#computerscards,
-#playersareaold {
+/*Styles for the index page*/
+
+.cards-index {
     font-family: 'Balsamiq Sans', sans-serif;
+    color: rgb(50, 19, 81);
+    font-size: 30px;
+    border-radius: 15px;
+    margin: 5px;
+    background-color: white;
+    border: 2px solid rgb(50, 19, 81);
+    width: 100px;
+    height: 150px;
+    text-align: center;
     display: flex;
-    flex-direction: row;
-    flex: 1;
-    flex-wrap: wrap;
-    font-size: 20px;
+    justify-content: center;
     align-items: center;
+    margin-left: 20px;
+}
+
+#deck {
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100%;
+    display: flex;
     justify-content: center;
 }
+
+#instructions,
+#deck-introduction {
+    font-family: 'Balsamiq Sans', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(50, 19, 81);
+    font-size: 20px;
+    padding: 10px;
+}
+
+/*Styles just for the replace the lowest card window*/
 
 #pile-cards {
     font-size: 20px;
@@ -94,22 +130,6 @@ main {
     min-height: 40vh;
 }
 
-.computerscard,
-.deck,
-.pilecard {
-    font-family: 'Balsamiq Sans', sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 10px;
-    background-image: linear-gradient(rgb(212, 121, 180), white, rgb(88, 166, 179));
-    font-size: 0px;
-    width: 80px;
-    height: 120px;
-    border: 2px solid rgb(50, 19, 81);
-    border-radius: 15px;
-    z-index: 1;
-}
 
 #pile-cards-group {
     display: flex;
@@ -125,6 +145,7 @@ main {
 .pilecard {
     position: absolute;
 }
+
 #pile-0 {
     z-index: 11;
     font-size: 20px;
@@ -137,15 +158,37 @@ main {
     height: 130px;
 }
 
-.deck {
-    font-size: 30px;
-    background-color: white;
-    width: 100px;
-    height: 150px;
-}
-
 #replacetext {
     font-size: 20px;
+}
+
+/*Styles for game page*/
+
+#chand,
+#phand {
+    font-size: 20px;
+}
+
+#gamearea {
+    font-family: 'Balsamiq Sans', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+}
+
+#computerarea,
+#playersarea,
+#computerscards,
+#playersareaold {
+    font-family: 'Balsamiq Sans', sans-serif;
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    flex-wrap: wrap;
+    font-size: 20px;
+    align-items: center;
+    justify-content: center;
 }
 
 .computerscardgamearea,
@@ -174,7 +217,62 @@ main {
     font-size: 30px;
 }
 
-.button {
+#computerscore,
+#playerscore {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    font-family: 'Balsamiq Sans', sans-serif;
+    margin: 5px;
+}
+
+#computerscore {
+    color: rgb(88, 166, 179);
+}
+
+#playerscore {
+    color: rgb(212, 121, 180);
+}
+
+#playerscoretext,
+#computerscoretext {
+    font-size: 20px;
+    margin: 5px;
+    max-width: 80px;
+    min-height: 130px;
+    margin: 25px;
+}
+
+/*Common styles*/
+
+.computerscard,
+.deck,
+.pilecard {
+    font-family: 'Balsamiq Sans', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    background-image: linear-gradient(rgb(212, 121, 180), white, rgb(88, 166, 179));
+    font-size: 0px;
+    width: 80px;
+    height: 120px;
+    border: 2px solid rgb(50, 19, 81);
+    border-radius: 15px;
+    z-index: 1;
+}
+
+.deck {
+    font-size: 30px;
+    background-color: white;
+    width: 100px;
+    height: 150px;
+}
+
+.button,
+.playerinnerdiv,
+.blink {
     font-family: 'Balsamiq Sans', sans-serif;
     color: rgb(50, 19, 81);
     font-size: 30px;
@@ -197,119 +295,16 @@ main {
     background-color: rgb(212, 121, 180);
 }
 
-.playerinnerdiv {
-    font-family: 'Balsamiq Sans', sans-serif;
-    color: rgb(50, 19, 81);
-    font-size: 30px;
-    border-radius: 15px;
-    margin: 10px;
-    background-color: white;
-    border: 2px solid rgb(50, 19, 81);
-    width: 80px;
-    height: 120px;
-    z-index: 1;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 .blink {
-    font-family: 'Balsamiq Sans', sans-serif;
-    color: rgb(50, 19, 81);
-    font-size: 30px;
-    border-radius: 15px;
-    margin: 10px;
-    background-color: white;
-    border: 2px solid rgb(50, 19, 81);
-    width: 80px;
-    height: 120px;
-    z-index: 1;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     background-color: rgb(88, 166, 179);
-   cursor: pointer;
+    cursor: pointer;
 }
 
 .blink:hover {
     background-color: rgb(212, 121, 180);
 }
 
-.cards-index {
-    font-family: 'Balsamiq Sans', sans-serif;
-    color: rgb(50, 19, 81);
-    font-size: 30px;
-    border-radius: 15px;
-    margin: 5px;
-    background-color: white;
-    border: 2px solid rgb(50, 19, 81);
-    width: 100px;
-    height: 150px;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-left: 20px;
-}
-
-#gamearea {
-    font-family: 'Balsamiq Sans', sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 30px;
-}
-
-
-#computerscore,
-#playerscore {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 40px;
-    font-family: 'Balsamiq Sans', sans-serif;
-    margin: 5px;
-}
-
-#computerscore {
-    color: rgb(88, 166, 179);
-}
-
-
-#playerscore {
-    color: rgb(212, 121, 180);
-}
-
-
-#playerscoretext,
-#computerscoretext {
-    font-size: 20px;
-    margin: 5px;
-    max-width: 80px;
-    min-height: 130px;
-    margin: 25px;
-}
-
-#deck {
-    flex-wrap: wrap;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-}
-
-#instructions,
-#deck-introduction {
-    font-family: 'Balsamiq Sans', sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: rgb(50, 19, 81);
-    font-size: 20px;
-    padding: 10px;
-}
+/*Result pages*/
 
 #start-button,
 #no {
@@ -320,29 +315,6 @@ main {
     border: 2px solid rgb(50, 19, 81);
     background-color: white;
     cursor: pointer;
-    margin-right: 40px;
-}
-
-#main {
-    display: flex;
-    text-align: center;
-    align-items: center;
-    font-family: 'Balsamiq Sans', sans-serif;
-    color: rgb(50, 19, 81);
-    font-size: 60px;
-    background-image: linear-gradient(rgb(88, 166, 179), white, white, rgb(212, 121, 180));
-
-}
-
-footer {
-    font-family: 'Balsamiq Sans', sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 15px;
-    color: rgb(212, 121, 180);
-    background-color: rgb(50, 19, 81);
-    min-height: 50px;
 
 }
 
@@ -358,10 +330,26 @@ footer {
 
 }
 
+/*Footer*/
+
+footer {
+    font-family: 'Balsamiq Sans', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+    color: rgb(212, 121, 180);
+    background-color: rgb(50, 19, 81);
+    min-height: 50px;
+
+}
+
 
 @media screen and (max-width: 490px) {
 
-    #computer-section, #gamearea, #player-section {
+    #computer-section,
+    #gamearea,
+    #player-section {
         font-size: 0px;
     }
 
@@ -371,7 +359,8 @@ footer {
         font-size: 15px;
     }
 
-    .computerscard, .blink {
+    .computerscard,
+    .blink {
         font-size: 20px;
         width: 60px;
         height: 90px;
@@ -389,7 +378,6 @@ footer {
     #computerscoretext {
         font-size: 15px;
         width: 15vw;
-       
     }
 
     #replacetext {
@@ -418,7 +406,7 @@ footer {
         font-size: 20px;
         width: 60px;
         height: 90px;
-        transition:none;
+        transition: none;
     }
 
     .button:hover {
@@ -426,7 +414,8 @@ footer {
         height: 90px;
     }
 
-    #computersplace, #playersplace {
+    #computersplace,
+    #playersplace {
         font-size: 20px;
     }
 
@@ -435,13 +424,12 @@ footer {
     }
 
     #pile-cards-group {
-        left:0px;
-        right:0px;
+        left: 0px;
+        right: 0px;
         top: 0em;
         height: 0px;
         width: 0px;
     }
-    
 
     .pilecard {
         width: 60px;
@@ -456,10 +444,10 @@ footer {
         height: 75px;
     }
 
-#pile-0 {
-    z-index: 20;
-    font-size: 15px;
-}
+    #pile-0 {
+        z-index: 20;
+        font-size: 15px;
+    }
 
     #pile-cards {
         font-size: 15px;
@@ -467,9 +455,8 @@ footer {
         justify-content: space-between;
         width: 90%;
         margin: 0 auto;
-        left:0px;
-        right:0px;
-        top:7em;
+        left: 0px;
+        right: 0px;
     }
 
     #no {
