@@ -48,6 +48,7 @@ lowestBlink.setAttribute('class', 'blink');
 lowestBlink.addEventListener('click', replaceAndPlay)
 lowestBlink.addEventListener('click', hideOldPlayershand)
 lowestBlink.addEventListener('click', hidePilecard)
+lowestBlink.addEventListener('click', hideReplaceWindow)
 
 /*Create a div for every item in the array of computer's hand*/
 
