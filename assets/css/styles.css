@@ -438,7 +438,11 @@ footer {
     #pile-cards-group {
         left:0px;
         right:0px;
+        top: 0em;
+        height: 0px;
+        width: 0px;
     }
+    
 
     .pilecard {
         width: 60px;
