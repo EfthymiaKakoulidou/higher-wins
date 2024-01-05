@@ -20,22 +20,37 @@
         <a id="restart" href="game-page.html">Restart Game</a>
         <a id="restart-icon" href="game-page.html"><i class="fa-solid fa-rotate-right"></i></a>
     </header>
+
+    
+
+    <!-- replace lowest card? -->
+    <aside id="pile-cards">
+        Do you want to replace your lowest card?
+        <button id="no">No</button>
+        <div id="pile-cards-group"></div>
+    </aside>
+
     <main id="main">
-        <span id="chand">
-        Computer's hand:</span>
-        <div id="computerarea">
+
+        <!-- computer's section -->
+        <div id="computer-section">
+            <span id="chand">
+                Computer's hand:</span>
+            <div id="computerarea"></div>
         </div>
-        
-        <div class="commongamearea" id="gamearea">
-            <div id="pile-cards"><p>Do you want to replace your lowest card?</p>
-                <button id="no">No</button></div>
-        </div>
-        <span id="phand">Your hand:</span>
-        <div id="playersarea">
-           
-            <div id="playersareaold"></div>
+
+        <!-- score area for game -->
+        <div class="commongamearea hide" id="gamearea"></div>
+    
+        <!-- player's section -->
+        <div id="player-section">
+            <span id="phand">Your hand:</span>
+            <div id="playersarea">
+                <div id="playersareaold"></div>
+            </div>
         </div>
     </main>
+
     <footer>Developed by Efthymia Kakoulidou</footer>
     <script src="assets/js/script.js"></script>
 </body>

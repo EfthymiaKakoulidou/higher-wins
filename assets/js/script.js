@@ -51,14 +51,19 @@ for (i = 0; i < computershand.length; i++) {
 
 /*Create a div for every item in the array of pile*/
 
+
+let marginLeft = 2;
 for (i = 0; i < pile.length; i++) {
   let pileButton = document.createElement('button');
   pileButton.className = 'pilecard';
   pileButton.innerHTML = pile[i];
   pileButton.id = 'pile-' + i;
   pileButton.dataset.card = pile[i];
+  pileButton.style.marginLeft = "-" + marginLeft + "px";
+  pileButton.style.zIndex = "-" + marginLeft;
+  marginLeft += 5;
   //Append divs to pile-cards
-document.getElementById('pile-cards').appendChild(pileButton);
+document.getElementById('pile-cards-group').appendChild(pileButton);
 
 }
 document.getElementById('pile-0').innerHTML = 'Click Here To Replace Card';
