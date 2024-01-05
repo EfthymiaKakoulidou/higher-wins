@@ -102,7 +102,7 @@ main {
     justify-content: center;
     align-items: center;
     margin: 10px;
-    background-image: linear-gradient(rgb(212, 121, 180), white, rgb(113, 206, 220));
+    background-image: linear-gradient(rgb(212, 121, 180), white, rgb(88, 166, 179));
     font-size: 0px;
     width: 80px;
     height: 120px;
@@ -229,7 +229,7 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgb(113, 206, 220);
+    background-color: rgb(88, 166, 179);
    transition: background-color 0.5s ease;
    cursor: pointer;
 }
@@ -275,7 +275,7 @@ main {
 }
 
 #computerscore {
-    color: rgb(113, 206, 220);
+    color: rgb(88, 166, 179);
 }
 
 
@@ -331,7 +331,7 @@ main {
     font-family: 'Balsamiq Sans', sans-serif;
     color: rgb(50, 19, 81);
     font-size: 60px;
-    background-image: linear-gradient(rgb(113, 206, 220), white, white, rgb(212, 121, 180));
+    background-image: linear-gradient(rgb(88, 166, 179), white, white, rgb(212, 121, 180));
 
 }
 
@@ -390,7 +390,7 @@ footer {
     #computerscoretext {
         font-size: 15px;
         width: 15vw;
-        margin: 0px;
+       
     }
 
     #replacetext {

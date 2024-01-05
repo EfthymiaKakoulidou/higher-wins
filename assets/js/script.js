@@ -168,8 +168,8 @@ function hidePilecard(){
   console.log(newPile);
   console.log(pile);
   if (pile.length == 7) {
-  setTimeout(hideReplaceWindow,500)
-}
+    setTimeout(hideReplaceWindow,500)
+  }
 }
 
 //Replace player's lowest card
