@@ -64,7 +64,7 @@ computerScoreSpan.id = 'computerscore';
 computerScoreSpan.innerHTML = 0;
 let computerScoreDiv = document.createElement('div');
 computerScoreDiv.id = 'computerscoretext';
-computerScoreDiv.innerText = "Computer:";
+computerScoreDiv.innerText = "Computer's Score:";
 computerScoreDiv.appendChild(computerScoreSpan);
 document.getElementById('gamearea').appendChild(computerScoreDiv);
 
@@ -73,6 +73,7 @@ document.getElementById('gamearea').appendChild(computerScoreDiv);
 let computergameareainnerdiv = document.createElement('div');
 computergameareainnerdiv.className = 'computerscardgamearea';
 computergameareainnerdiv.id = 'computersplace';
+computergameareainnerdiv.innerText= 'C';
 //Append div to gamearea
 document.getElementById('gamearea').appendChild(computergameareainnerdiv);
 
@@ -81,6 +82,7 @@ document.getElementById('gamearea').appendChild(computergameareainnerdiv);
 let playergameareainnerdiv = document.createElement('div');
 playergameareainnerdiv.className = 'computerscardgamearea';
 playergameareainnerdiv.id = 'playersplace';
+playergameareainnerdiv.innerText= 'You';
 //Append div to gamearea
 document.getElementById('gamearea').appendChild(playergameareainnerdiv);
 
@@ -91,7 +93,7 @@ playerScoreSpan.id = 'playerscore';
 playerScoreSpan.innerHTML = 0;
 let playerScoreDiv = document.createElement('div');
 playerScoreDiv.id = 'playerscoretext';
-playerScoreDiv.innerText = "Player:";
+playerScoreDiv.innerText = "Your score:";
 playerScoreDiv.appendChild(playerScoreSpan);
 document.getElementById('gamearea').appendChild(playerScoreDiv);
 

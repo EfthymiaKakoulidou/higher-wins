@@ -221,13 +221,8 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-transition: all 0.2s ease;
 }
 
-.button:hover {
-    height:130px;
-    width:90px;
-}
 
 .playerinnerdiv {
     font-family: 'Balsamiq Sans', sans-serif;
@@ -423,6 +418,16 @@ footer {
         font-size: 20px;
         width: 60px;
         height: 90px;
+        transition:none;
+    }
+
+    .button:hover {
+        width: 60px;
+        height: 90px;
+    }
+
+    #computersplace, #playersplace {
+        font-size: 20px;
     }
 
     .computerscard {
