@@ -230,7 +230,6 @@ main {
     justify-content: center;
     align-items: center;
     background-color: rgb(88, 166, 179);
-   transition: background-color 0.5s ease;
    cursor: pointer;
 }
 

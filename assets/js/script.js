@@ -1,5 +1,5 @@
 /*Deck*/
-const cards = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10 , 11, 12, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 , 11, 12,];
+const cards = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, ];
 
 /*Shuffle Cards with the Fischer Yates algorithm*/
 var i = cards.length,
@@ -13,12 +13,21 @@ while (--i > 0) {
 console.log(cards);
 
 /*Deal Cards*/
+
+//Computer's hand
 const computershand = cards.slice(8, 16);
 console.log(computershand);
+//Player's hand
 const playershand = cards.slice(0, 8);
 console.log(playershand);
+//Remaining cards
 const pile = cards.slice(16, 24);
 console.log(pile);
+
+//Function which refreshes the page
+function refresh() {
+  window.location.reload();
+}
 
 /*Create a div for every card of player's hand*/
 
@@ -31,7 +40,8 @@ for (i = 0; i < playershand.length; i++) {
   document.getElementById('playersareaold').appendChild(playerinnerdiv);
 }
 
-//Make lowest card blink
+//Find the lowest card of the remaining cards and asign functions to it
+
 let lowest = Math.min(...playershand);
 let lowestBlink = document.querySelector(`.playerinnerdiv[data-card="${lowest}"]`);
 lowestBlink.setAttribute('class', 'blink');
@@ -53,7 +63,6 @@ for (i = 0; i < computershand.length; i++) {
 
 /*Create a div for every item in the array of pile*/
 
-
 let marginLeft = 0;
 for (i = 0; i < pile.length; i++) {
   let pileButton = document.createElement('button');
@@ -65,12 +74,12 @@ for (i = 0; i < pile.length; i++) {
   pileButton.style.zIndex = "-" + marginLeft;
   marginLeft += 5;
   //Append divs to pile-cards
-document.getElementById('pile-cards-group').appendChild(pileButton);
-
+  document.getElementById('pile-cards-group').appendChild(pileButton);
 }
+//Add text to the first card of the remaining cards
 document.getElementById('pile-0').innerHTML = 'Click Here To Replace Card';
 
-//Create div for score computer
+//Create divs for the score of the computer
 
 let computerScoreSpan = document.createElement('span');
 computerScoreSpan.id = 'computerscore';
@@ -81,25 +90,25 @@ computerScoreDiv.innerText = "Computer's Score:";
 computerScoreDiv.appendChild(computerScoreSpan);
 document.getElementById('gamearea').appendChild(computerScoreDiv);
 
-/*Create a div for computersgamearea*/
+/*Create a div for the place where the computer plays*/
 
 let computergameareainnerdiv = document.createElement('div');
 computergameareainnerdiv.className = 'computerscardgamearea';
 computergameareainnerdiv.id = 'computersplace';
-computergameareainnerdiv.innerText= 'C';
+computergameareainnerdiv.innerText = 'C';
 //Append div to gamearea
 document.getElementById('gamearea').appendChild(computergameareainnerdiv);
 
-/*Create a div for playersgamearea*/
+/*Create a div for the place where the player plays*/
 
 let playergameareainnerdiv = document.createElement('div');
 playergameareainnerdiv.className = 'computerscardgamearea';
 playergameareainnerdiv.id = 'playersplace';
-playergameareainnerdiv.innerText= 'You';
+playergameareainnerdiv.innerText = 'You';
 //Append div to gamearea
 document.getElementById('gamearea').appendChild(playergameareainnerdiv);
 
-//Create div for score player
+//Create divs for the score of the player
 
 let playerScoreSpan = document.createElement('span');
 playerScoreSpan.id = 'playerscore';
@@ -110,172 +119,65 @@ playerScoreDiv.innerText = "Your score:";
 playerScoreDiv.appendChild(playerScoreSpan);
 document.getElementById('gamearea').appendChild(playerScoreDiv);
 
-function refresh(){
-  window.location.reload();
-}
-
-//Hide gamearea
-function youWin(){
-  document.getElementById("main").innerHTML = "You Win!"
-  document.getElementById("main").style.color = "rgb(212, 121, 180)"
-  playAgain = document.createElement("button");
-  playAgain.innerHTML="Play Again";
-  playAgain.id="play-again"
-  playAgain.addEventListener("click", refresh);
-  document.getElementById("main").appendChild(playAgain);
-}
-function computerWins(){
-  document.getElementById("main").innerHTML = "Computer Wins!"
-  document.getElementById("main").style.color = "rgb(113, 206, 220)"
-  playAgain = document.createElement("button");
-  playAgain.innerHTML="Play Again";
-  playAgain.id="play-again"
-  playAgain.addEventListener("click", refresh);
-  document.getElementById("main").appendChild(playAgain);
-}
-function itsAtie(){
-  document.getElementById("main").innerHTML = "It's a tie!"
-  playAgain = document.createElement("button");
-  playAgain.innerHTML="Play Again";
-  playAgain.id="play-again"
-  playAgain.addEventListener("click", refresh);
-  document.getElementById("main").appendChild(playAgain);
-}
-
-//Take the first card of the pile and place it to player's hand lowest card
-//Then hide the window with remainingcards
+//If the player chooses to replace the lowest card
 
 document.getElementById("pile-0").addEventListener("click", hideOldPlayershand);
 document.getElementById("pile-0").addEventListener("click", hidePilecard);
 document.getElementById("pile-0").addEventListener("click", replaceAndPlay);
 
-//Hide initial player's hand
-function hideOldPlayershand(){
-  document.getElementById('playersareaold').remove()
-}
+//If the player chooses not replace the lowest card
 
-//If the player choses No start the game
 document.getElementById("no").addEventListener("click", hideReplaceWindow);
 document.getElementById("no").addEventListener("click", hideOldPlayershand);
 document.getElementById("no").addEventListener("click", play);
 
-function hideReplaceWindow(){
+//Functions executed in both cases
+
+//Hide divs for the player's hand
+
+function hideOldPlayershand() {
+  document.getElementById('playersareaold').remove()
+}
+
+//Hide window with the option to replace the lowest card
+
+function hideReplaceWindow() {
   document.getElementById('pile-cards').style.visibility = 'hidden'
 }
-function hidePilecard(){
+
+//Remove the first card of the pile with the remaining cards
+
+function hidePilecard() {
   document.getElementById("pile-0").remove()
   let newPile = pile.splice(0, 1);
   console.log(newPile);
   console.log(pile);
   if (pile.length == 7) {
-    setTimeout(hideReplaceWindow,500)
+    setTimeout(hideReplaceWindow, 500)
   }
 }
 
-//Replace player's lowest card
+//If the player chooses to replace the lowest card
 
-function replaceAndPlay(){
+function replaceAndPlay() {
 
-//Find lowest card in players' hand
-let index = Math.min(...playershand);
+  //Find lowest card in players' hand
 
-//Find place of lowest card in players' hand
-let placeOfIndex = playershand.indexOf(index);
-console.log(index);
-console.log(placeOfIndex);
-//Replace player's card with pile's card
+  let index = Math.min(...playershand);
 
-playershand[placeOfIndex]=pile[0];
+  //Find place of lowest card in players' hand
 
-console.log(playershand);
+  let placeOfIndex = playershand.indexOf(index);
+  console.log(index);
+  console.log(placeOfIndex);
 
-/*Create buttons for every item in players hand*/
+  //Replace player's card with pile's card
 
-for (i = 0; i < playershand.length; i++) {
-  button = document.createElement('button');
-  button.className = 'button';
-  button.id = 'playershand-' + i;
-  button.innerHTML = playershand[i];
-  button.dataset.card = playershand[i];
-  //Append those divs to playerarea
-  document.getElementById('playersarea').appendChild(button);
-}
+  playershand[placeOfIndex] = pile[0];
+  console.log(playershand);
 
-//Take out the player's choice from player's hand
+  /*Create buttons for the player's hand*/
 
-const playerBtns = document.querySelectorAll(".button");
-
-playerBtns.forEach(btn => {
-  btn.addEventListener("click", function () {
-    let cardValue = this.dataset.card;
-    this.style.visibility = "hidden";
-    moveplayerscardtogamearea(cardValue);
-
-    //Playershand after playing the card
-    console.log(playershand);
-
-    if (computershand.length == 0 && playerScoreSpan.innerHTML > computerScoreSpan.innerHTML) {
-      setTimeout(youWin,500);
-    }
-
-    if (computershand.length == 0 && playerScoreSpan.innerHTML < computerScoreSpan.innerHTML) {
-      setTimeout(computerWins,500);
-    }
-
-    if (computershand.length == 0 && playerScoreSpan.innerHTML == computerScoreSpan.innerHTML) {
-      setTimeout(itsAtie,500);
-    }
-
-  });
-
-});
-
-
-//Move player's and computer's card to gamearea
-
-function moveplayerscardtogamearea(playersCardValue) {
-
-  //Computers random choice
-
-  const computersChoice = computershand[Math.floor(Math.random() * computershand.length)];
-  console.log(computersChoice);
-
-  //Move computer's choice to gamearea
-  document.getElementById("computersplace").innerHTML = computersChoice;
-
-  //Specify the place of the card randomly chosen
-  let computersChoicePlace = computershand.indexOf(computersChoice);
-  console.log(computersChoicePlace);
-  //Remove computer's card from computer's hand
-  let computerscardchoice = computershand.splice(computersChoicePlace, 1);
-  console.log(computerscardchoice);
-
-  let computersCardToRemove = document.querySelector(`.computerscard[data-card="${computersChoice}"]`);
-  computersCardToRemove.style.visibility = "hidden";
-  computersCardToRemove.removeAttribute("data-card");
-
-  //Computers hand after playing the card
-  console.log(computershand);
-
-  let playersPlace = document.getElementById("playersplace");
-  playersPlace.innerText = playersCardValue;
-
-  //Comparison
-
-  if (playersCardValue < computersChoice) {
-    // Computer wins
-    computerScoreSpan.innerHTML++;
-  } else if (playersCardValue > computersChoice) {
-    // Player wins
-    playerScoreSpan.innerHTML++;
-  }
-
-}}
-
-function play(){
-
-  /*Create buttons for every item in players hand*/
-  
   for (i = 0; i < playershand.length; i++) {
     button = document.createElement('button');
     button.className = 'button';
@@ -285,68 +187,80 @@ function play(){
     //Append those divs to playerarea
     document.getElementById('playersarea').appendChild(button);
   }
-  
-  //Take out the player's choice from player's hand
-  
+
+  //Take out the player's choice from the player's hand
+
   const playerBtns = document.querySelectorAll(".button");
-  
+
   playerBtns.forEach(btn => {
     btn.addEventListener("click", function () {
       let cardValue = this.dataset.card;
       this.style.visibility = "hidden";
-      moveplayerscardtogamearea(cardValue);
-  
+      moveCardsToGameArea(cardValue);
+
       //Playershand after playing the card
+
       console.log(playershand);
-  
+
+      //Result pages
+
       if (computershand.length == 0 && playerScoreSpan.innerHTML > computerScoreSpan.innerHTML) {
-        setTimeout(youWin,500);
+        setTimeout(youWin, 500);
       }
-  
+
       if (computershand.length == 0 && playerScoreSpan.innerHTML < computerScoreSpan.innerHTML) {
-        setTimeout(computerWins,500);
+        setTimeout(computerWins, 500);
       }
-  
+
       if (computershand.length == 0 && playerScoreSpan.innerHTML == computerScoreSpan.innerHTML) {
-        setTimeout(itsAtie,500);
+        setTimeout(itsAtie, 500);
       }
-  
+
     });
-  
+
   });
-  
-  
+
+
   //Move player's and computer's card to gamearea
-  
-  function moveplayerscardtogamearea(playersCardValue) {
-  
+
+  function moveCardsToGameArea(playersCardValue) {
+
     //Computers random choice
-  
+
     const computersChoice = computershand[Math.floor(Math.random() * computershand.length)];
     console.log(computersChoice);
-  
-    //Move computer's choice to gamearea
+
+    //Move computer's card to the place in the game-area where the computer plays
+
     document.getElementById("computersplace").innerHTML = computersChoice;
-  
+
     //Specify the place of the card randomly chosen
+
     let computersChoicePlace = computershand.indexOf(computersChoice);
     console.log(computersChoicePlace);
-    //Remove computer's card from computer's hand
+
+    //Remove computer's card from computer's hand and get the new reduced computer's hand
+
     let computerscardchoice = computershand.splice(computersChoicePlace, 1);
     console.log(computerscardchoice);
-  
+
+    //Computers hand after playing the card
+
+    console.log(computershand);
+
+    //Hide computer's card and remove its value
+
     let computersCardToRemove = document.querySelector(`.computerscard[data-card="${computersChoice}"]`);
     computersCardToRemove.style.visibility = "hidden";
     computersCardToRemove.removeAttribute("data-card");
-  
-    //Computers hand after playing the card
-    console.log(computershand);
-  
+
+    //Move player's card to the place in the game-area where the player plays
+
     let playersPlace = document.getElementById("playersplace");
     playersPlace.innerText = playersCardValue;
-  
-    //Comparison
-  
+
+    //Compare the cards played
+
     if (playersCardValue < computersChoice) {
       // Computer wins
       computerScoreSpan.innerHTML++;
@@ -354,5 +268,140 @@ function play(){
       // Player wins
       playerScoreSpan.innerHTML++;
     }
-  
-  }}
+
+  }
+}
+
+//If the player chooses not to replace the lowest card
+
+function play() {
+
+  /*Create buttons for every item in player's hand*/
+
+  for (i = 0; i < playershand.length; i++) {
+    button = document.createElement('button');
+    button.className = 'button';
+    button.id = 'playershand-' + i;
+    button.innerHTML = playershand[i];
+    button.dataset.card = playershand[i];
+    //Append those divs to playerarea
+    document.getElementById('playersarea').appendChild(button);
+  }
+
+  //Take out the player's choice from the player's hand
+
+  const playerBtns = document.querySelectorAll(".button");
+
+  playerBtns.forEach(btn => {
+    btn.addEventListener("click", function () {
+      let cardValue = this.dataset.card;
+      this.style.visibility = "hidden";
+      moveCardsToGameArea(cardValue);
+
+      //Playershand after playing the card
+
+      console.log(playershand);
+
+      //Result pages
+
+      if (computershand.length == 0 && playerScoreSpan.innerHTML > computerScoreSpan.innerHTML) {
+        setTimeout(youWin, 500);
+      }
+
+      if (computershand.length == 0 && playerScoreSpan.innerHTML < computerScoreSpan.innerHTML) {
+        setTimeout(computerWins, 500);
+      }
+
+      if (computershand.length == 0 && playerScoreSpan.innerHTML == computerScoreSpan.innerHTML) {
+        setTimeout(itsAtie, 500);
+      }
+
+    });
+
+  });
+
+
+  //Move player's and computer's card to gamearea
+
+  function moveCardsToGameArea(playersCardValue) {
+
+    //Computers random choice
+
+    const computersChoice = computershand[Math.floor(Math.random() * computershand.length)];
+    console.log(computersChoice);
+
+    //Move computer's choice to gamearea
+
+    document.getElementById("computersplace").innerHTML = computersChoice;
+
+    //Specify the place of the card randomly chosen
+
+    let computersChoicePlace = computershand.indexOf(computersChoice);
+    console.log(computersChoicePlace);
+
+    //Remove computer's card from computer's hand and get the new computer's hand
+
+    let computerscardchoice = computershand.splice(computersChoicePlace, 1);
+    console.log(computerscardchoice);
+
+    //Hide computer's card and remove its value
+
+    let computersCardToRemove = document.querySelector(`.computerscard[data-card="${computersChoice}"]`);
+    computersCardToRemove.style.visibility = "hidden";
+    computersCardToRemove.removeAttribute("data-card");
+
+    //Computers hand after playing the card
+
+    console.log(computershand);
+
+    let playersPlace = document.getElementById("playersplace");
+    playersPlace.innerText = playersCardValue;
+
+    //Comparison
+
+    if (playersCardValue < computersChoice) {
+      // Computer wins
+      computerScoreSpan.innerHTML++;
+    } else if (playersCardValue > computersChoice) {
+      // Player wins
+      playerScoreSpan.innerHTML++;
+    }
+
+  }
+}
+
+
+//Function executed when the player wins
+
+function youWin() {
+  document.getElementById("main").innerHTML = "You Win!"
+  document.getElementById("main").style.color = "rgb(212, 121, 180)"
+  playAgain = document.createElement("button");
+  playAgain.innerHTML = "Play Again";
+  playAgain.id = "play-again"
+  playAgain.addEventListener("click", refresh);
+  document.getElementById("main").appendChild(playAgain);
+}
+
+//Function executed when the computer wins
+
+function computerWins() {
+  document.getElementById("main").innerHTML = "Computer Wins!"
+  document.getElementById("main").style.color = "rgb(113, 206, 220)"
+  playAgain = document.createElement("button");
+  playAgain.innerHTML = "Play Again";
+  playAgain.id = "play-again"
+  playAgain.addEventListener("click", refresh);
+  document.getElementById("main").appendChild(playAgain);
+}
+
+//Function executed when it is a tie
+
+function itsAtie() {
+  document.getElementById("main").innerHTML = "It's a tie!"
+  playAgain = document.createElement("button");
+  playAgain.innerHTML = "Play Again";
+  playAgain.id = "play-again"
+  playAgain.addEventListener("click", refresh);
+  document.getElementById("main").appendChild(playAgain);
+}
