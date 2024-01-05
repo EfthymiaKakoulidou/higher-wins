@@ -197,8 +197,6 @@ main {
     background-color: rgb(212, 121, 180);
 }
 
-
-
 .playerinnerdiv {
     font-family: 'Balsamiq Sans', sans-serif;
     color: rgb(50, 19, 81);
@@ -231,7 +229,7 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: white;
+    background-color: rgb(113, 206, 220);
    transition: background-color 0.5s ease;
 }
 
@@ -374,7 +372,8 @@ footer {
         font-size: 15px;
     }
 
-    .computerscard {
+    .computerscard, .blink {
+        font-size: 20px;
         width: 60px;
         height: 90px;
     }
