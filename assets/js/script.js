@@ -52,7 +52,7 @@ for (i = 0; i < computershand.length; i++) {
 /*Create a div for every item in the array of pile*/
 
 
-let marginLeft = 2;
+let marginLeft = 0;
 for (i = 0; i < pile.length; i++) {
   let pileButton = document.createElement('button');
   pileButton.className = 'pilecard';
@@ -160,7 +160,6 @@ document.getElementById("no").addEventListener("click", play);
 function hideReplaceWindow(){
   document.getElementById('pile-cards').style.visibility = 'hidden'
 }
-
 function hidePilecard(){
   document.getElementById("pile-0").remove()
   let newPile = pile.splice(0, 1);

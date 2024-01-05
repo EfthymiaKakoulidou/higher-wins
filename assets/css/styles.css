@@ -126,9 +126,7 @@ main {
     position: absolute;
 }
 #pile-0 {
-    z-index: 8;
-    /* position: absolute; */
-    /* margin-left: 80%; */
+    z-index: 11;
     font-size: 20px;
     transition: all 0.2s ease;
     cursor: pointer;
@@ -296,11 +294,11 @@ main {
     border: 2px solid rgb(50, 19, 81);
     background-color: white;
     cursor: pointer;
+    margin-right: 40px;
 }
 
 #main {
     display: flex;
-    justify-content: space-between;
     text-align: center;
     align-items: center;
     font-family: 'Balsamiq Sans', sans-serif;
@@ -334,7 +332,12 @@ footer {
 
 }
 
+
 @media screen and (max-width: 490px) {
+    
+    #computer-section, #gamearea, #player-section {
+        font-size: 0px;
+    }
 
     #instructions,
     #deck-introduction {
@@ -421,6 +424,12 @@ footer {
         width: 50px;
         height: 75px;
     }
+
+#pile-0 {
+    z-index: 20;
+    font-size: 15px;
+}
+
     #pile-cards {
         font-size: 15px;
         flex-direction: column;
@@ -429,9 +438,10 @@ footer {
         margin: 0 auto;
         left:0px;
         right:0px;
+        top:7em;
     }
 
-    .hide {
-        display: none !important;
+    #no {
+        margin: 0px;
     }
 }
