@@ -112,6 +112,12 @@ main {
     position: absolute;
     margin-left: 80%;
     font-size: 20px;
+    transition : all 0.2s ease;
+}
+
+#pile-0:hover {
+    width:90px;
+    height:130px;
 }
 
 #pile-1 {
@@ -215,7 +221,12 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
+transition: all 0.2s ease;
+}
 
+.button:hover {
+    height:130px;
+    width:90px;
 }
 
 .playerinnerdiv {
