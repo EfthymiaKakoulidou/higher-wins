@@ -2,6 +2,10 @@
     box-sizing: border-box;
 }
 
+a {
+    text-decoration: none;
+  }
+
 body {
     display: flex;
     justify-content: space-evenly;
@@ -97,7 +101,7 @@ main {
     justify-content: center;
 }
 
-#instructions,
+.instructions,
 #deck-introduction {
     font-family: 'Balsamiq Sans', sans-serif;
     display: flex;
@@ -304,8 +308,6 @@ main {
     background-color: rgb(212, 121, 180);
 }
 
-/*Result pages*/
-
 #start-button,
 #no {
     font-family: 'Balsamiq Sans', sans-serif;
@@ -317,6 +319,8 @@ main {
     cursor: pointer;
 
 }
+
+/*Result pages*/
 
 #play-again {
     font-family: 'Balsamiq Sans', sans-serif;

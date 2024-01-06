@@ -7,7 +7,7 @@ It begins giving the instructions to player and introducing the deck.
 The deck has 24 cards from 1 to 12, two of each numder.
 The higher card is the one with the number 12 and the lower one is the one with the number 1.
 Both players get 8 cards. 
-You have the right to replace your lowest card with one of the remaining cards at a risk that it might be a lower one. Of course if you have a card with number '1' on it there is no risk, you have nothing to lose as there is not a lower card.
+You have the right to replace your lowest card with one of the remaining cards at a risk that it might be a lower one (unless of course if you have a card with number '1' on it there is no risk, you have nothing to lose as there is not a lower card).
 Both players draw a card simultaneously.
 The one that has the higher card wins!
 
@@ -125,15 +125,6 @@ Also it could keep track of the wins or loses to have an overall idea of how it 
 
 ## Tools & Technologies Used
 
-🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-In this section, you should explain the various tools and technologies used to develop the project.
-Make sure to put a link (where applicable) to the source, and explain what each was used for.
-Some examples have been provided, but this is just a sample only, your project might've used others.
-Feel free to delete any unused items below as necessary.
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
 - [HTML](https://en.wikipedia.org/wiki/HTML) used for the main site content.
 - [CSS](https://en.wikipedia.org/wiki/CSS) used for the main site design and layout.
 - [CSS Flexbox](https://www.w3schools.com/css/css3_flexbox.asp) used for an enhanced responsive layout.
@@ -198,69 +189,19 @@ There are no differences on the local and live version.
 
 ### Content
 
-🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-Use this space to provide attribution links to any borrowed code snippets, elements, or resources.
-A few examples have been provided below to give you some ideas.
-
-Ideally, you should provide an actual link to every resource used, not just a generic link to the main site!
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
 | Source | Location | Notes |
 | --- | --- | --- |
 | [Markdown Builder](https://tim.2bn.dev/markdown-builder) | README and TESTING | tool to help generate the Markdown files |
-| [Chris Beams](https://chris.beams.io/posts/git-commit) | version control | "How to Write a Git Commit Message" |
-| [W3Schools](https://www.w3schools.com/howto/howto_js_topnav_responsive.asp) | entire site | responsive HTML/CSS/JS navbar |
-| [W3Schools](https://www.w3schools.com/howto/howto_css_modals.asp) | contact page | interactive pop-up (modal) |
+| [W3Schools](https://www.w3schools.com/howto/howto_js_topnav_responsive.asp) | entire site | html, css and js |
 | [W3Schools](https://www.w3schools.com/css/css3_variables.asp) | entire site | how to use CSS :root variables |
-| [Flexbox Froggy](https://flexboxfroggy.com/) | entire site | modern responsive layouts |
-| [Grid Garden](https://cssgridgarden.com) | entire site | modern responsive layouts |
-| [StackOverflow](https://stackoverflow.com/a/2450976) | quiz page | Fisher-Yates/Knuth shuffle in JS |
-| [YouTube](https://www.youtube.com/watch?v=YL1F4dCUlLc) | leaderboard | using `localStorage()` in JS for high scores |
-| [YouTube](https://www.youtube.com/watch?v=u51Zjlnui4Y) | PP3 terminal | tutorial for adding color to the Python terminal |
-| [strftime](https://strftime.org) | CRUD functionality | helpful tool to format date/time from string |
-| [WhiteNoise](http://whitenoise.evans.io) | entire site | hosting static files on Heroku temporarily |
+| [Flexbox ](https://css-tricks.com/snippets/css/a-guide-to-flexbox/) | entire site | responsive layouts |
+| [StackOverflow](https://stackoverflow.com/a/2450976) | entire site | Fisher-Yates/Knuth shuffle in JS and everything that I had trouble with. |
+| [Youtube](https://www.youtube.com/watch?v=NxRwIZWjLtE&t=876s) | entire site | Structure the game |
+| [Youtube](https://www.youtube.com/watch?v=PkZNo7MFNFg&t=5493s) | entire site | Understand the essentials of js |
 
-### Media
-
-🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-Use this space to provide attribution links to any images, videos, or audio files borrowed from online.
-A few examples have been provided below to give you some ideas.
-
-If you're the owner (or a close acquaintance) of all media files, then make sure to specify this.
-Let the assessors know that you have explicit rights to use the media files within your project.
-
-Ideally, you should provide an actual link to every media file used, not just a generic link to the main site!
-The list below is by no means exhaustive. Within the Code Institute Slack community, you can find more "free media" links
-by sending yourself the following command: `!freemedia`.
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-| Source | Location | Type | Notes |
-| --- | --- | --- | --- |
-| [Pexels](https://www.pexels.com) | entire site | image | favicon on all pages |
-| [Lorem Picsum](https://picsum.photos) | home page | image | hero image background |
-| [Unsplash](https://unsplash.com) | product page | image | sample of fake products |
-| [Pixabay](https://pixabay.com) | gallery page | image | group of photos for gallery |
-| [Wallhere](https://wallhere.com) | footer | image | background wallpaper image in the footer |
-| [This Person Does Not Exist](https://thispersondoesnotexist.com) | testimonials | image | headshots of fake testimonial images |
-| [Audio Micro](https://www.audiomicro.com/free-sound-effects) | game page | audio | free audio files to generate the game sounds |
-| [Videvo](https://www.videvo.net/) | home page | video | background video on the hero section |
-| [TinyPNG](https://tinypng.com) | entire site | image | tool for image compression |
 
 ### Acknowledgements
 
-🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-Use this space to provide attribution to any supports that helped, encouraged, or supported you throughout the development stages of this project.
-A few examples have been provided below to give you some ideas.
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
 - I would like to thank my Code Institute mentor, [Tim Nelson](https://github.com/TravelTimN) for their support throughout the development of this project.
-- I would like to thank the [Code Institute](https://codeinstitute.net) tutor team for their assistance with troubleshooting and debugging some project issues.
-- I would like to thank the [Code Institute Slack community](https://code-institute-room.slack.com) for the moral support; it kept me going during periods of self doubt and imposter syndrome.
-- I would like to thank my partner (John/Jane), for believing in me, and allowing me to make this transition into software development.
-- I would like to thank my employer, for supporting me in my career development change towards becoming a software developer.
+- I would like to thank the [Code Institute Slack community](https://code-institute-room.slack.com) for the moral support; it kept me going.
+- I would like to thank my daughter, who helped me pick the game I was going to do. It is a game that we play together with real cards.
