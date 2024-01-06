@@ -1,172 +1,127 @@
-https://www.youtube.com/watch?v=NxRwIZWjLtE
-for making the deck
+# [HIGHER WINS](https://efthymiakakoulidou.github.io/higher-wins)
 
-# [HEIGHER WINS](https://efthymiakakoulidou.github.io/heigher-wins)
 
-🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
+Higher Wins is a card game where the player plays against the computer. The target audience can be children but is also fun to play for everyone!
+It begins giving the instructions to player and introducing the deck.
 
-In this section, you will include a few paragraphs providing an overview of your project.
-Essentially, this part is your "sales pitch".
+The deck has 24 cards from 1 to 12, two of each numder.
+The higher card is the one with the number 12 and the lower one is the one with the number 1.
+Both players get 8 cards. 
+You have the right to replace your lowest card with one of the remaining cards at a risk that it might be a lower one. Of course if you have a card with number '1' on it there is no risk, you have nothing to lose as there is not a lower card.
+Both players draw a card simultaneously.
+The one that has the higher card wins!
 
-At this stage, you should have a name for your project so use it!
-Don't introduce the project as a "portfolio project" for the diploma.
 
-In this section, describe what the project hopes to accomplish, who it is intended to target, and how it will be useful to the target audience.
-
-Consider adding a mockup image using the "Am I Responsive" website.
-Here's your deployed site as an example:
-https://ui.dev/amiresponsive?url=https://efthymiakakoulidou.github.io/heigher-wins
-
-Screenshots for the README and testing should not be inside of `assets/` or `static/` image folders.
-(reminder: `assets/` and `static/` are for files used on the live site, not documentation)
-Consider adding a new folder called `documentation`, and add the amiresponsive screenshot inside of that folder.
-To add the image into your README, use this format:
-(assuming you have a new folder called `documentation` with an image called "mockup.png")
-
-![screenshot](documentation/mockup.png)
-
-Note: Markdown files (.md) should not contain HTML elements like `img`, `br`, `div`, `a`, etc, only Markdown formatting.
-Find out more about using Markdown elements here:
-https://pandao.github.io/editor.md/en.html
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
+![screenshot](documentation/mockup.jpg)
 
 ## UX
 
-🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-In this section, you will briefly explain your design processes.
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
+As the game is aiming a younger audience also, it was very important to have a clear structure and navigation, and fun colours.
 
 ### Colour Scheme
 
-🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
+Fun bright colours where chosen and I did not want any association with gambling card-games so I avoided green, red, and black as well as suits.
 
-Explain your colours and the colour scheme.
 
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-- `#000000` used for primary text.
-- `#E84610` used for primary highlights.
-- `#4A4A4F` used for secondary text.
-- `#009FE3` used for secondary highlights.
-
-🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-Consider adding a link and screenshot for your colour scheme using "coolors".
-https://coolors.co/generate
-
-When you add a colour to the palette, the URL is dynamically updated, making it easier for you to return back to your colour palette later if needed.
-
-Example:
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
+- rgb(50, 19, 81) used for primary text.
+- rgb(212, 121, 180) and rgb(88, 166, 179) used for secondary text and to indicate the places on the screen where the computer or the player play.
 
 I used [coolors.co](https://coolors.co/e84610-009fe3-4a4a4f-445261-d63649-e6ecf0-000000) to generate my colour palette.
 
 ![screenshot](documentation/coolors.png)
 
-🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-If you've used CSS `:root` variables, consider also including a code snippet here!
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-I've used CSS `:root` variables to easily update the global colour scheme by changing only one value, instead of everywhere in the CSS file.
-
-```css
-:root {
-    /* P = Primary | S = Secondary */
-    --p-text: #000000;
-    --p-highlight: #E84610;
-    --s-text: #4A4A4F;
-    --s-highlight: #009FE3;
-    --white: #FFFFFF;
-    --black: #000000;
-}
-```
-
 ### Typography
 
-🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
+I used Google Fonts and/or Font Awesome for my text and icons as well as https://icons8.com/icons/set/cards for my favicon.
+I used one font throughout the project for consistency. I chose a font which reminded me of comics again to make it playful and to be liked by children.
 
-Explain any fonts and icon libraries used, like Google Fonts and/or Font Awesome.
+- [Balsamiq](https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap) was used for the primary headers and titles.
 
-Consider adding a link to each font used, and the Font Awesome site if used (or similar icon library).
-
-Example:
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-- [Montserrat](https://fonts.google.com/specimen/Montserrat) was used for the primary headers and titles.
-
-- [Lato](https://fonts.google.com/specimen/Lato) was used for all other secondary text.
-
-- [Font Awesome](https://fontawesome.com) icons were used throughout the site, such as the social media icons in the footer.
+- [Font Awesome](https://fontawesome.com) icons were used for the navigation and to refresh the page.
 
 ## Features
 
-🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-In this section, you should go over the different parts of your project,
-and describe each in a sentence or so.
-
-You will need to explain what value each of the features provides for the user,
-focusing on who this website is for, what it is that they want to achieve,
-and how your project is the best way to help them achieve these things.
-
-For some/all of your features, you may choose to reference the specific project files that implement them.
-
-IMPORTANT: Remember to always include a screenshot of each individual feature!
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
+The game consists of a start page where the instructions are given, the deck is introduced and a button whith which the player can start the game. After the button is pushed the player gets a window with the question if he/she wants to replace his/hers lowest card with the first one of the pile of the remaining cards. After the player makes the choice he/she proceeds to play. 
+The player can choose a card from his/hers hand which is placed in the middle of the screen at the place where the player's cards go. The computer does the same thing. The computer chooses randomly one card of its hand. 
+The two cards stand next to each other and the comparison is made. This updates the score. The one with the higher card gets one point. In the case that the cards chosen have the same value no one gets a point.
 
 ### Existing Features
 
-- **Title for feature #1**
+- **Instructions**
 
-    - Details about this particular feature, including the value to the site, and benefit for the user. Be as detailed as possible!
+    - The instructions are essentials to play the game. One has to read them to understand what to do.
 
-![screenshot](documentation/feature01.png)
+![screenshot](documentation/feature01.jpg)
 
-- **Title for feature #2**
+- **Deck**
 
-    - Details about this particular feature, including the value to the site, and benefit for the user. Be as detailed as possible!
+    - The deck is presented both visually and in text. 
+    Here the player gets a first glimpse of what the cards look like on both sides. This is important because the player's hand is open but the computer's cards are closed. 
 
-![screenshot](documentation/feature02.png)
+![screenshot](documentation/feature02.jpg)
 
-- **Title for feature #3**
+- **Start button**
 
-    - Details about this particular feature, including the value to the site, and benefit for the user. Be as detailed as possible!
+    - After going through all the information the player can push the start to start playing.
 
-![screenshot](documentation/feature03.png)
+![screenshot](documentation/feature03.jpg)
 
-🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
+- **Navigation and refresh options**
 
-Repeat as necessary for as many features as your site contains.
+    - We are now in the game page. In the header beside the title of the game there are the navigation link which leads to the start page and the restart button which refreshes the page. In this way the player has the opportunity to interrupt the game at any point and read the instructions again or start over.
 
-Hint: the more, the merrier!
+![screenshot](documentation/feature031.jpg)
 
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
+- **The window where the player can make the choice of replacing the lowest card**
+
+    - Before entering it and start playing the player has the choice of replacing his/hers lowest card. 
+    The window giving this option is placed in such a way that the user knows that it is something working independently and if you click on it, it will disappear. It is placed also above the player's hand so that it is fully shown and the player knows that it is one of these cards that is going to be changed. It partially hides the computer's hand so that the player knows that you cannot affect those cards.
+    At the same time the card with lowest value is indicated by a colour so that player knows that this card is going to be replaced. 
+    After adding the indication to the lowest card I noticed that I myself was drawn to click on it, so I added the function of replacing the card also to the lowest card of the player's hand.
+
+![screenshot](documentation/feature04.jpg)
+
+- **Clicking the 'No' button**
+
+    - If the player choses not to replace the lowest card the game starts, the lowest card's colour disappears and it becomes like the rest of the cards.
+
+![screenshot](documentation/feature04.jpg)
+![screenshot](documentation/feature05.jpg)
+
+- **Clicking the remaining cards pile or on the lowest card in the player's hand**
+
+    - If the player choses to replace the lowest card it is replaced by a new card from the pile of the remaining cards, and the game starts.
+
+![screenshot](documentation/feature06.jpg) 
+![screenshot](documentation/feature061.jpg) 
+
+- **Game layout**
+
+    - The game starts. On the top of the screen there are the computer's closed cards with a title for making it even more clear.
+    In the middle there is the game area. There are two spots in the middle where the player and the computer place their cards using also text to clarify it. Next to each spot there is the score area. The score for the player is next to player's played card and the score of the computer is next to computer's played card. This is also indicated with colours. The plaeyr's score has the colour of the background of the player's hand and the colour of the computer's score has the colour of the background of computer's hand.
+    At the bottom of the page there are the player's open cards.
+
+![screenshot](documentation/feature07.jpg) 
+![screenshot](documentation/feature071.jpg) 
+![screenshot](documentation/feature072.jpg) 
+
+- **Game begins**
+
+    - When the player chooses a card the card disappears from his/hers hand and is placed in the game area. The same with the computer's randomly chosen card. The score is being updated and the first round is over. This continues until the players run out of cards.
+
+![screenshot](documentation/feature08.jpg) 
+
+- **Game ends**
+
+    - The game ends when there are no cards left and the message if you win or lose appears on the screen along with a button to start over. Also here the colour of the message corresponds to the player's colour and the computer's colour respectively.The message appears with a small delay so that you have the time to see the final score.
+
+![screenshot](documentation/feature09.jpg) 
+
 
 ### Future Features
 
-🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-Do you have additional ideas that you'd like to include on your project in the future?
-Fantastic! List them here!
-It's always great to have plans for future improvements!
-Consider adding any helpful links or notes to help remind you in the future, if you revisit the project in a couple years.
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-- Title for future feature #1
-    - Any additional notes about this feature.
-- Title for future feature #2
-    - Any additional notes about this feature.
-- Title for future feature #3
-    - Any additional notes about this feature.
+In the future the game coud be more complex. It could have more cards in the initial deck and the player could replace more of his/hers cards. Adding complexity could make it more interesting and target an older audience. Being able to replace more card could increase the excitement as you are called to take a risk there.
+Also it could keep track of the wins or loses to have an overall idea of how it is going for you. 
 
 ## Tools & Technologies Used
 
@@ -181,28 +136,12 @@ Feel free to delete any unused items below as necessary.
 
 - [HTML](https://en.wikipedia.org/wiki/HTML) used for the main site content.
 - [CSS](https://en.wikipedia.org/wiki/CSS) used for the main site design and layout.
-- [CSS :root variables](https://www.w3schools.com/css/css3_variables.asp) used for reusable styles throughout the site.
 - [CSS Flexbox](https://www.w3schools.com/css/css3_flexbox.asp) used for an enhanced responsive layout.
-- [CSS Grid](https://www.w3schools.com/css/css_grid.asp) used for an enhanced responsive layout.
 - [JavaScript](https://www.javascript.com) used for user interaction on the site.
-- [Python](https://www.python.org) used as the back-end programming language.
 - [Git](https://git-scm.com) used for version control. (`git add`, `git commit`, `git push`)
 - [GitHub](https://github.com) used for secure online code storage.
 - [GitHub Pages](https://pages.github.com) used for hosting the deployed front-end site.
 - [Gitpod](https://gitpod.io) used as a cloud-based IDE for development.
-- [Codeanywhere](https://codeanywhere.com) used as a cloud-based IDE for development.
-- [Bootstrap](https://getbootstrap.com) used as the front-end CSS framework for modern responsiveness and pre-built components.
-- [Materialize](https://materializecss.com) used as the front-end CSS framework for modern responsiveness and pre-built components.
-- [Flask](https://flask.palletsprojects.com) used as the Python framework for the site.
-- [Django](https://www.djangoproject.com) used as the Python framework for the site.
-- [MongoDB](https://www.mongodb.com) used as the non-relational database management with Flask.
-- [SQLAlchemy](https://www.sqlalchemy.org) used as the relational database management with Flask.
-- [PostgreSQL](https://www.postgresql.org) used as the relational database management.
-- [ElephantSQL](https://www.elephantsql.com) used as the Postgres database.
-- [Heroku](https://www.heroku.com) used for hosting the deployed back-end site.
-- [Cloudinary](https://cloudinary.com) used for online static file storage.
-- [Stripe](https://stripe.com) used for online secure payments of ecommerce products/services.
-- [AWS S3](https://aws.amazon.com/s3) used for online static file storage.
 
 ## Testing
 
@@ -212,11 +151,11 @@ For all testing, please refer to the [TESTING.md](TESTING.md) file.
 
 The site was deployed to GitHub Pages. The steps to deploy are as follows:
 
-- In the [GitHub repository](https://github.com/EfthymiaKakoulidou/heigher-wins), navigate to the Settings tab 
+- In the [GitHub repository](https://github.com/EfthymiaKakoulidou/higher-wins), navigate to the Settings tab 
 - From the source section drop-down menu, select the **Main** Branch, then click "Save".
 - The page will be automatically refreshed with a detailed ribbon display to indicate the successful deployment.
 
-The live link can be found [here](https://efthymiakakoulidou.github.io/heigher-wins)
+The live link can be found [here](https://efthymiakakoulidou.github.io/higher-wins)
 
 ### Local Deployment
 
@@ -226,18 +165,18 @@ This project can be cloned or forked in order to make a local copy on your own s
 
 You can clone the repository by following these steps:
 
-1. Go to the [GitHub repository](https://github.com/EfthymiaKakoulidou/heigher-wins) 
+1. Go to the [GitHub repository](https://github.com/EfthymiaKakoulidou/higher-wins) 
 2. Locate the Code button above the list of files and click it 
 3. Select if you prefer to clone using HTTPS, SSH, or GitHub CLI and click the copy button to copy the URL to your clipboard
 4. Open Git Bash or Terminal
 5. Change the current working directory to the one where you want the cloned directory
 6. In your IDE Terminal, type the following command to clone my repository:
-	- `git clone https://github.com/EfthymiaKakoulidou/heigher-wins.git`
+	- `git clone https://github.com/EfthymiaKakoulidou/higher-wins.git`
 7. Press Enter to create your local clone.
 
 Alternatively, if using Gitpod, you can click below to create your own workspace using this repository.
 
-[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/EfthymiaKakoulidou/heigher-wins)
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/EfthymiaKakoulidou/higher-wins)
 
 Please note that in order to directly open the project in Gitpod, you need to have the browser extension installed.
 A tutorial on how to do that can be found [here](https://www.gitpod.io/docs/configure/user-settings/browser-extension).
@@ -247,27 +186,15 @@ A tutorial on how to do that can be found [here](https://www.gitpod.io/docs/conf
 By forking the GitHub Repository, we make a copy of the original repository on our GitHub account to view and/or make changes without affecting the original owner's repository.
 You can fork this repository by using the following steps:
 
-1. Log in to GitHub and locate the [GitHub Repository](https://github.com/EfthymiaKakoulidou/heigher-wins)
+1. Log in to GitHub and locate the [GitHub Repository](https://github.com/EfthymiaKakoulidou/higher-wins)
 2. At the top of the Repository (not top of page) just above the "Settings" Button on the menu, locate the "Fork" Button.
 3. Once clicked, you should now have a copy of the original repository in your own GitHub account!
 
 ### Local VS Deployment
 
-🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-Use this space to discuss any differences between the local version you've developed, and the live deployment site on GitHub Pages.
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
+There are no differences on the local and live version.
 
 ## Credits
-
-🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-In this section you need to reference where you got your content, media, and extra help from.
-It is common practice to use code from other repositories and tutorials,
-however, it is important to be very specific about these sources to avoid plagiarism.
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
 
 ### Content
 
