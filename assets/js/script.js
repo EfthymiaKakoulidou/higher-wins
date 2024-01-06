@@ -1,3 +1,5 @@
+/* jshint esversion: 11, jquery: true */
+
 /*Deck*/
 const cards = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, ];
 
@@ -32,7 +34,7 @@ function refresh() {
 /*Create a div for every card of player's hand*/
 
 for (i = 0; i < playershand.length; i++) {
-  playerinnerdiv = document.createElement('div');
+  let playerinnerdiv = document.createElement('div');
   playerinnerdiv.className = 'playerinnerdiv';
   playerinnerdiv.innerHTML = playershand[i];
   playerinnerdiv.dataset.card = playershand[i];
@@ -45,10 +47,10 @@ for (i = 0; i < playershand.length; i++) {
 let lowest = Math.min(...playershand);
 let lowestBlink = document.querySelector(`.playerinnerdiv[data-card="${lowest}"]`);
 lowestBlink.setAttribute('class', 'blink');
-lowestBlink.addEventListener('click', replaceAndPlay)
-lowestBlink.addEventListener('click', hideOldPlayershand)
-lowestBlink.addEventListener('click', hidePilecard)
-lowestBlink.addEventListener('click', hideReplaceWindow)
+lowestBlink.addEventListener('click', replaceAndPlay);
+lowestBlink.addEventListener('click', hideOldPlayershand);
+lowestBlink.addEventListener('click', hidePilecard);
+lowestBlink.addEventListener('click', hideReplaceWindow);
 
 /*Create a div for every item in the array of computer's hand*/
 
@@ -139,19 +141,19 @@ document.getElementById("pile-0").addEventListener("click", hideReplaceWindow);
 //Hide divs for the player's hand
 
 function hideOldPlayershand() {
-  document.getElementById('playersareaold').remove()
+  document.getElementById('playersareaold').remove();
 }
 
 //Hide window with the option to replace the lowest card
 
 function hideReplaceWindow() {
-  document.getElementById('pile-cards').style.visibility = 'hidden'
+  document.getElementById('pile-cards').style.visibility = 'hidden';
 }
 
 //Remove the first card of the pile with the remaining cards
 
 function hidePilecard() {
-  document.getElementById("pile-0").remove()
+  document.getElementById("pile-0").remove();
   let newPile = pile.splice(0, 1);
   console.log(newPile);
   console.log(pile);
@@ -180,7 +182,7 @@ function replaceAndPlay() {
   /*Create buttons for the player's hand*/
 
   for (i = 0; i < playershand.length; i++) {
-    button = document.createElement('button');
+    let button = document.createElement('button');
     button.className = 'button';
     button.id = 'playershand-' + i;
     button.innerHTML = playershand[i];
@@ -280,7 +282,7 @@ function play() {
   /*Create buttons for every item in player's hand*/
 
   for (i = 0; i < playershand.length; i++) {
-    button = document.createElement('button');
+    let button = document.createElement('button');
     button.className = 'button';
     button.id = 'playershand-' + i;
     button.innerHTML = playershand[i];
@@ -374,11 +376,11 @@ function play() {
 //Function executed when the player wins
 
 function youWin() {
-  document.getElementById("main").innerHTML = "You Win!"
-  document.getElementById("main").style.color = "rgb(212, 121, 180)"
-  playAgain = document.createElement("button");
+  document.getElementById("main").innerHTML = "You Win!";
+  document.getElementById("main").style.color = "rgb(212, 121, 180)";
+  let playAgain = document.createElement("button");
   playAgain.innerHTML = "Play Again";
-  playAgain.id = "play-again"
+  playAgain.id = "play-again";
   playAgain.addEventListener("click", refresh);
   document.getElementById("main").appendChild(playAgain);
 }
@@ -386,11 +388,11 @@ function youWin() {
 //Function executed when the computer wins
 
 function computerWins() {
-  document.getElementById("main").innerHTML = "Computer Wins!"
-  document.getElementById("main").style.color = "rgb(113, 206, 220)"
-  playAgain = document.createElement("button");
+  document.getElementById("main").innerHTML = "Computer Wins!";
+  document.getElementById("main").style.color = "rgb(113, 206, 220)";
+  let playAgain = document.createElement("button");
   playAgain.innerHTML = "Play Again";
-  playAgain.id = "play-again"
+  playAgain.id = "play-again";
   playAgain.addEventListener("click", refresh);
   document.getElementById("main").appendChild(playAgain);
 }
@@ -398,10 +400,10 @@ function computerWins() {
 //Function executed when it is a tie
 
 function itsAtie() {
-  document.getElementById("main").innerHTML = "It's a tie!"
-  playAgain = document.createElement("button");
+  document.getElementById("main").innerHTML = "It's a tie!";
+  let playAgain = document.createElement("button");
   playAgain.innerHTML = "Play Again";
-  playAgain.id = "play-again"
+  playAgain.id = "play-again";
   playAgain.addEventListener("click", refresh);
   document.getElementById("main").appendChild(playAgain);
 }
