@@ -39,6 +39,36 @@ I used one font throughout the project for consistency. I chose a font which rem
 
 - [Font Awesome](https://fontawesome.com) icons were used for the navigation and to refresh the page.
 
+To follow best practice, wireframes were developed for mobile, tablet, and desktop sizes.
+I've used [Balsamiq](https://balsamiq.com/wireframes) to design my site wireframes.
+
+### Mobile Wireframes
+
+<details>
+<summary> Click here to see the Mobile Wireframes </summary>
+
+Home
+  - ![screenshot](documentation/mobile-home.png)
+
+Game Page
+  - ![screenshot](documentation/mobile-game-page.png)
+
+</details>
+
+### Desktop Wireframes
+
+<details>
+<summary> Click here to see the Desktop Wireframes </summary>
+
+Home
+  - ![screenshot](documentation/desktop-home.png)
+
+Game Page
+  - ![screenshot](documentation/desktop-game-page.png)
+
+</details>
+
+
 ## Features
 
 The game consists of a start page where the instructions are given, the deck is introduced and a button whith which the player can start the game. After the button is pushed the player gets a window with the question if he/she wants to replace his/hers lowest card with the first one of the pile of the remaining cards. After the player makes the choice he/she proceeds to play. 
@@ -120,7 +150,7 @@ The two cards stand next to each other and the comparison is made. This updates 
 
 ### Future Features
 
-In the future the game coud be more complex. It could have more cards in the initial deck and the player could replace more of his/hers cards. Adding complexity could make it more interesting and target an older audience. Being able to replace more card could increase the excitement as you are called to take a risk there.
+In the future the game coud be more complex. It could have more cards in the initial deck and the player could replace more of his/hers cards. Adding complexity could make it more interesting and target an older audience. Being able to replace more cards could increase the excitement as you are called to take a risk there.
 Also it could keep track of the wins or loses to have an overall idea of how it is going for you. 
 
 ## Tools & Technologies Used

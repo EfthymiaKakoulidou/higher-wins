@@ -1,6 +1,5 @@
 # Testing
 
-
 ## Code Validation
 
 ### HTML
