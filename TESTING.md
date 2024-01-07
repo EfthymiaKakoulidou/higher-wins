@@ -70,7 +70,7 @@ Defensive programming was manually tested with the below user acceptance testing
 | | Start button expected to start the game | Tested by clicking on it | The feature behaved as expected| Test concluded and passed | ![screenshot](documentation/feature01.png) |
 | Game Page | | | | | |
 | | "No" button expected to continue to game without changes| Tested the feature clicking on it | It reacted as expected | Test passed | ![screenshot](documentation/feature02.png) |
-| | Clicking on the pile card | expected to proceed to game and replacing the lowest card | The feature had a transition of 0.5s and that caused for the card to stay put on the screen for 0.5s when it should disappear | Took away the time transition | ![screenshot](documentation/feature03.png) |
+| | Clicking on the pile card | Expected to proceed to game and replacing the lowest card | The feature had a transition of 0.5s and that caused for the card to stay put on the screen for 0.5s when it should disappear | Took away the time transition | ![screenshot](documentation/feature03.png) |
 | | Clicking on each of the players card | Clicking on cards| Expected to make the card disappear and reappear on the game area and make the card the computer has chosen and the value that it has appear on the game area | Worked as exepcted | ![screenshot](documentation/feature04.png) |
 | | Clicking on the last card of the player's hand | expected to do the function as any other card and have a delay before the message of winning or losing appears| Worked as expected | Test concluded and passed | ![screenshot](documentation/feature05.png) |
 
@@ -94,14 +94,6 @@ Make sure to include any necessary steps you've implemented to fix the bug(s) as
 
 **PRO TIP**: screenshots of bugs are extremely helpful, and go a long way!
 
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-- JS Uncaught ReferenceError: `foobar` is undefined/not defined
-
-    ![screenshot](documentation/bug01.png)
-
-    - To fix this, I _____________________.
-
 - JS `'let'` or `'const'` or `'template literal syntax'` or `'arrow function syntax (=>)'` is available in ES6 (use `'esversion: 11'`) or Mozilla JS extensions (use moz).
 
     ![screenshot](documentation/bug02.png)
@@ -114,6 +106,5 @@ Make sure to include any necessary steps you've implemented to fix the bug(s) as
 - On the iphone 13 the text on the first card of the pile of cards is blue. It doesn't appear like that on the devtools mobile mode. It actually looks more like clickable text with the blue colour but does not match the rest of the layout's colours.
 
     ![screenshot](documentation/bugs-iphone-game-page1.jpg)
-
 
 There are no other remaining bugs that I am aware of.
