@@ -79,7 +79,7 @@ The two cards stand next to each other and the comparison is made. This updates 
 
 - **Instructions**
 
-    - The instructions are essentials to play the game. One has to read them to understand what to do.
+    - The instructions are essential to play the game. One has to read them to understand what to do.
 
 ![screenshot](documentation/feature01.jpg)
 
