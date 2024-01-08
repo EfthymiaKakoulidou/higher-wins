@@ -104,7 +104,7 @@ The two cards stand next to each other and the comparison is made. This updates 
 
 - **The window where the player can make the choice of replacing the lowest card**
 
-    - Before entering it and start playing the player has the choice of replacing his/hers lowest card. 
+    - Before entering the actual game and start playing the player has the choice of replacing his/hers lowest card. 
     The window giving this option is placed in such a way that the user knows that it is something working independently and if you click on it, it will disappear. It is placed also above the player's hand so that it is fully shown and the player knows that it is one of these cards that is going to be changed. It partially hides the computer's hand so that the player knows that you cannot affect those cards.
     At the same time the card with lowest value is indicated by a colour so that player knows that this card is going to be replaced. 
     After adding the indication to the lowest card I noticed that I myself was drawn to click on it, so I added the function of replacing the card also to the lowest card of the player's hand.
