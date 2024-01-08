@@ -302,10 +302,20 @@ main {
     background-color: rgb(212, 121, 180);
 }
 
-.blink {
-    background-color: rgb(88, 166, 179);
-    cursor: pointer;
-}
+    .blink {
+        background-color: rgb(88, 166, 179);
+        cursor: pointer;
+        animation: blink 2s infinite;
+    }
+    
+    .blink:hover {
+        background-color: rgb(212, 121, 180);
+    }
+    
+    @keyframes blink {
+        0%, 100% {background-color: rgb(88, 166, 179);}
+        50% {background-color: rgb(212, 121, 180);}
+    }                                                       
 
 .blink:hover {
     background-color: rgb(212, 121, 180);
