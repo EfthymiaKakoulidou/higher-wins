@@ -72,7 +72,7 @@ Defensive programming was manually tested with the below user acceptance testing
 | | "No" button expected to continue to game without changes| Tested the feature clicking on it | It reacted as expected | Test passed | ![screenshot](documentation/feature04.jpg) |
 | | Clicking on the pile card | Expected to proceed to game and replacing the lowest card | The feature had a transition of 0.5s and that caused for the card to stay put on the screen for 0.5s when it should disappear | Took away the time transition | ![screenshot](documentation/feature04.jpg) |
 | | Clicking on each of the player's card | Clicking on cards| Expected to make the card disappear and reappear on the game area and make the card the computer has chosen and the value that it has appear on the game area | Worked as exepcted | ![screenshot](documentation/feature08.jpg) |
-| | Clicking on the last card of the player's hand | expected to do the function as any other card and have a delay before the message of winning or losing appears| Worked as expected | Test concluded and passed | ![screenshot](documentation/feature10.jpg) |
+| | Clicking on the last card of the player's hand | Expected to do the function as any other card and have a delay before the message of winning or losing appears| Worked as expected | Test concluded and passed | ![screenshot](documentation/feature10.jpg) |
 
 
 | Page | User Action | Expected Result | Pass/Fail | Comments |
