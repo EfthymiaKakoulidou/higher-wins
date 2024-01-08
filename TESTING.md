@@ -71,7 +71,7 @@ Defensive programming was manually tested with the below user acceptance testing
 | Game Page | | | | | |
 | | "No" button expected to continue to game without changes| Tested the feature clicking on it | It reacted as expected | Test passed | ![screenshot](documentation/feature02.png) |
 | | Clicking on the pile card | Expected to proceed to game and replacing the lowest card | The feature had a transition of 0.5s and that caused for the card to stay put on the screen for 0.5s when it should disappear | Took away the time transition | ![screenshot](documentation/feature03.png) |
-| | Clicking on each of the players card | Clicking on cards| Expected to make the card disappear and reappear on the game area and make the card the computer has chosen and the value that it has appear on the game area | Worked as exepcted | ![screenshot](documentation/feature04.png) |
+| | Clicking on each of the player's card | Clicking on cards| Expected to make the card disappear and reappear on the game area and make the card the computer has chosen and the value that it has appear on the game area | Worked as exepcted | ![screenshot](documentation/feature04.png) |
 | | Clicking on the last card of the player's hand | expected to do the function as any other card and have a delay before the message of winning or losing appears| Worked as expected | Test concluded and passed | ![screenshot](documentation/feature05.png) |
 
 
@@ -83,16 +83,6 @@ Defensive programming was manually tested with the below user acceptance testing
 
 
 ## Bugs
-
-🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-This section is primarily used for JavaScript and Python applications,
-but feel free to use this section to document any HTML/CSS bugs you might run into.
-
-It's very important to document any bugs you've discovered while developing the project.
-Make sure to include any necessary steps you've implemented to fix the bug(s) as well.
-
-**PRO TIP**: screenshots of bugs are extremely helpful, and go a long way!
 
 - JS `'let'` or `'const'` or `'template literal syntax'` or `'arrow function syntax (=>)'` is available in ES6 (use `'esversion: 11'`) or Mozilla JS extensions (use moz).
 
