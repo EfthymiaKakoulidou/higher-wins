@@ -9,7 +9,7 @@ I have used the recommended [HTML W3C Validator](https://validator.w3.org) to va
 | Page | W3C URL | Screenshot | Notes |
 | --- | --- | --- | --- |
 | Home | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2FEfthymiaKakoulidou.github.io%2Fhigher-wins%2Findex.html) | ![screenshot](documentation/html-validation-home.jpg) | No errors or warnings |
-| Game page | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2FEfthymiaKakoulidou.github.io%2Fhigher-wins%2Fcontact.html) | ![screenshot](documentation/html-validation-game-page.jpg) | No errors or warnings |
+| Game page | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2FEfthymiaKakoulidou.github.io%2Fhigher-wins%2Fgame-page.html) | ![screenshot](documentation/html-validation-game-page.jpg) | No errors or warnings |
 
 ### CSS
 
