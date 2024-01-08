@@ -20,7 +20,7 @@ As the game is aiming a younger audience also, it was very important to have a c
 
 ### Colour Scheme
 
-Fun bright colours where chosen and I did not want any association with gambling card-games so I avoided green, red, and black as well as suits.
+Fun bright colours where chosen and I did not want any association with gambling card-games so I avoided green, red, and black as well as suits. With this choice of colours I achieved sufficient contrasts for accessibility.
 
 
 - rgb(50, 19, 81) used for primary text.
