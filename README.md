@@ -71,8 +71,8 @@ Game Page
 
 ## Features
 
-The game consists of a start page where the instructions are given, the deck is introduced and a button whith which the player can start the game. After the button is pushed the player gets a window with the question if he/she wants to replace his/hers lowest card with the first one of the pile of the remaining cards. After the player makes the choice he/she proceeds to play. 
-The player can choose a card from his/hers hand which is placed in the middle of the screen at the place where the player's cards go. The computer does the same thing. The computer chooses randomly one card of its hand. 
+The game consists of a start page where the instructions are given, the deck is introduced and a button whith which the player can start the game and a game page. After the start-button is pushed the player gets a window with the question if he/she wants to replace his/hers lowest card with the first one of the pile of the remaining cards. After the player makes the choice he/she proceeds to play. 
+The player can choose a card from his/hers hand which then is placed in the middle of the screen at the place where the player's cards go. The computer does the same thing. The computer chooses randomly one card of its hand. 
 The two cards stand next to each other and the comparison is made. This updates the score. The one with the higher card gets one point. In the case that the cards chosen have the same value no one gets a point.
 
 ### Existing Features
