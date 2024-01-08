@@ -49,10 +49,6 @@ for (i = 0; i < playershand.length; i++) {
 let lowest = Math.min(...playershand);
 let lowestBlink = document.querySelector(`.playerinnerdiv[data-card="${lowest}"]`);
 lowestBlink.setAttribute('class', 'blink');
-lowestBlink.addEventListener('click', replaceAndPlay);
-lowestBlink.addEventListener('click', hideOldPlayershand);
-lowestBlink.addEventListener('click', hidePilecard);
-lowestBlink.addEventListener('click', hideReplaceWindow);
 
 /*Create a div for every item in the array of computer's hand*/
 

@@ -304,7 +304,6 @@ main {
 
     .blink {
         background-color: rgb(88, 166, 179);
-        cursor: pointer;
         animation: blink 2s infinite;
     }
     
