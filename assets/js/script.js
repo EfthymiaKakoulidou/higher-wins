@@ -17,14 +17,16 @@ console.log(cards);
 /*Deal Cards*/
 
 //Computer's hand
+
 const computershand = cards.slice(8, 16);
-console.log(computershand);
+
 //Player's hand
+
 const playershand = cards.slice(0, 8);
-console.log(playershand);
+
 //Remaining cards
+
 const pile = cards.slice(16, 24);
-console.log(pile);
 
 //Function which refreshes the page
 function refresh() {
@@ -155,9 +157,6 @@ function hideReplaceWindow() {
 function hidePilecard() {
   document.getElementById("pile-0").remove();
   let newPile = pile.splice(0, 1);
-  console.log(newPile);
-  console.log(pile);
-
 }
 
 //If the player chooses to replace the lowest card
@@ -171,13 +170,10 @@ function replaceAndPlay() {
   //Find place of lowest card in players' hand
 
   let placeOfIndex = playershand.indexOf(index);
-  console.log(index);
-  console.log(placeOfIndex);
 
   //Replace player's card with pile's card
 
   playershand[placeOfIndex] = pile[0];
-  console.log(playershand);
 
   /*Create buttons for the player's hand*/
 
@@ -200,10 +196,6 @@ function replaceAndPlay() {
       let cardValue = this.dataset.card;
       this.style.visibility = "hidden";
       moveCardsToGameArea(cardValue);
-
-      //Playershand after playing the card
-
-      console.log(playershand);
 
       //Result pages
 
@@ -231,7 +223,6 @@ function replaceAndPlay() {
     //Computers random choice
 
     const computersChoice = computershand[Math.floor(Math.random() * computershand.length)];
-    console.log(computersChoice);
 
     //Move computer's card to the place in the game-area where the computer plays
 
@@ -240,16 +231,10 @@ function replaceAndPlay() {
     //Specify the place of the card randomly chosen
 
     let computersChoicePlace = computershand.indexOf(computersChoice);
-    console.log(computersChoicePlace);
 
     //Remove computer's card from computer's hand and get the new reduced computer's hand
 
     let computerscardchoice = computershand.splice(computersChoicePlace, 1);
-    console.log(computerscardchoice);
-
-    //Computers hand after playing the card
-
-    console.log(computershand);
 
     //Hide computer's card and remove its value
 
@@ -301,10 +286,6 @@ function play() {
       this.style.visibility = "hidden";
       moveCardsToGameArea(cardValue);
 
-      //Playershand after playing the card
-
-      console.log(playershand);
-
       //Result pages
 
       if (computershand.length == 0 && playerScoreSpan.innerHTML > computerScoreSpan.innerHTML) {
@@ -352,10 +333,6 @@ function play() {
     let computersCardToRemove = document.querySelector(`.computerscard[data-card="${computersChoice}"]`);
     computersCardToRemove.style.visibility = "hidden";
     computersCardToRemove.removeAttribute("data-card");
-
-    //Computers hand after playing the card
-
-    console.log(computershand);
 
     let playersPlace = document.getElementById("playersplace");
     playersPlace.innerText = playersCardValue;
