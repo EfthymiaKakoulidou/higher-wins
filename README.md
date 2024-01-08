@@ -92,7 +92,7 @@ The two cards stand next to each other and the comparison is made. This updates 
 
 - **Start button**
 
-    - After going through all the information the player can push the start to start playing.
+    - After going through all the information the player can push the 'Start Game!' to start playing.
 
 ![screenshot](documentation/feature03.jpg)
 
