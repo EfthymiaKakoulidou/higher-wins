@@ -2,12 +2,12 @@
 
 
 Higher Wins is a card game where the player plays against the computer. The target audience can be children but is also fun to play for everyone!
-It begins giving the instructions to player and introducing the deck.
+It begins giving the instructions to the player and introducing the deck.
 
 The deck has 24 cards from 1 to 12, two of each numder.
 The higher card is the one with the number 12 and the lower one is the one with the number 1.
 Both players get 8 cards. 
-You have the right to replace your lowest card with one of the remaining cards at a risk that it might be a lower one (unless of course if you have a card with number '1' on it there is no risk, you have nothing to lose as there is not a lower card).
+You have the right to replace your lowest card with one of the remaining cards at a risk that it might be a lower one (unless of course if you have a card with number '1' on it so there is no risk, you have nothing to lose as there is not a lower card).
 Both players draw a card simultaneously.
 The one that has the higher card wins!
 
@@ -119,7 +119,7 @@ The two cards stand next to each other and the comparison is made. This updates 
 
 - **Clicking the remaining cards' pile**
 
-    - If the player choses to replace the lowest card it is replaced by a new card from the pile of the remaining cards, and the game starts.
+    - If the player choses to replace the lowest card then it is replaced by a new card from the pile of the remaining cards, and the game starts.
 
 ![screenshot](documentation/feature06.jpg) 
 ![screenshot](documentation/feature061.jpg) 
