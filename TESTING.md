@@ -86,8 +86,6 @@ Defensive programming was manually tested with the below user acceptance testing
 
 - JS `'let'` or `'const'` or `'template literal syntax'` or `'arrow function syntax (=>)'` is available in ES6 (use `'esversion: 11'`) or Mozilla JS extensions (use moz).
 
-    ![screenshot](documentation/bug02.png)
-
     - To fix this, I added a line of code to the beginning of the script.
 
 ## Unfixed Bugs
