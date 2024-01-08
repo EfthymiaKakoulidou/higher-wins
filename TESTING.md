@@ -95,6 +95,6 @@ Defensive programming was manually tested with the below user acceptance testing
 
 - On the iphone 13 the text on the first card of the pile of cards is blue. It doesn't appear like that on the devtools mobile mode. It actually looks more like clickable text with the blue colour but does not match the rest of the layout's colours.
 
-    ![screenshot](documentation/bugs-iphone-game-page1.jpg)
+    ![screenshot](documentation/bug-iphone-game-page1.jpg)
 
 There are no other remaining bugs that I am aware of.
